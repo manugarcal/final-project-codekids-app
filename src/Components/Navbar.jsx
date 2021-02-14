@@ -1,3 +1,4 @@
+
 const Navbar = () => {
     return (
         <header className="site-navbar site-navbar-target" role="banner">
@@ -13,7 +14,7 @@ const Navbar = () => {
                                     <span>Sign in</span>
                                 </a>
                                 <a href="#"className="d-flex site-info align-items-center">
-                                    <span className="block-icon mr-3"><i class="fas fa-user-plus"></i></span>
+                                    <span className="block-icon mr-3"><img src="http://localhost:3000/assets/spaceman01.png" width="50px" height="50px"></img></span>
                                     <span>Register</span>
                                 </a>
 
@@ -35,7 +36,7 @@ const Navbar = () => {
                                     <li><a href="packages.html" className="nav-link">About Us</a></li>
                                     <li><a href="gallery.html" className="nav-link">Forum</a></li>
                                     <li><a href="pricing.html" className="nav-link">FAQ</a></li>
-                                    <li><a href="contact.html" className="nav-link">Contact</a></li>
+                                    <li><a href="contact.html" className="nav-link">Contact Us</a></li>
                                 </ul>
                             </nav>
 

@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="row">
                 <div className="col-lg-4">
                     <h2 className="footer-heading mb-3">About Us</h2>
-                    <p className="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                    <p className="mb-5">CodeKids es una aplicacion desarollada con mucho &#128150; por Andres, Alejandro y Manuel </p>
 
                     <h2 className="footer-heading mb-4">Newsletter</h2>
                     <form action="#" className="d-flex" className="subscribe">
@@ -24,7 +24,7 @@ const Footer = () => {
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">Forum</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="/Contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>

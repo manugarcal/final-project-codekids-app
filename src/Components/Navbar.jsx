@@ -1,3 +1,4 @@
+import React from 'react'
 
 const Navbar = () => {
     return (
@@ -17,11 +18,9 @@ const Navbar = () => {
                                     <span className="block-icon mr-3"><img src="http://localhost:3000/assets/spaceman01.png" width="50px" height="50px"></img></span>
                                     <span>Register</span>
                                 </a>
-
                             </div>
                         </div>
                     </div>
-
 
                     <div className="container">
                         <div className="menu-wrap d-flex align-items-center">
@@ -31,12 +30,12 @@ const Navbar = () => {
 
                             <nav className="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                                 <ul className="site-menu main-menu js-clone-nav mr-auto ">
-                                    <li className="active"><a href="index.html" className="nav-link">Home</a></li>
+                                    <li className="active"><a  href="/" className="nav-link">Home</a></li>
                                     <li><a href="about.html" className="nav-link">Getting Started</a></li>
                                     <li><a href="packages.html" className="nav-link">About Us</a></li>
                                     <li><a href="gallery.html" className="nav-link">Forum</a></li>
                                     <li><a href="pricing.html" className="nav-link">FAQ</a></li>
-                                    <li><a href="contact.html" className="nav-link">Contact Us</a></li>
+                                    <li><a href="/Contact" className="nav-link">Contact Us</a></li>
                                 </ul>
                             </nav>
 

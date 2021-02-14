@@ -12,6 +12,7 @@ import Contact from "./views/Contact";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./views/home";
+import About from "./views/About";
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/About" component={About} />
       </Switch>
       <Footer />
     </BrowserRouter>

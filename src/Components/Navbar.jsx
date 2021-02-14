@@ -32,7 +32,7 @@ const Navbar = () => {
                                 <ul className="site-menu main-menu js-clone-nav mr-auto ">
                                     <li className="active"><a  href="/" className="nav-link">Home</a></li>
                                     <li><a href="about.html" className="nav-link">Getting Started</a></li>
-                                    <li><a href="packages.html" className="nav-link">About Us</a></li>
+                                    <li><a href="/About" className="nav-link">About Us</a></li>
                                     <li><a href="gallery.html" className="nav-link">Forum</a></li>
                                     <li><a href="pricing.html" className="nav-link">FAQ</a></li>
                                     <li><a href="/Contact" className="nav-link">Contact Us</a></li>

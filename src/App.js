@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -7,9 +8,11 @@ import {
   Link,
   BrowserRouter
 } from "react-router-dom";
-import CardsIndex from "./Components/CardsIndex";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import Home from "./views/Home";
+import Home from "./views/home";
+
+
 
 
 function App() {
@@ -17,9 +20,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
+        <Route exact path="/" component={Home} />
       </Switch>
-      <CardsIndex />
+      <Footer />
     </BrowserRouter>
+    
   );
 }
 

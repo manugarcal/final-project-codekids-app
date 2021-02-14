@@ -127,7 +127,7 @@ const About = () => {
 
                   <div className="post-entry-1-contents">
                     <span className="meta">Founder</span>
-                    <h2>Jano</h2>
+                    <h2>Alejandro Belmar</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Ipsa, sapiente.

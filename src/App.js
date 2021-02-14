@@ -13,6 +13,7 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./views/home";
 import About from "./views/About";
+import GettingStarted from "./views/GettingStarted";
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/About" component={About} />
+        <Route exact path="/GettingStarted" component={GettingStarted} />
       </Switch>
       <Footer />
     </BrowserRouter>

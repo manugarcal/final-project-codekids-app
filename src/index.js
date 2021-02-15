@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import '@fortawesome/fontawesome-free/css/all.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import 'bootstrap';
 import 'jquery';
 import 'popper.js'
+import Test from './test';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Test />
   </React.StrictMode>,
   document.getElementById('root')
 );

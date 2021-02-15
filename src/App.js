@@ -7,8 +7,8 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import Contact from "./views/Contact";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import Home from "./views/home";
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
@@ -17,11 +17,9 @@ import Faq from "./views/Faq";
 import Foro from "./views/Foro";
 
 
-
-
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>        
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -31,8 +29,7 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Faq" component={Faq} />
         <Route exact path="/Foro" component={Foro} />
-
-      </Switch>
+      </Switch>      
       <Footer />
     </BrowserRouter>
     

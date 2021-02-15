@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
+        <>
         <header className="site-navbar site-navbar-target" role="banner">
 
                     <div className="container mb-3">
@@ -54,6 +55,7 @@ const Navbar = () => {
 
 
                 </header>
+                </>
     )
 }
 export default Navbar;

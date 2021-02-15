@@ -16,7 +16,7 @@ const Navbar = () => {
                                     <span>Entrar</span>
                                 </a>
                                 <a href="/GettingStarted"className="d-flex site-info align-items-center">
-                                    <span className="block-icon mr-3"><img src="http://localhost:3000/assets/spaceman01.png" width="50px" height="50px"></img></span>
+                                    <span className="block-icon mr-3"><img src="assets/spaceman01.png" width="50px" height="50px"></img></span>
                                     <span>Registrarme</span>
                                 </a>
                             </div>

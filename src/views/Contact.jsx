@@ -26,7 +26,7 @@ const Contact = () => {
                     <a href="/" className="text-white">
                       Inicio
                     </a>{" "}
-                    <span className="mx-3">/</span> <strong>Cantactanos</strong>
+                    <span className="mx-3">/</span> <strong>Contactanos</strong>
                   </p>
                 </div>
               </div>

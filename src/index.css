@@ -1,0 +1,23 @@
+.media-playlist{
+  border: 3px solid tomato;
+  display: grid;
+  justify-content: right;
+}
+
+.leccion{
+    border: 3px solid tomato;
+    padding: 0;
+    
+}
+
+.leccion-instrucciones{
+    border: 3px solid tomato;
+    padding: 0;
+    height: 600px;
+}
+
+.leccion-code{
+    border: 3px solid tomato;
+    padding: 0;
+    height: 50%;
+}

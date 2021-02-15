@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -7,16 +8,16 @@ const Navbar = () => {
                     <div className="container mb-3">
                         <div className="d-flex align-items-center">
                             <div className="site-logo mr-auto">
-                                <a href="index.html">CodeKids<span className="text-primary">.</span></a>
+                                <a href="/">CodeKids<span className="text-primary">.</span></a>
                             </div>
                             <div className="site-quick-contact d-none d-lg-flex ml-auto ">
                                 <a href="#"className="d-flex site-info align-items-center mr-5">
                                     <span className="block-icon mr-3"><i class="fas fa-sign-in-alt"></i></span>
-                                    <span>Sign in</span>
+                                    <span>Entrar</span>
                                 </a>
-                                <a href="#"className="d-flex site-info align-items-center">
+                                <a href="/GettingStarted"className="d-flex site-info align-items-center">
                                     <span className="block-icon mr-3"><img src="http://localhost:3000/assets/spaceman01.png" width="50px" height="50px"></img></span>
-                                    <span>Register</span>
+                                    <span>Registrarme</span>
                                 </a>
                             </div>
                         </div>
@@ -30,12 +31,12 @@ const Navbar = () => {
 
                             <nav className="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                                 <ul className="site-menu main-menu js-clone-nav mr-auto ">
-                                    <li className="active"><a  href="/" className="nav-link">Home</a></li>
-                                    <li><a href="GettingStarted" className="nav-link">Getting Started</a></li>
-                                    <li><a href="/About" className="nav-link">About Us</a></li>
-                                    <li><a href="gallery.html" className="nav-link">Forum</a></li>
-                                    <li><a href="pricing.html" className="nav-link">FAQ</a></li>
-                                    <li><a href="/Contact" className="nav-link">Contact Us</a></li>
+                                    <li className="active"><Link  to="/" className="nav-link">Inicio</Link></li>
+                                    <li><Link to="GettingStarted" className="nav-link">Comenzar Ahora</Link></li>
+                                    <li><Link to="/About" className="nav-link">Acerca de Nosotros</Link></li>
+                                    <li><Link to="gallery.html" className="nav-link">Foros</Link></li>
+                                    <li><Link to="pricing.html" className="nav-link">FAQ</Link></li>
+                                    <li><Link to="/Contact" className="nav-link">Contactanos</Link></li>
                                 </ul>
                             </nav>
 

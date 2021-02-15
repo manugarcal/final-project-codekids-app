@@ -20,10 +20,10 @@ const Home = () => {
                         <div className="container">
                             <div className="row align-items-center ">
                                 <div className="col-md-5 mt-5 pt-5">
-                                    <span className="text-cursive h5 text-red">Welcome To Our Website</span>
-                                    <h1 className="mb-3 font-weight-bold text-teal">Bring Fun Life To Your Kids</h1>
-                                    <p>Amazing Playground for your kids</p>
-                                    <p className="mt-5"><a href="#" className="btn btn-primary py-4 btn-custom-1">Learn More</a></p>
+                                    <span className="text-cursive h5 text-red">Bienvenidos a nuestro sitio</span>
+                                    <h1 className="mb-3 font-weight-bold text-teal">Diversion y aprendizaje para tus niños</h1>
+                                    <p>Increible plataforma para tus hijos</p>
+                                    <p className="mt-5"><a href="#" className="btn btn-primary py-4 btn-custom-1">Saber mas!</a></p>
                                 </div>
                                 <div className="col-md-6 ml-auto align-self-end">
                                     <img src="images/kid_transparent.png" alt="Image" className="img-fluid" />
@@ -42,8 +42,8 @@ const Home = () => {
                                     <span className="wrap-icon">
                                         <span ><i class="fas fa-user-astronaut"></i></span>
                                     </span>
-                                    <h2>About Us</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nesciunt, mollitia, hic enim id culpa.</p>
+                                    <h2>Sobre Nosotros</h2>
+                                    <p>CodeKids es una plataforma que desea contribuir y potenciar las habilidades de los mas pequeños.</p>
                                 </div>
                             </div>
                             <div className="col-lg-4">
@@ -52,7 +52,7 @@ const Home = () => {
                                         <span ><i class="far fa-question-circle"></i></span>
                                     </span>
                                     <h2>FAQs</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nesciunt, mollitia, hic enim id culpa.</p>
+                                    <p>Disponemos de una seccion de preguntas frecuentes para que puedas aclarar algunas dudas.</p>
                                 </div>
                             </div>
                             <div className="col-lg-4">
@@ -61,7 +61,7 @@ const Home = () => {
                                         <span ><i class="fas fa-users"></i></span>
                                     </span>
                                     <h2>Forum</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nesciunt, mollitia, hic enim id culpa.</p>
+                                    <p>En esta seccion encontraras nuestra comunidad, Sacale el mayor provecho planteando tus temas.</p>
                                 </div>
                             </div>
                         </div>
@@ -75,11 +75,11 @@ const Home = () => {
                                 <img src="images/img_1.jpg" alt="Image" className="img-fluid" />
                             </div>
                             <div className="col-md-5 ml-auto pl-md-5">
-                                <span className="text-cursive h5 text-red">About Us</span>
-                                <h3 className="text-black">Bring Fun Life To Your Kids</h3>
-                                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et harum, magni sequi nostrum maxime enim.</span><span>Magnam id atque dicta deleniti, ipsam ipsum distinctio. Facilis praesentium voluptatem accusamus, earum veritatis, laudantium.</span></p>
+                                <span className="text-cursive h5 text-red">Acerca de Nosotros</span>
+                                <h3 className="text-black">Diversion y aprendizaje para tus niños</h3>
+                                <p>En CodeKids sabemos que la mejor forma de aprender es jugando, por lo que nuestra propuesta para potenciar el aprendizaje esta orientada a sacarle partido a esta premisa</p>
 
-                                <p className="mt-5"><a href="#" className="btn btn-warning py-4 btn-custom-1">More About Us</a></p>
+                                <p className="mt-5"><a href="#" className="btn btn-warning py-4 btn-custom-1">Mas sobre Nosotros</a></p>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ const Home = () => {
                         <div className="row mb-5">
                             <div className="col-12 text-center">
                                 <span className="text-cursive h5 text-red d-block">Testimonial</span>
-                                <h2 className="text-black">What Our Client Says About Us</h2>
+                                <h2 className="text-black">Lo que dicen nuestros clientes de nosotros</h2>
                             </div>
                         </div>
                         <div className="row justify-content-center">
@@ -170,8 +170,8 @@ const Home = () => {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-md-12 d-flex">
-                                <h2 className="text-white m-0">Bring Fun Life To Your Kids</h2>
-                                <a href="#" className="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
+                                <h2 className="text-white m-0">Diversion y aprendizaje para tus niños</h2>
+                                <a href="#" className="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Comenzemos</a>
                             </div>
                         </div>
                     </div>

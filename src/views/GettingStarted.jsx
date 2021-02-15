@@ -21,17 +21,17 @@ const GettingStarted = () => {
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
                   <span className="text-cursive h5 text-red">
-                    Getting Started
+                    Comenzemos
                   </span>
                   <h1 className="mb-3 font-weight-bold text-teal">
-                    Get In Touch
+                    Registrarme
                   </h1>
                   <p>
                     <a href="/" className="text-white">
-                      Home
+                      Inicio
                     </a>{" "}
                     <span className="mx-3">/</span>{" "}
-                    <strong>Getting Started</strong>
+                    <strong>Comenzemos</strong>
                   </p>
                 </div>
               </div>
@@ -43,10 +43,9 @@ const GettingStarted = () => {
           <div className="container">
             <div className="row justify-content-center text-center">
               <div className="col-7 text-center mb-5">
-                <h2>Get In Touch Using The Contact Form</h2>
+                <h2>Registrese mediante este formulario</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
-                  assumenda, dolorum necessitatibus eius earum voluptates sed!
+                  rellene los campos necesarios para completar el registro, una vez que haya hecho esto dele click a enviar y listo!
                 </p>
               </div>
             </div>
@@ -58,46 +57,72 @@ const GettingStarted = () => {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="First name"
+                        placeholder="Nombre"
                       />
                     </div>
                     <div className="col-md-6">
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Last name"
+                        placeholder="Apellido"
                       />
                     </div>
+                  </div>
+                  <div className="form-group row">
+                  <div className="col-md-6">
+                      <input
+                        type="password"
+                        className="form-control"
+                        placeholder="Contraseña"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <input
+                        type="password"
+                        className="form-control"
+                        placeholder="Repita Contraseña"
+                      />
+                    </div>
+                  </div>
+                  <div className="form-group row">
+                    <div className="col-md-6">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Telefono"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <select className="form-control" >
+                        <option value="null">Edad de su hijo</option>
+                          <option value="6">6 años</option>
+                          <option value="7">7 años</option>
+                          <option value="8">8 años</option>
+                          <option value="9">9 años</option>
+                          <option value="10">10 años</option>
+                          <option value="11">11 años</option>
+                          <option value="12">12 años</option>
+                         
+                      </select>
+                    </div> 
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
                       <input
-                        type="text"
+                        type="email"
                         className="form-control"
-                        placeholder="Email address"
+                        placeholder="Email"
                       />
                     </div>
                   </div>
 
-                  <div className="form-group row">
-                    <div className="col-md-12">
-                      <textarea
-                        name=""
-                        id=""
-                        className="form-control"
-                        placeholder="Write your message."
-                        cols="30"
-                        rows="10"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div className="form-group row">
                     <div className="col-md-6 mr-auto">
                       <input
                         type="submit"
                         className="btn btn-block btn-primary text-white py-3 px-5"
-                        value="Send Message"
+                        value="Enviar"
                       />
                     </div>
                   </div>
@@ -105,19 +130,19 @@ const GettingStarted = () => {
               </div>
               <div className="col-lg-4 ml-auto">
                 <div className="bg-white p-3 p-md-5">
-                  <h3 className="text-black mb-4">Contact Info</h3>
+                  <h3 className="text-black mb-4">Informacion de Contacto</h3>
                   <ul className="list-unstyled footer-link">
                     <li className="d-block mb-3">
-                      <span className="d-block text-black">Address:</span>
-                      <span>34 Street Name, City Name Here, United States</span>
+                      <span className="d-block text-black">Direccion:</span>
+                      <span>Av. Pedro de valdivia #555, providencia, Santiago de Chile</span>
                     </li>
                     <li className="d-block mb-3">
-                      <span className="d-block text-black">Phone:</span>
-                      <span>+1 242 4942 290</span>
+                      <span className="d-block text-black">Telefono:</span>
+                      <span>+56 2 4942 290</span>
                     </li>
                     <li className="d-block mb-3">
                       <span className="d-block text-black">Email:</span>
-                      <span>info@yourdomain.com</span>
+                      <span>info@CodeKids.com</span>
                     </li>
                   </ul>
                 </div>

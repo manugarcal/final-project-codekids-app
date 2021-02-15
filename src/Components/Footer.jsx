@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return ( 
@@ -6,25 +7,25 @@ const Footer = () => {
         <div className="container">
             <div className="row">
                 <div className="col-lg-4">
-                    <h2 className="footer-heading mb-3">About Us</h2>
+                    <h2 className="footer-heading mb-3">Acerca de Nosotros</h2>
                     <p className="mb-5">CodeKids es una aplicacion desarollada con mucho &#128150; por Andres, Alejandro y Manuel </p>
 
-                    <h2 className="footer-heading mb-4">Newsletter</h2>
+                    <h2 className="footer-heading mb-4">Boletin informativo</h2>
                     <form action="#" className="d-flex" className="subscribe">
                         <input type="text" className="form-control mr-3" placeholder="Email" />
-                        <input type="submit" value="Send" className="btn btn-primary" />
+                        <input type="submit" value="Enviar" className="btn btn-primary" />
                     </form>
                 </div>
                 <div className="col-lg-8 ml-auto">
                     <div className="row">
                         <div className="col-lg-4 ml-auto">
-                            <h2 className="footer-heading mb-4">Navigation</h2>
+                            <h2 className="footer-heading mb-4">Navegacion</h2>
                             <ul className="list-unstyled">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Forum</a></li>
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/About">Acerca de Nosotros</a></li>
+                                <li><a href="#">Foro</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a href="/Contact">Contact Us</a></li>
+                                <li><a href="/Contact">Contactanos</a></li>
                             </ul>
                         </div>
                     </div>

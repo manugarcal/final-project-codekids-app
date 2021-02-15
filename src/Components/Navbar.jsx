@@ -12,11 +12,11 @@ const Navbar = () => {
                             </div>
                             <div className="site-quick-contact d-none d-lg-flex ml-auto ">
                                 <a href="#"className="d-flex site-info align-items-center mr-5">
-                                    <span className="block-icon mr-3"><i class="fas fa-sign-in-alt"></i></span>
+                                    <span className="block-icon mr-3"><i className="fas fa-sign-in-alt"></i></span>
                                     <span>Entrar</span>
                                 </a>
                                 <a href="/GettingStarted"className="d-flex site-info align-items-center">
-                                    <span className="block-icon mr-3"><img src="http://localhost:3000/assets/spaceman01.png" width="50px" height="50px"></img></span>
+                                    <span className="block-icon mr-3"><img src="assets/spaceman01.png" width="50px" height="50px"></img></span>
                                     <span>Registrarme</span>
                                 </a>
                             </div>

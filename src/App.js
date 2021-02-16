@@ -7,11 +7,11 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import Contact from "./views/Contact";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Navbar from "./Components/Navbar";
 import Home from "./views/home";
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
+import Footer from "./Components/Footer";
 
 
 function App() {

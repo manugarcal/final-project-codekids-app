@@ -6,30 +6,66 @@
 }
 
 .b1{
-    border: 3px solid tomato;
-    
+    border: 3px solid tomato;  
+    min-height: 540px;  
+    max-height: 540px;
     }
+
 .usuario{
     width: 100%;
-    height: 84%;
+    height: 92%;
+}
+.card-img-top{
+    width: 250px;
+    height: 250px;
 }
 .b2{border: 3px solid tomato;
-    
+    max-height: 540px;
     min-height: 540px;
 }
 
 .logros{
-    width: 300px;
-    height: 91%;
+    width: 100%;
+    height: 90%;
 }    
 .b3{border: 3px solid tomato;
-    
+    max-height: 540px;
     min-height: 540px;
 }
 
 .mapa{
-    width: 390px;
-    height: 84%;
+    width: 100%;
+    height: 92%;
 }
 
 /* Dashboard*/
+
+
+/*DashboardProfe*/
+
+.b4{border: 3px solid tomato;    
+    min-height: 540px;    
+}
+
+.profe{
+    width: 100%;
+    height: 94%;
+    
+}
+
+.b5{
+    border: 3px solid tomato;    
+    min-height: 540px;
+   
+}
+
+.tablealumnos{
+    width: 100%;
+    height: 92%;
+    min-width: 388px;
+    max-width: 69%;
+}
+
+
+
+/*DashboardProfe*/

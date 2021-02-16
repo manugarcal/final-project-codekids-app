@@ -3,8 +3,8 @@ import DashboardProfe from "./views/dashboardprofe";
 
 const Test =()=>{
     return(
-        <Dashboard/>
-        /* <DashboardProfe/> */
+         <Dashboard/>  
+        /* <DashboardProfe/> */ 
     )
 }
 export default Test

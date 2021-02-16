@@ -1,7 +1,11 @@
+import React from "react";
+import { UncontrolledCollapse, Button, CardBody, Card } from "reactstrap";
+import CollapseFaq from "../components/CollapseFaq";
+
 const Faq = () => {
   return (
     <>
-    <div className="site-wrap" id="home-section">
+      <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
             <div className="site-mobile-menu-close mt-3">
@@ -23,7 +27,9 @@ const Faq = () => {
                   <span className="text-cursive h5 text-red">
                     Bienvenidos a nuestro sitio
                   </span>
-                  <h1 className="mb-3 font-weight-bold text-teal">Preguntas frecuentes</h1>
+                  <h1 className="mb-3 font-weight-bold text-teal">
+                    Preguntas frecuentes
+                  </h1>
                   <p>
                     <a href="/" className="text-white">
                       Inicio
@@ -36,7 +42,15 @@ const Faq = () => {
           </div>
         </div>
 
-
+        <div className="site-section bg-teal">
+          <div className="container">
+           <CollapseFaq title="test" text="lorem ipsum blah blah blah" />
+           <CollapseFaq title="test 2" text="otras prueba" />
+            
+            
+  
+          </div>
+        </div>
       </div>
     </>
   );

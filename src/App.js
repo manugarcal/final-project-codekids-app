@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 import Home from "./views/home";
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
-import Login from "./Components/login";
+import Login from "./components/Login";
 import Faq from "./views/Faq";
 import Foro from "./views/Foro";
 

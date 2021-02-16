@@ -1,6 +1,16 @@
 import React from 'react';
+import {useEffect} from 'react'
 
 const Home = () => {
+
+    useEffect(() => {
+        
+        return () => {
+            <Home />
+            console.log("recargado")
+        }
+    }, [])
+
     return (
         <>
             <div className="site-wrap" id="home-section">
@@ -40,7 +50,7 @@ const Home = () => {
                             <div className="col-lg-4">
                                 <div className="block-2 red">
                                     <span className="wrap-icon">
-                                        <span ><i class="fas fa-user-astronaut"></i></span>
+                                        <span ><i className="fas fa-user-astronaut"></i></span>
                                     </span>
                                     <h2>Sobre Nosotros</h2>
                                     <p>CodeKids es una plataforma que desea contribuir y potenciar las habilidades de los mas pequeños.</p>
@@ -49,7 +59,7 @@ const Home = () => {
                             <div className="col-lg-4">
                                 <div className="block-2 yellow">
                                     <span className="wrap-icon">
-                                        <span ><i class="far fa-question-circle"></i></span>
+                                        <span ><i className="far fa-question-circle"></i></span>
                                     </span>
                                     <h2>FAQs</h2>
                                     <p>Disponemos de una seccion de preguntas frecuentes para que puedas aclarar algunas dudas.</p>

@@ -1,11 +1,34 @@
 import React from 'react';
 import '../index.css'
+
 import Navbar2 from '../Components/Navbar-login';
 import Cardcomponent from '../Components/Card';
+
 
 const Leccion = () => {
     return (
         <>
+
+
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="leccion media-playlist col-md-12">
+                        test
+                </div>
+                </div>
+                <div className="row">
+                    <div className="leccion-instrucciones col-md-4">
+                        test
+                    </div>
+                    <div className="leccion col-md-8 g-0">
+                        <div className="leccion-code col-md-12">
+                            test
+                        </div>
+                        <div className="leccion-code col-md-12">
+                            test
+                        </div>
+                    </div>
+
             <Navbar2 />
             <div className="container-fluid">
                 <div className="row">
@@ -82,6 +105,7 @@ const Leccion = () => {
                         <div className="col-md-2 align-buttons">
                         </div>
                     </div> */}
+
 
 
                 </div>

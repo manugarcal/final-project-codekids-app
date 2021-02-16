@@ -15,20 +15,20 @@ const About = () => {
           <div
             className="site-section-cover overlay"
             data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('images/hero_1.jpg')` }}
+            style={{ backgroundImage: `url('assets/index02.png')` }}
           >
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
                   <span className="text-cursive h5 text-red">
-                    Welcome To Our Website
+                    Bienvenidos a nuestro sitio
                   </span>
-                  <h1 className="mb-3 font-weight-bold text-teal">About Us</h1>
+                  <h1 className="mb-3 font-weight-bold text-teal">Quienes Somos</h1>
                   <p>
                     <a href="/" className="text-white">
-                      Home
+                      Inicio
                     </a>{" "}
-                    <span className="mx-3">/</span> <strong>About</strong>
+                    <span className="mx-3">/</span> <strong>Acerca de nosotros</strong>
                   </p>
                 </div>
               </div>
@@ -43,23 +43,15 @@ const About = () => {
                 <img src="images/img_1.jpg" alt="Image" className="img-fluid" />
               </div>
               <div className="col-md-5 ml-auto pl-md-5">
-                <span className="text-cursive h5 text-red">About Us</span>
-                <h3 className="text-black">Bring Fun Life To Your Kids</h3>
+                <span className="text-cursive h5 text-red">Acerca de Nosotros</span>
+                <h3 className="text-black">Diversion y aprendizaje para tus niños</h3>
                 <p>
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    harum, magni sequi nostrum maxime enim.
-                  </span>
-                  <span>
-                    Magnam id atque dicta deleniti, ipsam ipsum distinctio.
-                    Facilis praesentium voluptatem accusamus, earum veritatis,
-                    laudantium.
-                  </span>
+                En CodeKids sabemos que la mejor forma de aprender es jugando, por lo que nuestra propuesta para potenciar el aprendizaje esta orientada a sacarle partido a esta premisa
                 </p>
 
                 <p className="mt-5">
                   <a href="#" className="btn btn-warning py-4 btn-custom-1">
-                    More About Us
+                    MAS SOBRE NOSOTROS
                   </a>
                 </p>
               </div>
@@ -71,11 +63,10 @@ const About = () => {
           <div className="container">
             <div className="row justify-content-center text-center mb-5 section-2-title">
               <div className="col-md-6">
-                <span className="text-cursive h5 text-red">The Team</span>
-                <h3 className="text-white text-center">Meet The Team</h3>
+                <span className="text-cursive h5 text-red">El Equipo</span>
+                <h3 className="text-white text-center">Conoce al Equipo</h3>
                 <p className="mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-                  nesciunt nemo vel earum maxime neque!
+                  Somos un grupo de desarrolladores apasionados por el codigo, que quieren transmitir diha pasion a los mas pequeños
                 </p>
               </div>
             </div>
@@ -92,8 +83,7 @@ const About = () => {
                     <span className="meta">Founder</span>
                     <h2>Andres Olivares</h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ipsa, sapiente.
+                      Full Stack Software Developer
                     </p>
                   </div>
                 </div>
@@ -110,8 +100,7 @@ const About = () => {
                     <span className="meta">Founder</span>
                     <h2>Manuel Garcia</h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ipsa, sapiente.
+                    Full Stack Software Developer
                     </p>
                   </div>
                 </div>
@@ -129,8 +118,7 @@ const About = () => {
                     <span className="meta">Founder</span>
                     <h2>Alejandro Belmar</h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ipsa, sapiente.
+                    Full Stack Software Developer
                     </p>
                   </div>
                 </div>

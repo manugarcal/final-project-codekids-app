@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
     return (
         <>
@@ -12,12 +13,12 @@ const Navbar = () => {
                                 <a href="/">CodeKids<span className="text-primary">.</span></a>
                             </div>
                             <div className="site-quick-contact d-none d-lg-flex ml-auto ">
-                                <a href="#"className="d-flex site-info align-items-center mr-5">
-                                    <span className="block-icon mr-3"><i class="fas fa-sign-in-alt"></i></span>
+                                <a href="/Login"className="d-flex site-info align-items-center mr-5">
+                                    <span className="block-icon mr-3"><i className="fas fa-sign-in-alt"></i></span>
                                     <span>Entrar</span>
                                 </a>
                                 <a href="/GettingStarted"className="d-flex site-info align-items-center">
-                                    <span className="block-icon mr-3"><img src="http://localhost:3000/assets/spaceman01.png" width="50px" height="50px"></img></span>
+                                    <span className="block-icon mr-3"><img src="assets/spaceman01.png" width="50px" height="50px"></img></span>
                                     <span>Registrarme</span>
                                 </a>
                             </div>
@@ -35,9 +36,11 @@ const Navbar = () => {
                                     <li className="active"><Link  to="/" className="nav-link">Inicio</Link></li>
                                     <li><Link to="GettingStarted" className="nav-link">Comenzar Ahora</Link></li>
                                     <li><Link to="/About" className="nav-link">Acerca de Nosotros</Link></li>
-                                    <li><Link to="gallery.html" className="nav-link">Foros</Link></li>
-                                    <li><Link to="pricing.html" className="nav-link">FAQ</Link></li>
+                                    <li><Link to="/Foro" className="nav-link">Foros</Link></li>
+                                    <li><Link to="/Faq" className="nav-link">FAQ</Link></li>
                                     <li><Link to="/Contact" className="nav-link">Contactanos</Link></li>
+                                    
+    
                                 </ul>
                             </nav>
 

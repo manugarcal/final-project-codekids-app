@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -18,9 +16,15 @@ import Dashboard from "./views/Dashboard"
 
 
 
+/* import Code from "./components/editorCode";
+import Home from "./views/home"; */
+import Leccion from "./views/leccion";
+
+
 
 function App() {
   return (
+<>
     <BrowserRouter>
       <Navbar />
         <Route exact path="/Dashboard" component={Dashboard} />
@@ -33,6 +37,11 @@ function App() {
       <Footer />
     </BrowserRouter>
     
+
+    
+    <Leccion />
+    </>
+
   );
 }
 

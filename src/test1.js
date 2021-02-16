@@ -1,10 +1,10 @@
 import Dashboard from "./views/Dashboard";
 import DashboardProfe from "./views/dashboardprofe";
 
-const Test =()=>{
+const Test1 =()=>{
     return(
          /*<Dashboard/>  */
          <DashboardProfe/>  
     )
 }
-export default Test
+export default Test1

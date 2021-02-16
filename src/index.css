@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/* Dashboards*/
+.row{
+    border: 3px solid tomato;
+    height: 550px;
+    width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.b1{
+    border: 3px solid tomato;  
+    min-height: 540px;  
+    max-height: 540px;
+    }
+
+.usuario{
+    width: 100%;
+    height: 92%;
 }
+.card-img-top{
+    width: 250px;
+    height: 250px;
+}
+.b2{border: 3px solid tomato;
+    max-height: 540px;
+    min-height: 540px;
+}
+
+.logros{
+    width: 100%;
+    height: 90%;
+}    
+.logros2{
+    width: 100%;
+    height: 90%;}
+.logro1{
+    height:100%;
+}
+
+
+.my-card
+{   
+    position:absolute;
+    left:40%;
+    top:-20px;
+    border-radius:50%;
+}
+
+
+
+.b3{border: 3px solid tomato;
+    max-height: 540px;
+    min-height: 540px;
+}
+
+.mapa{
+    width: 100%;
+    height: 92%;
+}
+
+/* Dashboard*/
+
+
+/*DashboardProfe*/
+
+.b4{border: 3px solid tomato;    
+    min-height: 540px;    
+}
+
+.profe{
+    width: 100%;
+    height: 94%;
+    
+}
+
+.b5{
+    border: 3px solid tomato;    
+    min-height: 540px;
+   
+}
+
+.tablealumnos{
+    width: 100%;
+    height: 92%;
+    min-width: 388px;
+    max-width: 69%;
+}
+
+
+
+/*DashboardProfe*/
+
+.media-playlist{
+  border: 3px solid tomato;
+  display: grid;
+  justify-content: right;
+}
+
+.leccion{
+    border: 3px solid tomato;
+    padding: 0;
+    
+}
+
+.leccion-instrucciones{
+    border: 3px solid tomato;
+    padding: 0;
+    height: 600px;
+}
+
+.leccion-code{
+    border: 3px solid tomato;
+    padding: 0;
+    height: 50%;
+}
+

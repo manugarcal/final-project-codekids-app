@@ -14,11 +14,11 @@ const injectContext = PassedComponent => {
         })
     }));
 
-    useEffect(() => {
-        state.actions.getPeople();
-        state.actions.getPlanets();        
+
+              
         
-    },[]);
+
+
 
     return (
         <Context.Provider value={state}>

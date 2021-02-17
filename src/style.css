@@ -1,14 +1,9 @@
 /* Dashboards*/
-/* .row{
-    border: 3px solid tomato;
-    height: 550px;
-    width: 100%;
-}
- */
+
  .b1{
     border: 3px solid tomato;  
     min-height: 540px;  
-    max-height: 540px;
+    
     }
 
 .usuario{
@@ -20,7 +15,7 @@
     height: 250px;
 }
 .b2{border: 3px solid tomato;
-    max-height: 540px;
+   
     min-height: 540px;
 }
 
@@ -47,7 +42,7 @@
 
 
 .b3{border: 3px solid tomato;
-    max-height: 540px;
+    
     min-height: 540px;
 }
 
@@ -99,22 +94,15 @@
 
 .leccion{
     border: 3px solid tomato;
-
     padding: 0;
-    
-
-    padding: 0;    
-
+    padding: 0;  
 }
 
 .leccion-instrucciones{
     border: 3px solid tomato;
     padding: 0;
-
-    height: 600px;
-
-    min-height: 400px;
     
+    min-height: 400px;
 }
 
 .leccion-2{
@@ -125,11 +113,9 @@
 
 .leccion-code{
     border: 3px solid tomato;
-
     padding: 0;
     height: 50%;
 }
-
 /* 
     padding: 0px;
     height: 50%;
@@ -141,14 +127,13 @@
 .leccion-tips{
   border: 3px solid tomato;
   padding: 0; 
- 
   align-content: center;
   
 }
 
 .align-buttons{
   align-self: center;
-  
+    
 }
 
 /* FIN css leccion */

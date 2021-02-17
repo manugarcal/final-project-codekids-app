@@ -11,7 +11,7 @@ const Dashboard = () => {
             <div className="container">
                 <div className="row">
                     <div className="b1 col-md-4">
-                        Usuario
+                        <h3>Usuario</h3>
                         <Cardcomponent
                             title="Nivel:"
                             subtitle="Nombre:"
@@ -25,22 +25,22 @@ const Dashboard = () => {
                         <h2>Logros</h2>
                         
                         <div className="logros card d-flex justify-content-between">
-                            <div className="row d-flex justify-content-between">
-                                <div className="col-12">
+                            <div className="row d-flex d-flex justify-content-around">
+                                <div className="col-12 d-flex justify-content-around">
                                     <img src="assets/logros/1.png" className="img-fluid w-25 " />
                                     <img src="assets/logros/2.png" className="img-fluid w-25" />
                                     <img src="assets/logros/3.png" className="img-fluid w-25" />
                                 </div>
                             </div>
-                            <div className="row d-flex justify-content-between">
-                                <div className="col-12">
+                            <div className="row d-flex justify-content-around">
+                                <div className="col-12 d-flex justify-content-around">
                                     <img src="assets/logros/4.png" className="img-fluid w-25" />
                                     <img src="assets/logros/5.png" className="img-fluid w-25" />
                                     <img src="assets/logros/6.png" className="img-fluid w-25" />
                                 </div>
                             </div>
-                            <div className="row d-flex justify-content-between">
-                                <div className="col-12">
+                            <div className="row d-flex justify-content-around">
+                                <div className="col-12 d-flex justify-content-around">
                                     <img src="assets/logros/7.png" className="img-fluid w-25" />
                                     <img src="assets/logros/8.png" className="img-fluid w-25" />
                                     <img src="assets/logros/9.png" className="img-fluid w-25" />
@@ -52,6 +52,7 @@ const Dashboard = () => {
 
                     <div className="b3 col-md-4">
                         Mapa
+                        
                     <div className="mapa card" >
 
 

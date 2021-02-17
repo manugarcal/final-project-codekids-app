@@ -1,5 +1,5 @@
 import React from 'react';
-import '../index.css'
+import '../style.css'
 
 import Navbar2 from '../Components/Navbar-login';
 import Cardcomponent from '../Components/Card';
@@ -100,7 +100,11 @@ const Leccion = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="row mx-0">
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    {/* <div className="row mx-0">
 
                         <div className="col-md-2 align-buttons">
                         </div>
@@ -108,10 +112,8 @@ const Leccion = () => {
 
 
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        
+      
         </>
     );
 }

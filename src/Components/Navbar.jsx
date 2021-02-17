@@ -33,12 +33,12 @@ const Navbar = () => {
 
                             <nav className="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                                 <ul className="site-menu main-menu js-clone-nav mr-auto ">
-                                    <li className="active"><Link  to="/" className="nav-link">Inicio</Link></li>
-                                    <li><Link to="GettingStarted" className="nav-link">Comenzar Ahora</Link></li>
-                                    <li><Link to="/About" className="nav-link">Acerca de Nosotros</Link></li>
-                                    <li><Link to="/Foro" className="nav-link">Foros</Link></li>
-                                    <li><Link to="/Faq" className="nav-link">FAQ</Link></li>
-                                    <li><Link to="/Contact" className="nav-link">Contactanos</Link></li>
+                                    <li className="active"><a  href="/" className="nav-link">Inicio</a></li>
+                                    <li><a href="GettingStarted" className="nav-link">Comenzar Ahora</a></li>
+                                    <li><a href="/About" className="nav-link">Acerca de Nosotros</a></li>
+                                    <li><a href="/Foro" className="nav-link">Foros</a></li>
+                                    <li><a href="/Faq" className="nav-link">FAQ</a></li>
+                                    <li><a href="/Contact" className="nav-link">Contactanos</a></li>
                                     
     
                                 </ul>

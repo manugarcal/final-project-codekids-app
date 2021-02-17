@@ -15,19 +15,13 @@ const Dashboard = () => {
 
                     </div>
 
-                    <div className="b2 col-md-4">Logros<Cardcomponent
-                            text="ajskdlaljsdjlkasjdlkaslkjdlaskdjlasjkldasljdjkasldljkasjldkasljkdjalksdjasldkasoidaudoiuaoidusaoiduasioduaoisdalcnasljncikjdhaiohdaoiudsaljlkalkajsdlkajdklajdlkauopidualjcam,nfklajhjdklajdklasjljaksdlkasjdklaslkjdasjkldjklasjdaslkdjasjkldjasdjasjlkdjalsdljaslkdasjdlaskjlasdjaslkncm,ankjahds" />
-
-                   
-                    <div className="logros card" >  </div>
+                    <div className="b2 col-md-4">Logros
+                    <div className="logros card">  </div>
                     </div>
 
 
                     <div className="b3 col-md-4">
-                        Mapa<Cardcomponent
-                            text="ajskdlaljsdjlkasjdlkaslkjdlaskdjlasjkldasljdjkasldljkasjldkasljkdjalksdjasldkasoidaudoiuaoidusaoiduasioduaoisdalcnasljncikjdhaiohdaoiudsaljlkalkajsdlkajdklajdlkauopidualjcam,nfklajhjdklajdklasjljaksdlkasjdklaslkjdasjkldjklasjdaslkdjasjkldjasdjasjlkdjalsdljaslkdasjdlaskjlasdjaslkncm,ankjahds" />
-
-                   
+                       
                             <div className="mapa card" >
 
 

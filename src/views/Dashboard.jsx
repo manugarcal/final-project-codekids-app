@@ -1,4 +1,5 @@
-import "../index.css"
+import Cardcomponent from "../Components/Card"
+import "../style.css"
 
 const Dashboard = () => {
     return (
@@ -9,7 +10,9 @@ const Dashboard = () => {
                 <div className="row">
                     <div className="b1 col-md-4">
                         Usuario
-                        <div className="usuario card" >
+                        <Cardcomponent 
+                        text="ajskdlaljsdjlkasjdlkaslkjdlaskdjlasjkldasljdjkasldljkasjldkasljkdjalksdjasldkasoidaudoiuaoidusaoiduasioduaoisdalcnasljncikjdhaiohdaoiudsaljlkalkajsdlkajdklajdlkauopidualjcam,nfklajhjdklajdklasjljaksdlkasjdklaslkjdasjkldjklasjdaslkdjasjkldjasdjasjlkdjalsdljaslkdasjdlaskjlasdjaslkncm,ankjahds"/>
+                        {/* div className="usuario card" >
                             <img src="https://via.placeholder.com/150" className="card-img-top rounded-circle" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title"> Nivel</h5>
@@ -20,7 +23,7 @@ const Dashboard = () => {
                                 <a href="/#" className="card-link">Card link</a>
                                 <button href="/#" className="btn-primary">Actualizar Datos</button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="b2 col-md-4">

@@ -4,7 +4,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-const Cardcomponent = ({image ="https://via.placeholder.com/200x200", title="se espera titulo", subtitle="ingresar subtitulo", text= "ingresar texto", textButton="borrar o no"}) => {
+const CardNoButton = ({image ="https://via.placeholder.com/200x200", title="se espera titulo", subtitle="ingresar subtitulo", text= "ingresar texto", }) => {
   return (
     <div>
       <Card>
@@ -12,8 +12,7 @@ const Cardcomponent = ({image ="https://via.placeholder.com/200x200", title="se 
         <CardBody>
           <CardTitle tag="h5">{title}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{subtitle}</CardSubtitle>
-          <CardText>{text}</CardText>
-          <Button>{textButton}</Button>
+          <CardText>{text}</CardText>          
         </CardBody>
       </Card>
     </div>
@@ -22,4 +21,4 @@ const Cardcomponent = ({image ="https://via.placeholder.com/200x200", title="se 
 };
 
 
-export default Cardcomponent;
+export default CardNoButton;

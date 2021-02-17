@@ -1,12 +1,12 @@
 
 
 /* Dashboards*/
-.row{
+/* .row{
     border: 3px solid tomato;
     height: 550px;
     width: 100%;
 }
-
+ */
 .b1{
     border: 3px solid tomato;  
     min-height: 540px;  
@@ -132,13 +132,13 @@
     height: 50%;
 }
 
-
+/* 
     padding: 0px;
     height: 50%;
     display: grid;
     align-content: center;
     min-height: 300px;
-}
+} */
 
 .leccion-tips{
   border: 3px solid tomato;

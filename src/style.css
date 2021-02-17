@@ -5,20 +5,22 @@
     width: 100%;
 }
  */
- .b1{
+.b1{
     border: 3px solid tomato;  
     min-height: 540px;  
     max-height: 540px;
-    }
+}
 
 .usuario{
     width: 100%;
     height: 92%;
 }
+
 .card-img-top{
     width: 250px;
     height: 250px;
 }
+
 .b2{border: 3px solid tomato;
     max-height: 540px;
     min-height: 540px;

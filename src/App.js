@@ -24,7 +24,8 @@ import Login from "./Components/login";
 
 import Foro from "./views/Foro";
 import Faq from "./views/Faq";
-import Home from "./views/Home";
+import Home from "./views/home";
+
 
 
 

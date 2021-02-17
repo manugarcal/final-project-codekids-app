@@ -8,10 +8,10 @@ const Dashboard = () => {
 
         <>
             <h1> Dashboard</h1>
-            <div className="container">
+            <div className="div-padre-dash container">
                 <div className="row">
                     <div className="b1 col-md-4">
-                        <h3>Usuario</h3>
+                        <h2>Usuario</h2>
                         <Cardcomponent
                             title="Nivel:"
                             subtitle="Nombre:"
@@ -25,12 +25,12 @@ const Dashboard = () => {
                     <div className="b2 col-md-4  ">
                         <h2>Logros</h2>
                         
-                        <div className="logros card d-flex justify-content-between">
+                        <div className="logros card d-flex justify-content-between" style={{backgroundColor: "rgb(88, 21, 107)"}}>
                             <div className="row d-flex d-flex justify-content-around">
                                 <div className="col-12 d-flex justify-content-around">
                                     <img src="assets/logros/1.png" className="img-fluid w-25 " />
                                     <img src="assets/logros/2.png" className="img-fluid w-25" />
-                                    <img src="assets/logros/3.png" className="img-fluid w-25" />
+                                    <img src="assets/logros/3.png" className="img-fluid w-25"/>
                                 </div>
                             </div>
                             <div className="row d-flex justify-content-around">
@@ -54,7 +54,7 @@ const Dashboard = () => {
                     <div className="b3 col-md-4">
                         
                         <h2>Mapa</h2>
-                    <div className="mapa card" >
+                    <div className="mapa card" style={{backgroundColor: "rgb(88, 21, 107)"}} >
                         <h5>Seleccione Planeta</h5>
                         
                     <img src="assets/space-map-01.png" className="img-fluid w-100 mb-3" />

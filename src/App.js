@@ -8,24 +8,23 @@ import {
 } from "react-router-dom";
 import Contact from "./views/Contact";
 import Navbar from "./Components/Navbar";
-import Home from "./views/home";
+
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
 
-import Login from "./components/Login";
 
 import Dashboard from "./views/Dashboard"
 
 
 
-/* import Code from "./components/editorCode";
-import Home from "./views/home"; */
 import Leccion from "./views/leccion";
 import Footer from "./Components/Footer";
 import Login from "./Components/login";
 
-import Faq from "./views/Faq";
+
 import Foro from "./views/Foro";
+import Faq from "./views/Faq";
+import Home from "./views/Home";
 
 
 

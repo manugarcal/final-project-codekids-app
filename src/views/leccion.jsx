@@ -100,6 +100,8 @@ const Leccion = () => {
                             </div>
                         </div>
                     </div>
+                    </div>
+                    </div>
                     {/* <div className="row mx-0">
 
                         <div className="col-md-2 align-buttons">

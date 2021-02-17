@@ -4,7 +4,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-const Cardcomponent = ({image, title, subtitle, text, textButton}) => {
+const Cardcomponent = ({image ="https://via.placeholder.com/200x200", title="se espera titulo", subtitle="ingresar subtitulo", text= "ingresar texto", textButton="borrar o no"}) => {
   return (
     <div>
       <Card>

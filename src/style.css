@@ -1,10 +1,21 @@
 /* Dashboards*/
-
+ /* .row{
+    border: 3px solid tomato;
+    height: 550px;
+    width: 100%;
+} */
+.div-padre-dash{
+    background-color:rgb(22, 195, 176);
+}
+ 
  .b1{
-    border: 3px solid tomato;  
+     
     min-height: 540px;  
     
     }
+.b1 h2{
+    color: white;
+}    
 
 /* .usuario{
     width: 100%;
@@ -14,19 +25,21 @@
     width: 250px;
     height: 250px;
 } */
-.b2{border: 3px solid tomato;
+.b2{
     min-height: 540px;
 }
+.b2 h2{
+color: white;
+} 
 
 .logros{
+    
     width: 100%;
     height: 90%;
 }    
-.logros2{
-    width: 100%;
-    height: 90%;}
-.logro1{
-    height:100%;
+.planeta1{
+    width: 10px ;
+    height:  10px ;
 }
 
 
@@ -40,13 +53,17 @@
 
 
 
-.b3{border: 3px solid tomato;
+.b3{
     min-height: 540px;
+}
+.b3 h2,h5{
+    color: white;
 }
 
 .mapa{
+    background-color:red;
     width: 100%;
-    height: 92%;
+    height: 90%;
 }
 
 /* Dashboard*/
@@ -54,17 +71,20 @@
 
 /*DashboardProfe*/
 
-.b4{border: 3px solid tomato;    
+.columna-profe{
+    background-color: rgb(22, 195, 176);
+    border: 3px solid tomato;    
     min-height: 540px;    
 }
 
-.profe{
+.profe-card{
     width: 100%;
     height: 94%;
     
 }
 
-.b5{
+.columna-table{
+    background-color: rgb(22, 195, 176);
     border: 3px solid tomato;    
     min-height: 540px;
    
@@ -92,15 +112,22 @@
 
 .leccion{
     border: 3px solid tomato;
+
     padding: 0;
-    padding: 0;  
+    
+
+    padding: 0;    
+
 }
 
 .leccion-instrucciones{
     border: 3px solid tomato;
     padding: 0;
-    
+
+    height: 600px;
+
     min-height: 400px;
+    
 }
 
 .leccion-2{
@@ -111,9 +138,11 @@
 
 .leccion-code{
     border: 3px solid tomato;
+
     padding: 0;
     height: 50%;
 }
+
 /* 
     padding: 0px;
     height: 50%;
@@ -125,13 +154,14 @@
 .leccion-tips{
   border: 3px solid tomato;
   padding: 0; 
+ 
   align-content: center;
   
 }
 
 .align-buttons{
   align-self: center;
-    
+  
 }
 
 /* FIN css leccion */

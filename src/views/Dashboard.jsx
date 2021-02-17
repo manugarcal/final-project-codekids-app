@@ -17,6 +17,7 @@ const Dashboard = () => {
                             subtitle="Nombre:"
                             textButton="Actualizar Datos"
                             text=""
+                            
 
                         />
                     </div>
@@ -51,10 +52,16 @@ const Dashboard = () => {
 
 
                     <div className="b3 col-md-4">
-                        Mapa
                         
+                        <h2>Mapa</h2>
                     <div className="mapa card" >
-
+                        <h5>Seleccione Planeta</h5>
+                        
+                    <img src="assets/space-map-01.png" className="img-fluid w-100 mb-3" />
+                    <h2>Misión</h2>
+                    <h5>Seleccione Misión</h5>
+                    <img src="assets/level-map.png" className="img-fluid w-100" />
+                        
 
                         </div>
                     </div>

@@ -7,9 +7,10 @@ const Table1 = (props) => {
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>E-mail</th>
+          <th>Nivel</th>
         </tr>
       </thead>
       <tbody>
@@ -18,19 +19,24 @@ const Table1 = (props) => {
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
+          <td>2</td>
         </tr>
         <tr>
           <th scope="row">2</th>
           <td>Jacob</td>
           <td>Thornton</td>
           <td>@fat</td>
+          <td>3</td>
         </tr>
         <tr>
           <th scope="row">3</th>
           <td>Larry</td>
           <td>the Bird</td>
           <td>@twitter</td>
+          <td>1</td>
         </tr>
+        
+        
       </tbody>
     </Table>
   );

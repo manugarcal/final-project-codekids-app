@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Leccion from './views/leccion';
 
 const Test = () => {
+
+  
     return (
         <Leccion />
       );

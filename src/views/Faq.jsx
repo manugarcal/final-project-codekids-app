@@ -1,6 +1,6 @@
 import React from "react";
-import { UncontrolledCollapse, Button, CardBody, Card } from "reactstrap";
-import CollapseFaq from "../components/CollapseFaq";
+import CollapseFaq from "../Components/CollapseFaq";
+
 
 const Faq = () => {
   return (

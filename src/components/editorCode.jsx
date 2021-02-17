@@ -29,7 +29,6 @@ const Code = () => {
         </div>
     </div>
         </>
-
       );
 }
  

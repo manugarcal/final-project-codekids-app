@@ -7,20 +7,38 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import Contact from "./views/Contact";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Home from "./views/home";
+import Navbar from "./Components/Navbar";
+
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
-import Login from "./components/Login";
-import Faq from "./views/Faq";
+
+
+import Dashboard from "./views/Dashboard"
+
+
+
+import Leccion from "./views/leccion";
+import Footer from "./Components/Footer";
+import Login from "./Components/login";
+
+
 import Foro from "./views/Foro";
+import Faq from "./views/Faq";
+import Home from "./views/home";
+
+
 
 
 function App() {
   return (
+
+
+    
+
     <BrowserRouter>        
+
       <Navbar />
+        <Route exact path="/Dashboard" component={Dashboard} />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />
@@ -32,6 +50,8 @@ function App() {
       </Switch>      
       <Footer />
     </BrowserRouter>
+    
+
     
   );
 }

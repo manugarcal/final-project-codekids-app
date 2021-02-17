@@ -30,7 +30,7 @@ function App() {
   return (
 
 
-    <BrowserRouter>
+    
 
     <BrowserRouter>        
 
@@ -49,9 +49,7 @@ function App() {
     </BrowserRouter>
     
 
-    <>
-    <Leccion />
-    </>
+  
 
   );
 }

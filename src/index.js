@@ -18,9 +18,10 @@ import Test from './test';
 ReactDOM.render(
   <React.StrictMode>
 
-    /*<Test1 /> */
+   {/*  <Test1 /> 
 
-    <Test />
+    <Test /> */}
+    <App/>
 
   </React.StrictMode>,
   document.getElementById('root')

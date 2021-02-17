@@ -1,10 +1,71 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
+
+const NavbarIndex = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar color="light" light expand="md" >
+        <NavbarBrand href="/">CodeKids.</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="/">Inicio</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="GettingStarted">Comenzar ahora</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/About">Acerca de Nosotros</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/Foro">Foros</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/Faq">FaQ</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/Contact">Contactanos</NavLink>
+            </NavItem>            
+          </Nav>          
+            <NavItem className="d-flex float-right">
+              <NavLink href="/Contact">Login</NavLink>
+            </NavItem>
+            <NavItem className="d-flex float-right">
+              <NavLink href="/Contact">Register</NavLink>
+            </NavItem>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+}
+
+export default NavbarIndex;
 
 
-const Navbar = () => {
+
+/* const Navbar = () => {
     return (
         <>
+
+        
         <header className="site-navbar site-navbar-target" role="banner">
 
                     <div className="container mb-3">
@@ -58,4 +119,4 @@ const Navbar = () => {
                 </>
     )
 }
-export default Navbar;
+export default Navbar; */

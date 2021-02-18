@@ -24,9 +24,9 @@ const Faq = () => {
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
-                  <span className="text-cursive h5 text-red">
+                 {/*  <span className="text-cursive h5 text-red">
                     Bienvenidos a nuestro sitio
-                  </span>
+                  </span> */}
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Preguntas frecuentes
                   </h1>

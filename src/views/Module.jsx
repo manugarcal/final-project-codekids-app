@@ -40,7 +40,6 @@ const Module = () => {
             backgroundSize: "100% 100%",
             width:"100%",
             height:"auto"
-
             }}>
             <div className="row my-5">
               <img

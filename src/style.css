@@ -105,19 +105,19 @@ color: white;
 /* css leccion */
 
 .media-playlist{
-  border: 3px solid tomato;
+ 
   display: grid;
   justify-content: right;
 }
 
 .leccion{
-    border: 3px solid tomato;
+    
     padding: 0;
   
 }
 
 .leccion-instrucciones{
-    border: 3px solid tomato;
+   
     padding: 0;
     
     min-height: 400px;
@@ -125,13 +125,13 @@ color: white;
 }
 
 .leccion-2{
-  border: 3px solid tomato;
+  
     padding: 0;    
 
 }
 
 .leccion-code{
-    border: 3px solid tomato;
+    
     padding: 0;
     height: 50%;
 }
@@ -145,7 +145,7 @@ color: white;
 } */
 
 .leccion-tips{
-  border: 3px solid tomato;
+ 
   padding: 0; 
   align-content: center;
   

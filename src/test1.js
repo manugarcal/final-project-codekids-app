@@ -1,10 +1,10 @@
-import Dashboard from "./views/Dashboard";
-import DashboardProfe from "./views/dashboardprofe";
+import GettingStarted from "./views/GettingStarted"
+
 
 const Test1 =()=>{
     return(
-       <Dashboard/>
-        /* <DashboardProfe/>  */
-    )
+        <GettingStarted/> 
+        
+            )
 }
 export default Test1

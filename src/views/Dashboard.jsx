@@ -18,7 +18,6 @@ const Dashboard = () => {
                             textButton="Actualizar Datos"
                             text=""
                             
-
                         />
                     </div>
 
@@ -49,8 +48,6 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-
-
                     <div className="b3 col-md-4">
                         
                         <h2>Mapa</h2>

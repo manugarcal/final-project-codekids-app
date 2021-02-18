@@ -28,7 +28,7 @@ const Leccion = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="leccion-instrucciones col-md-4">
+                    <div className="col-md-4 leccion-instrucciones">
                         
                         <Cardcomponent
                             image="https://via.placeholder.com/400x200"

@@ -5,47 +5,19 @@ import { useForm } from 'react-hook-form';
 
 const GettingStarted = () => {  /**/
 
-	const [inputData, setInputData] = useState([]
-		/* fullname:"",
-		username:"",
-		phone:"",
-		email:"",
-		password:"",
-		passwordrepeat:"",
-		street:"",
-		city:"",
-		state:"",
-		zip:""	 */
-
-	)
-
-
-	/* const handleInputChange = (event) =>{
+	const [inputData, setInputData] = useState([])
 	
-	   setInputData({
-		   ...inputData,
-		   [event.target.name] : event.target.value
-			 
-	   })
-   }  */
 	const enviarDatos = (event) => {
-		event.preventDefault();
-		/* console.log(inputData.fullname ) */
-
-
-
+	
 	}
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
 
 	const onSubmit = (data, e) => {
-		/* console.log(data) */
-		setInputData({
+		event.preventDefault();
+		setInputData([
 			...inputData,
 			data
-			/* [event.target.name] : event.target.value */
-			
-
-		})
+		])
 		e.target.reset();
 	}
 	return (

@@ -3,7 +3,7 @@ import { event } from 'jquery';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const GettingStarted = () => { /**/
+const GettingStarted = () => {  /**/
 
 	const [inputData, setInputData] = useState([]
 		/* fullname:"",

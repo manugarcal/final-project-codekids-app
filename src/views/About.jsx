@@ -18,7 +18,7 @@ const About = () => {
           <div
             className="site-section-cover overlay"
             data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('assets/kid01.jpg')` }}
+            style={{ backgroundImage: `url('assets/kid02.jpg')` }}
           >
             <div className="container">
               <div className="row align-items-center ">

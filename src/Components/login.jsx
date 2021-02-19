@@ -27,7 +27,7 @@ const Login = () => {
                                         <label for="exampleInputPassword1">Contraseña</label>
                                         <input type="password" className="form-control" id="exampleInputPassword1"/>
                                     </div>
-                                    <button type="submit" className="btn btn-theme">Login</button>
+                                    <button type="submit" className="btn bg-success">Login</button>
                                     <a href="#l" className="forgot-link float-right text-primary">Olvidaste la contraseña?</a>
                                 </form>
                             </div>
@@ -48,7 +48,7 @@ const Login = () => {
             </div>
             
 
-            <p className="text-muted text-center mt-3 mb-0">No tienes una cuenta? <a href="/GettingStarted" className="text-primary ml-1">registrate</a></p>
+            <p className="text-muted text-center mt-3 mb-0">No tienes una cuenta? <a href="/" className="text-primary ml-1">registrate</a></p>
 
             
 

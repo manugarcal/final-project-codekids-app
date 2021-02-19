@@ -5,47 +5,19 @@ import { useForm } from 'react-hook-form';
 
 const GettingStarted = () => {  /**/
 
-	const [inputData, setInputData] = useState([]
-		/* fullname:"",
-		username:"",
-		phone:"",
-		email:"",
-		password:"",
-		passwordrepeat:"",
-		street:"",
-		city:"",
-		state:"",
-		zip:""	 */
-
-	)
-
-
-	/* const handleInputChange = (event) =>{
+	const [inputData, setInputData] = useState([])
 	
-	   setInputData({
-		   ...inputData,
-		   [event.target.name] : event.target.value
-			 
-	   })
-   }  */
 	const enviarDatos = (event) => {
-		event.preventDefault();
-		/* console.log(inputData.fullname ) */
-
-
-
+	
 	}
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
 
 	const onSubmit = (data, e) => {
-		/* console.log(data) */
-		setInputData({
+		event.preventDefault();
+		setInputData([
 			...inputData,
 			data
-			/* [event.target.name] : event.target.value */
-			
-
-		})
+		])
 		e.target.reset();
 	}
 	return (
@@ -301,8 +273,8 @@ const GettingStarted = () => {  /**/
 											<div className="row gutters" >
 												<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<div className="text-right">
-														<button type="button" id="cancel" name="cancel?" className="btn btn-secondary">Cancelar</button>
-														<button type="sumbmit" id="submit" name="button" className="btn btn-primary"  >Enviar</button>
+														<button type="button" id="cancel" name="cancel?" className="btn btn-secondary mx-1">Cancelar</button>
+														<button type="sumbmit" id="submit" name="button" className="btn btn-primary mx-1">Enviar</button>
 													</div>
 												</div>
 											</div>

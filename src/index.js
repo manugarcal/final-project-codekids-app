@@ -14,7 +14,7 @@ import Test from './test';
 ReactDOM.render(
   <React.StrictMode>
 
-    <Test1 />
+    <App />
 
   </React.StrictMode>,
   document.getElementById('root')

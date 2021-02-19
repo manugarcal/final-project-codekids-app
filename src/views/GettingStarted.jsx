@@ -128,9 +128,9 @@ const GettingStarted = () => {
 		</div>
 		<div className="row gutters">
 			<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<div className="text-right">
-					<button type="button" id="submit" name="submit" className="btn btn-secondary">Cancelar</button>
-					<button type="button" id="submit" name="submit" className="btn btn-primary">Enviar</button>
+				<div className="text-right ">
+					<button type="button" id="submit" name="submit" className="btn btn-secondary mx-1">Cancelar</button>
+					<button type="button" id="submit" name="submit" className="btn btn-primary mx-1">Enviar</button>
 				</div>
 			</div>
 		</div>

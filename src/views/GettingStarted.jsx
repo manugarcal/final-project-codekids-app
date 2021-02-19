@@ -5,47 +5,17 @@ import { useForm } from 'react-hook-form';
 
 const GettingStarted = () => {  /**/
 
-	const [inputData, setInputData] = useState([]
-		/* fullname:"",
-		username:"",
-		phone:"",
-		email:"",
-		password:"",
-		passwordrepeat:"",
-		street:"",
-		city:"",
-		state:"",
-		zip:""	 */
+	const [inputData, setInputData] = useState([])
 
-	)
-
-
-	/* const handleInputChange = (event) =>{
-	
-	   setInputData({
-		   ...inputData,
-		   [event.target.name] : event.target.value
-			 
-	   })
-   }  */
-	const enviarDatos = (event) => {
-		event.preventDefault();
-		/* console.log(inputData.fullname ) */
-
-
-
-	}
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
 
 	const onSubmit = (data, e) => {
-		/* console.log(data) */
-		setInputData({
+		event.preventDefault();
+		setInputData([{
 			...inputData,
 			data
-			/* [event.target.name] : event.target.value */
 			
-
-		})
+		}])
 		e.target.reset();
 	}
 	return (
@@ -123,7 +93,7 @@ const GettingStarted = () => {  /**/
 																register(
 																	{
 																		required: { value: true, message: "Ingrese su Nombre Completo" },
-																		pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un nombre valido'}
+																		pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un Nombre válido'}
 																	}
 																)
 
@@ -141,8 +111,8 @@ const GettingStarted = () => {  /**/
 															register(
 																{
 																	required: { value: true, message: "Ingrese un Nombre de usuario" },
-																	pattern: { value: / ^[0-9]{12,16}$/, message: 'Ingrese un nombre de usuario válido'}
-																} /* [a-zA-Z0-9] */
+																    pattern: { value: / [a-zA-Z0-9]/, message: 'Ingrese un Nombre de usuario válido'} 
+																} 
 															)
 														} />
 														<span className="text-danger text-small d-block mb-2">
@@ -158,7 +128,8 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese un telefono válido" }
+																		required: { value: true, message: "Ingrese un teléfono " },
+																		pattern: { value: / [a-zA-Z]+/, message: 'Ingrese un teléfono válido'} 
 																	}
 																)
 															} />
@@ -175,7 +146,8 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese un e-mail valido" }
+																		required: { value: true, message: "Ingrese un e-mail válido" },
+																		
 																	}
 																)
 															} />
@@ -192,7 +164,9 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "debe elegir una password" }
+																		required: { value: true, message: "debe elegir una contraseña" },
+																		pattern: { value: / [a-zA-Z0-9]/, message: 'Ingrese una contraseña válida'},
+																		min: { value: 8, message: 'Su contraseña debe contener al menos 8 caracteres'} 
 																	}
 																)
 															} />
@@ -210,7 +184,9 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "repita su pasword" }
+																		required: { value: true, message: "repita su constraseña" },
+																		pattern: { value: / [a-zA-Z0-9]/, message: 'Ingrese una contraseña válida'}, 
+																		min: { value: 8, message: 'Su contraseña debe contener al menos 8 caracteres'} 
 																	}
 																)
 															} />
@@ -233,7 +209,8 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "ingrese nombre de su calle" }
+																		required: { value: true, message: "ingrese datos de la calle donde reside" },
+																		pattern: { value: /[a-zA-Z0-9]/, message: 'Ingrese una dirección válida ej: santa calle, n° 666'} 
 																	}
 																)
 															} />
@@ -251,7 +228,8 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese su ciudad" }
+																		required: { value: true, message: "Ingrese su ciudad" },
+																		pattern: { value: / [a-zA-Z]+/, message: "Ingrese una ciudad válida"} 
 																	}
 																)
 															} />
@@ -269,7 +247,8 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese su Estado/Región" }
+																		required: { value: true, message: "Ingrese su Estado/Región" },
+																		pattern: { value: / [a-zA-Z]+/, message: 'Ingrese un Estado/Región válido'} 
 																	}
 																)
 															} />
@@ -287,7 +266,8 @@ const GettingStarted = () => {  /**/
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese un codigo postal Valido" }
+																		required: { value: true, message: "Ingrese un codigo postal"},
+																		pattern: { value: / [0-9]+/, message: 'Ingrese un codigo postal válido'} 
 																	}
 																)
 															} />

@@ -117,18 +117,16 @@ const Home = () => {
                     <div className="testimonial-3 d-flex">
                       <div className="vcard-wrap mr-5">
                         <img
-                          src="images/person_1.jpg"
+                          src="assets/elon.jpg"
                           alt="Image"
                           className="vcard img-fluid"
                         />
                       </div>
                       <div className="text">
-                        <h3>Jeff Woodland</h3>
+                        <h3>Elon Musk</h3>
                         <p className="position">Partner</p>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Aliquam earum libero rem maxime magnam.
-                          Similique esse ab earum, autem consectetur.
+                          Gracias a CodeKids. mi hijo X AE A-XII Musk pudo mejorar notablemente su desarrollo logico y esta pronto a que lo pueda enviar al espacio.
                         </p>
                       </div>
                     </div>
@@ -136,18 +134,16 @@ const Home = () => {
                     <div className="testimonial-3 d-flex">
                       <div className="vcard-wrap mr-5">
                         <img
-                          src="images/person_3.jpg"
+                          src="assets/bill.jpg"
                           alt="Image"
                           className="vcard img-fluid"
                         />
                       </div>
                       <div className="text">
-                        <h3>Jeff Woodland</h3>
+                        <h3>Bill Gates</h3>
                         <p className="position">Partner</p>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Aliquam earum libero rem maxime magnam.
-                          Similique esse ab earum, autem consectetur.
+                          Considero que mi hijo a podido mejorar su desarrollo en cuanto a programación y prontamente estrenara su propio SO llamado Door XP
                         </p>
                       </div>
                     </div>
@@ -155,18 +151,16 @@ const Home = () => {
                     <div className="testimonial-3 d-flex">
                       <div className="vcard-wrap mr-5">
                         <img
-                          src="images/person_2.jpg"
+                          src="assets/jeff.jpg"
                           alt="Image"
                           className="vcard img-fluid"
                         />
                       </div>
                       <div className="text">
-                        <h3>Jeff Woodland</h3>
+                        <h3>Jeff Bezos</h3>
                         <p className="position">Partner</p>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Aliquam earum libero rem maxime magnam.
-                          Similique esse ab earum, autem consectetur.
+                          Me gusta mucho CodeKids. Asi que probablemente pronto lo compre y lo renombre AmazonKids.
                         </p>
                       </div>
                     </div>
@@ -178,26 +172,26 @@ const Home = () => {
               <div className="col-md-8">
                 <div className="row">
                   <div className="col-lg-3 text-center">
-                    <span className="text-teal h2 d-block">3423</span>
-                    <span>Happy Client</span>
+                    <span className="text-teal h2 d-block">201</span>
+                    <span>Clientes Felices</span>
                   </div>
                   <div className="col-lg-3 text-center">
-                    <span className="text-yellow h2 d-block">4398</span>
-                    <span>Members</span>
+                    <span className="text-yellow h2 d-block">3</span>
+                    <span>Miembros del equipo</span>
                   </div>
                   <div className="col-lg-3 text-center">
-                    <span className="text-success h2 d-block">50+</span>
-                    <span>Staffs</span>
+                    <span className="text-success h2 d-block">1000</span>
+                    <span>Primera meta de clientes</span>
                   </div>
                   <div className="col-lg-3 text-center">
-                    <span className="text-danger h2 d-block">2000+</span>
-                    <span>Our Followers</span>
+                    <span className="text-danger h2 d-block">1500+</span>
+                    <span>seguidores</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
 
         <div className="site-section py-5 bg-warning">
           <div className="container">
@@ -207,8 +201,8 @@ const Home = () => {
                   Diversion y aprendizaje para tus niños
                 </h2>
                 <a
-                  href="#"
-                  className="btn btn-primary btn-custom-1 py-3 px-5 ml-auto"
+                  href="/GettingStarted"
+                  className="btn btn-primary btn-custom-1  ml-auto"                  
                 >
                   Comenzemos
                 </a>

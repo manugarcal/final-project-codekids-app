@@ -17,7 +17,7 @@ const Contact = () => {
           <div
             className="site-section-cover overlay"
             data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('assets/index03.png')` }}
+            style={{ backgroundImage: `url('assets/kid03.jpg')` }}
           >
             <div className="container">
               <div className="row align-items-center ">

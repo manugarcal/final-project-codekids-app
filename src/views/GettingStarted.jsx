@@ -89,7 +89,7 @@ const GettingStarted = () => {
 					</div>
 				</div>
 
-
+				
 				{/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<DE AQUÍ HACIA ABAJO ESTÁ EL FORMULARIO>>>>>>>>>>>>*/}
 
 
@@ -122,8 +122,8 @@ const GettingStarted = () => {
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese su Nombre Completo" }
-																		/* pattern: /^[0-9]{12,16}$/ */
+																		required: { value: true, message: "Ingrese su Nombre Completo" },
+																		pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un nombre valido'}
 																	}
 																)
 
@@ -140,8 +140,9 @@ const GettingStarted = () => {
 														<input type="text" className="form-control" id="userName" name="username" placeholder="Ingrese Nombre de Usuraio" /* onChange={handleInputChange} */ ref={
 															register(
 																{
-																	required: { value: true, message: "Ingrese un Nombre de usuario valido" }
-																}
+																	required: { value: true, message: "Ingrese un Nombre de usuario" },
+																	pattern: { value: / ^[0-9]{12,16}$/, message: 'Ingrese un nombre de usuario válido'}
+																} /* [a-zA-Z0-9] */
 															)
 														} />
 														<span className="text-danger text-small d-block mb-2">

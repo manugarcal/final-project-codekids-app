@@ -10,13 +10,19 @@ const Leccion = () => {
     return (
         <>
             <Navbar2 />
-            <div className="container-fluid">
+            <div className="container-fluid"style={{
+            backgroundImage:"url(assets/space.jpg)",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: "100% 100%",
+            width:"100%",
+            height:"auto"
+            }}>
                 <div className="row">
                     <div className="col-md-12 leccion media-playlist pr-5 align-middle">
                         <div className="row">
                             <div className="col-md-12 leccion media-playlist pr-5 align-middle">
                                 <div className="row">
-                                    <p className="pr-4 my-auto">Media Playlist</p>
+                                    <p className="pr-4 my-4 text-white">Media Playlist</p>
                                     <div class="btn-group my-auto" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-success"><i class="fas fa-play-circle"></i></button>
                                         <button type="button" class="btn btn-success"><i class="fas fa-pause-circle"></i></button>
@@ -28,7 +34,7 @@ const Leccion = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="leccion-instrucciones col-md-4">
+                    <div className="col-md-4 leccion-instrucciones">
                         
                         <Cardcomponent
                             image="https://via.placeholder.com/400x200"
@@ -56,7 +62,7 @@ const Leccion = () => {
                                 <div className="leccion-tips col-md-12 mt-2 ">
 
                             <div className="row mx-0">
-                                <h4>Tips</h4>
+                                <h4 className="text-white my-4">Tips</h4>
                             </div>
                             <div className="row mx-0">
                                 <div className="col-md-12">

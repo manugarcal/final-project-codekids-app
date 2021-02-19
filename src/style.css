@@ -105,40 +105,33 @@ color: white;
 /* css leccion */
 
 .media-playlist{
-  border: 3px solid tomato;
+ 
   display: grid;
   justify-content: right;
 }
 
 .leccion{
-    border: 3px solid tomato;
-
-    padding: 0;
     
-
-    padding: 0;    
-
+    padding: 0;
+  
 }
 
 .leccion-instrucciones{
-    border: 3px solid tomato;
+   
     padding: 0;
-
-    height: 600px;
-
+    
     min-height: 400px;
     
 }
 
 .leccion-2{
-  border: 3px solid tomato;
+  
     padding: 0;    
 
 }
 
 .leccion-code{
-    border: 3px solid tomato;
-
+    
     padding: 0;
     height: 50%;
 }
@@ -152,16 +145,14 @@ color: white;
 } */
 
 .leccion-tips{
-  border: 3px solid tomato;
-  padding: 0; 
  
+  padding: 0; 
   align-content: center;
   
 }
 
 .align-buttons{
   align-self: center;
-  
 }
 
 /* FIN css leccion */
@@ -176,11 +167,10 @@ color: white;
 	padding: 0 !important;
 }
 .navbar {		
-	background: #fff;
+	
 	padding-left: 16px;
 	padding-right: 16px;
-	border-bottom: 1px solid #d6d6d6;
-	box-shadow: 0 0 4px rgba(0,0,0,.1);
+	
 }
 .nav-link img {
 	border-radius: 50%;

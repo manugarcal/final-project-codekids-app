@@ -24,9 +24,9 @@ const Faq = () => {
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
-                  <span className="text-cursive h5 text-red">
+                 {/*  <span className="text-cursive h5 text-red">
                     Bienvenidos a nuestro sitio
-                  </span>
+                  </span> */}
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Preguntas frecuentes
                   </h1>
@@ -44,9 +44,10 @@ const Faq = () => {
 
         <div className="site-section bg-teal">
           <div className="container">
-           <CollapseFaq title="test" text="lorem ipsum blah blah blah" />
-           <CollapseFaq title="test 2" text="otras prueba" />
-            
+           <CollapseFaq title="¿Como registrarme en CodeKids?" text="Para registrarse en CodeKids, vaya a la seccion Registrarme y rellene los campos del formulario de forma correcta, luego haga click en enviar y listo, es asi de facil" />
+           <CollapseFaq title="¿Es necesario que un adulto haga el registro o puede hacerlo cualquier persona?" text="Recomendamos que el registro de un nuevo usuario sea realizado por un adulto responsable" />
+           <CollapseFaq title="¿CodeKids tiene algun costo?" text="CodeKids esta en una version BETA y de momento no tiene ningun costo asociado a su uso, aprovecha y registrate ahora" />
+           <CollapseFaq title="Puedo hacer sugerencias para mejorar CodeKids" text="Porsupuesto! para ello hemos dispuesto la seccion de contacto, estamos abiertos a cualquier sugerencia que ayude a mejorar tu experiencia como usuario" />
             
   
           </div>

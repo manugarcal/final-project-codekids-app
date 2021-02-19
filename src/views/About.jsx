@@ -18,14 +18,14 @@ const About = () => {
           <div
             className="site-section-cover overlay"
             data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('assets/index02.png')` }}
+            style={{ backgroundImage: `url('assets/kid01.jpg')` }}
           >
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
-                  <span className="text-cursive h5 text-red">
+                 {/*  <span className="text-cursive h5 text-red">
                     Bienvenidos a nuestro sitio
-                  </span>
+                  </span> */}
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Quienes Somos
                   </h1>
@@ -51,6 +51,7 @@ const About = () => {
           buttonText="Sigue descubriendo aún más"
           img="assets/spaceman01.png"
           url="/about"
+          
         />
 
         <div className="site-section bg-teal">

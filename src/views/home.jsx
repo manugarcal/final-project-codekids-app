@@ -24,12 +24,16 @@ const Home = () => {
         </div>
 
         <div className="ftco-blocks-cover-1">
-          <div className="site-section-cover overlay">
+          <div
+            className="site-section-cover overlay"
+            data-stellar-background-ratio="0.5"
+            style={{ backgroundImage: `url('images/img_7.png')` }}
+          >
             <div className="container">
-              <div className="row align-items-center ">
+            <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
                   <span className="text-cursive h5 text-red">
-                   <h3 className="text-cursive text-red">Bienvenidos a nuestro sitio</h3> 
+                   <h3 className="text-cursive text-white">Bienvenidos a CodeKids</h3> 
                   </span>
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Diversion y aprendizaje para tus niños
@@ -41,17 +45,12 @@ const Home = () => {
                     </a>
                   </p>
                 </div>
-                <div className="col-md-6 ml-auto align-self-end">
-                  <img
-                    src="images/kid_transparent.png"
-                    alt="Image"
-                    className="img-fluid"
-                  />
-                </div>
               </div>
+
             </div>
           </div>
         </div>
+        
 
         <div className="site-section">
           <div className="container">

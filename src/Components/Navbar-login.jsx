@@ -22,30 +22,27 @@ const Navbar2 = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">CodeKids.</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/">Inicio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/Foro">Foro</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Usuario
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
+                  Dashboard
+                </DropdownItem>               
                 <DropdownItem divider />
                 <DropdownItem>
-                  Reset
+                  Salir
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

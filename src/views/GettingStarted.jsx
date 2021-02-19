@@ -3,9 +3,11 @@ import { event } from 'jquery';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+
 const GettingStarted = () => { 
 
 	const [inputData, setInputData] = useState([]);
+
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
 
 	const onSubmit = (data, e) => {
@@ -269,8 +271,8 @@ const GettingStarted = () => {
 											<div className="row gutters" >
 												<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<div className="text-right">
-														<button type="button" id="cancel" name="cancel?" className="btn btn-secondary">Cancelar</button>
-														<button type="sumbmit" id="submit" name="button" className="btn btn-primary"  >Enviar</button>
+														<button type="button" id="cancel" name="cancel?" className="btn btn-secondary mx-1">Cancelar</button>
+														<button type="sumbmit" id="submit" name="button" className="btn btn-primary mx-1">Enviar</button>
 													</div>
 												</div>
 											</div>

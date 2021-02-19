@@ -7,6 +7,7 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import Contact from "./views/Contact";
+import Navbar from "./Components/Navbar";
 
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
@@ -24,7 +25,6 @@ import Login from "./Components/login";
 import Foro from "./views/Foro";
 import Faq from "./views/Faq";
 import Home from "./views/home";
-import NavbarIndex from "./Components/Navbar";
 
 
 
@@ -37,7 +37,7 @@ function App() {
 
     <BrowserRouter>        
 
-      <NavbarIndex />
+      <Navbar />
         <Route exact path="/Dashboard" component={Dashboard} />
       <Switch>
         <Route exact path="/" component={Home} />

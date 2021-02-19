@@ -3,49 +3,18 @@ import { event } from 'jquery';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const GettingStarted = () => {  /**/
+const GettingStarted = () => { 
 
-	const [inputData, setInputData] = useState([]
-		/* fullname:"",
-		username:"",
-		phone:"",
-		email:"",
-		password:"",
-		passwordrepeat:"",
-		street:"",
-		city:"",
-		state:"",
-		zip:""	 */
+	const [inputData, setInputData] = useState([])
 
-	)
-
-
-	/* const handleInputChange = (event) =>{
-	
-	   setInputData({
-		   ...inputData,
-		   [event.target.name] : event.target.value
-			 
-	   })
-   }  */
-	const enviarDatos = (event) => {
-		event.preventDefault();
-		/* console.log(inputData.fullname ) */
-
-
-
-	}
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
 
 	const onSubmit = (data, e) => {
-		/* console.log(data) */
-		setInputData({
+		event.preventDefault();
+		setInputData([
 			...inputData,
 			data
-			/* [event.target.name] : event.target.value */
-			
-
-		})
+		])
 		e.target.reset();
 	}
 	return (
@@ -141,7 +110,7 @@ const GettingStarted = () => {  /**/
 															register(
 																{
 																	required: { value: true, message: "Ingrese un Nombre de usuario" },
-																	pattern: { value: / ^[0-9]{12,16}$/, message: 'Ingrese un nombre de usuario válido'}
+																	pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un nombre de usuario valido'}
 																} /* [a-zA-Z0-9] */
 															)
 														} />

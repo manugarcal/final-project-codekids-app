@@ -23,7 +23,7 @@ const GettingStarted = () => {
 		password.current = watch("password", "");
 		 
 		/* const onSubmit = async data => {
-		  alert(JSON.stringify(data));  */
+		  alert(JSON.stringify(data));  */ /**/
 		
 
 

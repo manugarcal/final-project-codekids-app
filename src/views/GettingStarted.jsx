@@ -1,6 +1,6 @@
 
 import { event } from 'jquery';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
 
@@ -9,9 +9,11 @@ const GettingStarted = () => {
 	const [inputData, setInputData] = useState([]);
 
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
+	
 
 	const onSubmit = (data, e) => {
 		event.preventDefault();
+		
 		setInputData([
 			...inputData,
 			data

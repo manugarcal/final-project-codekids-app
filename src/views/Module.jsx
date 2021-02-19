@@ -1,6 +1,7 @@
 import React from "react";
 import CardNoButton from "../Components/CardNoButton";
 import Navbar2 from "../Components/Navbar-login";
+import CollapseFaq from "../Components/CollapseFaq";
 
 
 const Module = () => {
@@ -48,6 +49,8 @@ const Module = () => {
                 className="img-fluid"
                 style={{borderRadius: "10%"}}
               />
+              {/* agregar nombres de los modulos y linkearlos */}
+              <CollapseFaq title="Selecciona tu planeta" text="Para registrarse en CodeKids, vaya a la seccion Registrarme y rellene los campos del formulario de forma correcta, luego haga click en enviar y listo, es asi de facil" />
             </div>
           </div>
         </div>

@@ -3,9 +3,11 @@ import { event } from 'jquery';
 import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
+
 const GettingStarted = () => { 
 
 	const [inputData, setInputData] = useState([]);
+
 	const { register, errors, handleSubmit, setError, clearError } = useForm();
 	
 

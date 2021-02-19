@@ -8,7 +8,7 @@ const CollapseFaq = ({title, text}) => {
   
     return (
       <div>
-        <Button color="success" onClick={toggle} style={{ marginBottom: '1rem', width: "100%" }}>{title}</Button>
+        <Button color="info" onClick={toggle} style={{ marginBottom: '1rem', width: "100%" }}>{title}</Button>
         <Collapse isOpen={isOpen}>
           <Card>
             <CardBody>

@@ -56,9 +56,9 @@ const GettingStarted = () => {
 									<h1 className="mb-3 font-weight-bold text-teal">
 										Registrarme
                   </h1>
-									<p>
-										<a href="/" className="text-white">
-											Inicio
+                  <p>
+                    <a href="/" className="text-white">
+                      Inicio
                     </a>{" "}
 										<span className="mx-3">/</span>{" "}
 										<strong>Comenzemos</strong>

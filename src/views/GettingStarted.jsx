@@ -10,14 +10,14 @@ const GettingStarted = () => {
 	const { register, errors, handleSubmit, setError, clearError, watch } = useForm();
 	
 
-	const onSubmit = (data, e) => {
+	const onSubmit = (data, event) => {
 		event.preventDefault();
 		
 		setInputData([
 			...inputData,
 			data
 		])
-		e.target.reset();
+		event.target.reset();
 	}
 		
 		const password = useRef({});
@@ -79,7 +79,7 @@ const GettingStarted = () => {
 							<div className="col-7 text-center mb-5">
 								<h2>Registrese mediante este formulario</h2>
 								<p>
-									rellene los campos necesarios para completar el registro, una vez que haya hecho esto dele click a enviar y listo!
+									rellene los campos necesarios para completar el registro, una vez que haya hecho esto haga click en enviar y listo!
                						</p>
 							</div>
 						</div>
@@ -95,10 +95,12 @@ const GettingStarted = () => {
 												</div>
 
 												{/* desde aquí están los inputs*/}
-												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												
+												
+												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
-														<label for="fullName">Nombre Completo</label>
-														<input type="text" className="form-control" id="fullName" name="fullname" placeholder="Ingrese Nombre Completo"
+														 <label for="fullName">Nombre Completo</label> 
+														 <input type="text" className="form-control" id="fullName" name="fullname" placeholder="Ingrese Nombre Completo"
 															ref={
 																register(
 																	{
@@ -110,10 +112,12 @@ const GettingStarted = () => {
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.fullname?.message}
-														</span>
+														</span> 
 
 													</div>
-												</div>
+												</div> */}
+
+
 												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="userName">Nombre de Usuario</label>
@@ -131,10 +135,13 @@ const GettingStarted = () => {
 
 													</div>
 												</div>
-												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+
+
+
+												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
-														<label for="phone">Telefono</label>
-														<input type="tel" className="form-control" id="phone" name="phone" placeholder="Ingrese numero de telefono" /* onChange={handleInputChange} */
+														 <label for="phone">Telefono</label> 
+														 <input type="tel" className="form-control" id="phone" name="phone" placeholder="Ingrese numero de telefono" 
 															ref={
 																register(
 																	{
@@ -146,10 +153,13 @@ const GettingStarted = () => {
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.phone?.message}
-														</span>
+														</span> 
 
 													</div>
-												</div>
+												</div> */}
+
+
+
 												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="eMail">Email</label>
@@ -214,15 +224,17 @@ const GettingStarted = () => {
 													</div>
 												</div>
 											</div>
-											<div className="row gutters">
+
+
+											{/* <div className="row gutters">
 												<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<h6 className="mt-3 mb-2 text-primary">Direccion</h6>
-												</div>
-												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div> */}
+												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="Street">Calle</label>
 
-														<input type="name" className="form-control" id="street" name="street" placeholder="Ingrese calle" /* onChange={handleInputChange} */
+														 <input type="name" className="form-control" id="street" name="street" placeholder="Ingrese calle" 
 															ref={
 																register(
 																	{
@@ -233,15 +245,15 @@ const GettingStarted = () => {
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.street?.message}
-														</span>
+														</span> 
 
 													</div>
-												</div>
-												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div> */}
+												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="ciTy">Ciudad</label>
 
-														<input type="name" className="form-control" id="city" name="city" placeholder="Ingrese Ciudad" /* onChange={handleInputChange}  */
+														{/* <input type="name" className="form-control" id="city" name="city" placeholder="Ingrese Ciudad" 
 															ref={
 																register(
 																	{
@@ -252,15 +264,15 @@ const GettingStarted = () => {
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.city?.message}
-														</span>
+														</span> 
 
 													</div>
-												</div>
-												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+														</div> */}
+											{/* 	<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="sTate">Estado</label>
 
-														<input type="text" className="form-control" id="state" name="state" placeholder="Ingrese Estado" /* onChange={handleInputChange}  */
+														<input type="text" className="form-control" id="state" name="state" placeholder="Ingrese Estado" 
 															ref={
 																register(
 																	{
@@ -271,15 +283,15 @@ const GettingStarted = () => {
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.state?.message}
-														</span>
+														</span> 
 
 													</div>
-												</div>
-												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div> */}
+												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="zIp">Codigo Postal</label>
 
-														<input type="text" className="form-control" id="zip" name="zip" placeholder="Codigo Postal" /* onChange={handleInputChange}  */
+												 <input type="text" className="form-control" id="zip" name="zip" placeholder="Codigo Postal" 
 															ref={
 																register(
 																	{
@@ -290,15 +302,17 @@ const GettingStarted = () => {
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.zip?.message}
-														</span>
+														</span> 
 
 													</div>
 												</div>
-											</div>
+											</div> */}
+
+
 											<div className="row gutters" >
 												<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<div className="text-right">
-														<button type="button" id="cancel" name="cancel?" className="btn btn-secondary mx-1">Cancelar</button>
+														
 														<button type="sumbmit" id="submit" name="button" className="btn btn-primary mx-1">Enviar</button>
 													</div>
 												</div>

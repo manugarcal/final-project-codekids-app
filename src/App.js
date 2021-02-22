@@ -18,6 +18,7 @@ import Foro from "./views/Foro";
 import Faq from "./views/Faq";
 import Home from "./views/home";
 import NavbarIndex from "./Components/Navbar";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Faq" component={Faq} />
         <Route exact path="/Foro" component={Foro} />
+        <Route component={NotFound} />
       </Switch>      
       <Footer />
     </BrowserRouter>

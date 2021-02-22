@@ -1,6 +1,22 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import ContactInfo from "../Components/ContactInfo"
 
 const Contact = () => {
+
+  const [inputData, setInputData] = useState([]);
+  
+  const { register, errors, handleSubmit, setError, clearError} = useForm();
+
+  const onSubmit = (data, event) => {
+		event.preventDefault();		
+		setInputData([
+			...inputData,
+			data
+		])
+		event.target.reset();
+	}
+
   return (
     <>
       <div className="site-wrap" id="home-section">
@@ -46,61 +62,115 @@ const Contact = () => {
                 </p>
               </div>
             </div>
+
             <div className="row">
               <div className="col-lg-8 mb-5">
-                <form action="#" method="post">
+                <form action="#" method="post" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-group row">
                     <div className="col-md-6 mb-4 mb-lg-0">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Nombre"
-                      />
+                      
+                      <input type="text" className="form-control" placeholder="Nombre" name = "nombre" 
+                      ref={
+                        register(
+                          {
+                            required: { value: true, message: "Ingrese su Nombre" },
+                            pattern: { value: /[a-zA-Z]+/, message: 'Ingrese su nombre correctamente' }
+                          }
+                        )
+
+                      } />
+                      <span className="text-danger text-small d-block mb-2">
+															{errors?.nombre?.message}
+														</span>
+
                     </div>
                     <div className="col-md-6">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Apellido"
-                      />
+                      
+                      <input type="text" className="form-control" placeholder="Apellido" name= "apellido"
+                      
+                      ref={
+                        register(
+                          {
+                            required: { value: true, message: "Ingrese su Apellido" },
+                            pattern: { value: /[a-zA-Z]+/, message: 'Ingrese su apellido correctamente correctamente' }
+                          }
+                        )
+
+                      }
+                        />
+                        <span className="text-danger text-small d-block mb-2">
+															{errors?.apellido?.message}
+														</span>
+
                     </div>
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
+                      
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Email"
-                      />
+                        name="email"
+                        ref={
+                          register(
+                            {
+                              required: { value: true, message: "Ingrese su e-mail" },
+                              pattern: { value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'Ingrese su email en el formato email@compañía.com' }
+                              
+                            }
+                          )
+                          }/>
+                          <span className="text-danger text-small d-block mb-2">
+															{errors?.email?.message}
+														</span>
                     </div>
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
-                      <textarea
-                        name=""
+                     
+                      <textarea                       
                         id=""
                         className="form-control"
                         placeholder="Escribe tu mensaje."
                         cols="30"
                         rows="10"
+                        name="mensaje"
+                        ref={
+                          register(
+                            {
+                              required: { value: true, message: "Escriba su mensaje" },
+                              pattern: { value: /[a-zA-Z0-9]/}
+                            }
+                          )
+  
+                        }
+                          
                       ></textarea>
+                      <span className="text-danger text-small d-block mb-2">
+															{errors?.mensaje?.message}
+														</span>
+
                     </div>
                   </div>
                   <div className="form-group row">
                     <div className="col-md-6 mr-auto">
+                      
                       <input
                         type="submit"
                         className="btn btn-block btn-primary text-white py-3 px-5"
                         value="Enviar Mensaje"
-                      />
+                       />
                     </div>
                   </div>
                 </form>
               </div>
               <ContactInfo />
             </div>
+
+
           </div>
         </div>
       </div>

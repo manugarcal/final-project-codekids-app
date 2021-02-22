@@ -1,4 +1,13 @@
+import React, {Fragment} from 'react';
+import {useForm} from 'react-hook-form';
+
 const Login = () => {
+    const {register, errors, handleSubmit} = useForm();
+
+    const onSubmit = (data, e) => {
+        console.log(data)
+        e.target.reset()
+    }
     return ( 
     
 <div className="site-section bg-teal">
@@ -18,14 +27,16 @@ const Login = () => {
                                 <h6 className="h5 mb-0">Bienvenido de Nuevo!</h6>
                                 <p className="text-muted mt-2 mb-5">ingresa tu email y contraseña para acceder.</p>
 
-                                <form>
+                                <form onSubmit={handleSubmit(onSubmit)}>
                                     <div className="form-group">
                                         <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" className="form-control" id="exampleInputEmail1"/>
+                                        <input name="email" ref={register({required: {value: true, message: 'Ingrese su email'}})} type="email" className="form-control" id="exampleInputEmail1"/>
+                                        <span className="text-danger text-small d-block mb-2">{errors?.email?.message}</span>
                                     </div>
                                     <div className="form-group mb-5">
                                         <label for="exampleInputPassword1">Contraseña</label>
-                                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                                        <input name="password" ref={register({required: {value: true, message: 'Ingrese una contraseña corecta'}})} type="password" className="form-control" id="exampleInputPassword1"/>
+                                        <span className="text-danger text-small d-block mb-2">{errors?.password?.message}</span>
                                     </div>
                                     <button type="submit" className="btn bg-success">Login</button>
                                     <a href="#l" className="forgot-link float-right text-primary">Olvidaste la contraseña?</a>

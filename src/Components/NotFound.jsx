@@ -10,7 +10,7 @@ const NotFound = () => {
           </div>
           <div className="col-md-6  text-center">
             <p className="text-light">
-              Algo malio sal...
+			&#x1F921;...Algo malió sal...&#x1F921;
             </p>
             <a
               href="/"

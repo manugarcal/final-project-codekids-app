@@ -1,4 +1,3 @@
-import { event } from "jquery";
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 
@@ -15,8 +14,8 @@ const GettingStarted = () => {
   } = useForm();
 
   const onSubmit = (data, e) => {
-    event.preventDefault();
-
+    console.log(data);
+    e.preventDefault();
     setInputData([...inputData, data]);
     e.target.reset();
   };
@@ -113,57 +112,7 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="userName">Nombre de Usuario</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="userName"
-                              name="username"
-                              placeholder="Ingrese Nombre de Usuraio"
-                              /* onChange={handleInputChange} */ ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese un Nombre de usuario",
-                                },
-                                pattern: {
-                                  value: /[a-zA-Z0-9]/,
-                                  message:
-                                    "Ingrese un Nombre de usuario válido",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.username?.message}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="phone">Telefono</label>
-                            <input
-                              type="tel"
-                              className="form-control"
-                              id="phone"
-                              name="phone"
-                              placeholder="Ingrese numero de telefono" /* onChange={handleInputChange} */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese un teléfono ",
-                                },
-                                pattern: {
-                                  value: /[0-9]{8}/,
-                                  message: "Ingrese al menos 8 digitos",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.phone?.message}
-                            </span>
-                          </div>
-                        </div>
+
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="eMail">Email</label>
@@ -249,129 +198,22 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
-                      </div>
-                      <div className="row gutters">
-                        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                          <h6 className="mt-3 mb-2 text-primary">Direccion</h6>
-                        </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
-                            <label for="Street">Calle</label>
-
+                            <label htmlFor="file">Inserta una foto</label>
                             <input
-                              type="name"
+                              type="file"
+                              name="file"
+                              id="file"
                               className="form-control"
-                              id="street"
-                              name="street"
-                              placeholder="Ingrese calle" /* onChange={handleInputChange} */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message:
-                                    "Ingrese datos de la calle donde reside",
-                                },
-                                pattern: {
-                                  value: /[a-zA-Z0-9]/,
-                                  message:
-                                    "Ingrese una dirección válida ej: santa calle, n° 666",
-                                },
-                              })}
                             />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.street?.message}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="ciTy">Ciudad</label>
-
-                            <input
-                              type="name"
-                              className="form-control"
-                              id="city"
-                              name="city"
-                              placeholder="Ingrese Ciudad" /* onChange={handleInputChange}  */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese su ciudad",
-                                },
-                                pattern: {
-                                  value: /[a-zA-Z0-9]/,
-                                  message: "Ingrese una ciudad válida",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.city?.message}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="sTate">Estado</label>
-
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="state"
-                              name="state"
-                              placeholder="Ingrese Estado" /* onChange={handleInputChange}  */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese su Estado/Región",
-                                },
-                                pattern: {
-                                  value: /[a-zA-Z0-9]/,
-                                  message: "Ingrese un Estado/Región válido",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.state?.message}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="zIp">Codigo Postal</label>
-
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="zip"
-                              name="zip"
-                              placeholder="Codigo Postal" /* onChange={handleInputChange}  */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese un codigo postal",
-                                },
-                                pattern: {
-                                  value: /[0-9]+/,
-                                  message: "Ingrese un codigo postal válido",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.zip?.message}
-                            </span>
                           </div>
                         </div>
                       </div>
+
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
-                            <button
-                              type="button"
-                              id="cancel"
-                              name="cancel?"
-                              className="btn btn-secondary mx-1"
-                            >
-                              Cancelar
-                            </button>
                             <button
                               type="sumbmit"
                               id="submit"

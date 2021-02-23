@@ -1,7 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useRef } from "react";
+import { Context } from "../Store/appContext";
 
 const Footer = () => {
+  const { actions } = useContext(Context);
+
+  let emailref = useRef(null);
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -14,13 +18,25 @@ const Footer = () => {
             </p>
 
             <h2 className="footer-heading mb-4">Boletin informativo</h2>
-            <form action="#" className="d-flex" className="subscribe">
+            <form className="d-flex" className="subscribe">
               <input
-                type="text"
+                ref={(r) => (emailref = r)}
+                id="emailNewsletter"
+                name="email"
+                type="email"
                 className="form-control mr-3"
                 placeholder="Email"
               />
-              <input type="submit" value="Enviar" className="btn btn-primary mt-2" />
+              <button
+                onClick={() => {
+                  actions.newsletterPost(emailref.value);
+                  emailref.value = "";
+                }}
+                type="submit"
+                className="btn btn-primary mt-2"
+              >
+                Enviar
+              </button>
             </form>
           </div>
           <div className="col-lg-8 ml-auto">

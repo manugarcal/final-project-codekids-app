@@ -98,7 +98,6 @@ const GettingStarted = () => {
 																		pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un nombre valido'}
 																	}
 																)
-
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.fullname?.message}

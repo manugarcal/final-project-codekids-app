@@ -51,36 +51,46 @@ const Contact = () => {
                 <form action="#" method="post">
                   <div className="form-group row">
                     <div className="col-md-6 mb-4 mb-lg-0">
+                      <label htmlFor="nombre">Nombre</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Nombre"
+                        placeholder="ingresa tu nombre"
+                        name="nombre"
+                        id="nombre"
                       />
                     </div>
                     <div className="col-md-6">
+                      <label htmlFor="apellido">Apellido</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Apellido"
+                        placeholder="ingresa tu apellido"
+                        name="apellido"
+                        id="apellido"
                       />
                     </div>
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
+                      <label htmlFor="email">Email</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="ingresa tu email"
+                        name="email"
+                        id="email"
                       />
                     </div>
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
+                      <label htmlFor="message">Mensaje</label>
                       <textarea
-                        name=""
-                        id=""
+                        name="message"
+                        id="message"
                         className="form-control"
                         placeholder="Escribe tu mensaje."
                         cols="30"

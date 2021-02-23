@@ -1,4 +1,4 @@
-import ContactInfo from "../Components/ContactInfo"
+import ContactInfo from "../Components/ContactInfo";
 
 const Contact = () => {
   return (
@@ -23,7 +23,9 @@ const Contact = () => {
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
                   <span className="text-cursive h5 text-red">Cantactanos</span>
-                  <h1 className="mb-3 font-weight-bold text-teal">Ponerse en contacto</h1>
+                  <h1 className="mb-3 font-weight-bold text-teal">
+                    Ponerse en contacto
+                  </h1>
                   <p>
                     <a href="/" className="text-white">
                       Inicio
@@ -42,7 +44,9 @@ const Contact = () => {
               <div className="col-7 text-center mb-5">
                 <h2>Pongase en contacto con nosotros usando este formulario</h2>
                 <p>
-                  Rellene los campos requeridos para ponerse en contacto con nostros y luego dele click en enviar, en poco tiempo nos pondremos en contacto con usted!
+                  Rellene los campos requeridos para ponerse en contacto con
+                  nostros y luego dele click en enviar, en poco tiempo nos
+                  pondremos en contacto con usted!
                 </p>
               </div>
             </div>

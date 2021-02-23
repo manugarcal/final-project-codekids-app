@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 
@@ -15,7 +14,7 @@ const GettingStarted = () => {
   } = useForm();
 
   const onSubmit = (data, e) => {
-	console.log(data);
+    console.log(data);
     e.preventDefault();
     setInputData([...inputData, data]);
     e.target.reset();
@@ -113,8 +112,7 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
-                        
-                        
+
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="eMail">Email</label>
@@ -200,8 +198,19 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div className="form-group">
+                            <label htmlFor="file">Inserta una foto</label>
+                            <input
+                              type="file"
+                              name="file"
+                              id="file"
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      
+
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">

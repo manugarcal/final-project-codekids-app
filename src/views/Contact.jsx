@@ -70,8 +70,13 @@ const Contact = () => {
                 <form action="#" method="post" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-group row">
                     <div className="col-md-6 mb-4 mb-lg-0">
-                      
-                      <input type="text" className="form-control" placeholder="Nombre" name = "nombre" 
+                    <label htmlFor="nombre">Nombre</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="ingresa tu nombre"
+                        name="nombre"
+                        id="nombre"
                       ref={
                         register(
                           {
@@ -87,8 +92,13 @@ const Contact = () => {
 
                     </div>
                     <div className="col-md-6">
-                      
-                      <input type="text" className="form-control" placeholder="Apellido" name= "apellido"
+                    <label htmlFor="apellido">Apellido</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="ingresa tu apellido"
+                        name="apellido"
+                        id="apellido"
                       
                       ref={
                         register(
@@ -109,12 +119,13 @@ const Contact = () => {
 
                   <div className="form-group row">
                     <div className="col-md-12">
-                      
+                    <label htmlFor="email">Email</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="ingresa tu email"
                         name="email"
+                        id="email"
                         ref={
                           register(
                             {
@@ -132,14 +143,14 @@ const Contact = () => {
 
                   <div className="form-group row">
                     <div className="col-md-12">
-                     
-                      <textarea                       
-                        id=""
+                    <label htmlFor="message">Mensaje</label>
+                      <textarea
+                        name="message"
+                        id="message"
                         className="form-control"
                         placeholder="Escribe tu mensaje."
                         cols="30"
                         rows="10"
-                        name="mensaje"
                         ref={
                           register(
                             {

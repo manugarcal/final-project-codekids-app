@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { event } from 'jquery';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import ContactInfo from "../Components/ContactInfo"
 
@@ -6,7 +7,7 @@ const Contact = () => {
 
   const [inputData, setInputData] = useState([]);
   
-  const { register, errors, handleSubmit, setError, clearError} = useForm();
+  const { register, errors, handleSubmit, setError, clearError, watch} = useForm();
 
   const onSubmit = (data, event) => {
 		event.preventDefault();		
@@ -16,6 +17,8 @@ const Contact = () => {
 		])
 		event.target.reset();
 	}
+
+
 
   return (
     <>
@@ -33,8 +36,7 @@ const Contact = () => {
           <div
             className="site-section-cover overlay"
             data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('assets/kid03.jpg')` }}
-          >
+            style={{ backgroundImage: `url('assets/kid03.jpg')` }} >
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">

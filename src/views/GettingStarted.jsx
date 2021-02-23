@@ -7,27 +7,18 @@ const GettingStarted = () => {
 
 	const [inputData, setInputData] = useState([]);
 
-	const { register, errors, handleSubmit, setError, clearError, watch } = useForm();
+	const { register, errors, handleSubmit, setError, clearError } = useForm();
 	
 
-	const onSubmit = (data, event) => {
+	const onSubmit = (data, e) => {
 		event.preventDefault();
 		
 		setInputData([
 			...inputData,
 			data
 		])
-		event.target.reset();
+		e.target.reset();
 	}
-		
-		const password = useRef({});
-		password.current = watch("password", "");
-		 
-		/* const onSubmit = async data => {
-		  alert(JSON.stringify(data));  */ /**/
-		
-
-
 	return (
 		<>
 
@@ -56,9 +47,9 @@ const GettingStarted = () => {
 									<h1 className="mb-3 font-weight-bold text-teal">
 										Registrarme
                   </h1>
-                  <p>
-                    <a href="/" className="text-white">
-                      Inicio
+									<p>
+										<a href="/" className="text-white">
+											Inicio
                     </a>{" "}
 										<span className="mx-3">/</span>{" "}
 										<strong>Comenzemos</strong>
@@ -69,7 +60,7 @@ const GettingStarted = () => {
 					</div>
 				</div>
 
-
+				
 				{/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<DE AQUÍ HACIA ABAJO ESTÁ EL FORMULARIO>>>>>>>>>>>>*/}
 
 
@@ -79,7 +70,7 @@ const GettingStarted = () => {
 							<div className="col-7 text-center mb-5">
 								<h2>Registrese mediante este formulario</h2>
 								<p>
-									rellene los campos necesarios para completar el registro, una vez que haya hecho esto haga click en enviar y listo!
+									rellene los campos necesarios para completar el registro, una vez que haya hecho esto dele click a enviar y listo!
                						</p>
 							</div>
 						</div>
@@ -95,29 +86,25 @@ const GettingStarted = () => {
 												</div>
 
 												{/* desde aquí están los inputs*/}
-												
-												
-												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
-														 <label for="fullName">Nombre Completo</label> 
-														 <input type="text" className="form-control" id="fullName" name="fullname" placeholder="Ingrese Nombre Completo"
+														<label for="fullName">Nombre Completo</label>
+														<input type="text" className="form-control" id="fullName" name="fullname" placeholder="Ingrese Nombre Completo"
 															ref={
 																register(
 																	{
 																		required: { value: true, message: "Ingrese su Nombre Completo" },
-																		pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un Nombre válido' }
+																		pattern: { value: /[a-zA-Z]+/, message: 'Ingrese un nombre valido'}
 																	}
 																)
 
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.fullname?.message}
-														</span> 
+														</span>
 
 													</div>
-												</div> */}
-
-
+												</div>
 												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="userName">Nombre de Usuario</label>
@@ -125,8 +112,8 @@ const GettingStarted = () => {
 															register(
 																{
 																	required: { value: true, message: "Ingrese un Nombre de usuario" },
-																	pattern: { value: /[a-zA-Z0-9]/, message: 'Ingrese un Nombre de usuario válido' }
-																}
+																	pattern: { value: / ^[0-9]{12,16}$/, message: 'Ingrese un nombre de usuario válido'}
+																} /* [a-zA-Z0-9] */
 															)
 														} />
 														<span className="text-danger text-small d-block mb-2">
@@ -135,31 +122,23 @@ const GettingStarted = () => {
 
 													</div>
 												</div>
-
-
-
-												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
-														 <label for="phone">Telefono</label> 
-														 <input type="tel" className="form-control" id="phone" name="phone" placeholder="Ingrese numero de telefono" 
+														<label for="phone">Telefono</label>
+														<input type="tel" className="form-control" id="phone" name="phone" placeholder="Ingrese numero de telefono" /* onChange={handleInputChange} */
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese un teléfono " },
-																		pattern: { value: /[0-9]{8}/, message: 'Ingrese al menos 8 digitos' }
-
+																		required: { value: true, message: "Ingrese un telefono válido" }
 																	}
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.phone?.message}
-														</span> 
+														</span>
 
 													</div>
-												</div> */}
-
-
-
+												</div>
 												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="eMail">Email</label>
@@ -167,9 +146,7 @@ const GettingStarted = () => {
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese un e-mail válido" },
-																		pattern: { value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'El e-mail no es valido' }
-
+																		required: { value: true, message: "Ingrese un e-mail valido" }
 																	}
 																)
 															} />
@@ -186,35 +163,26 @@ const GettingStarted = () => {
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "debe elegir una contraseña" },
-																		pattern: { value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g, message: 'Ingrese una contraseña válida de entre 8 y 12 caracteres' },
-																			       
-
+																		required: { value: true, message: "debe elegir una password" }
 																	}
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.password?.message}
-															{errors.password_repeat && <p>{errors.password_repeat.message}</p>}
 														</span>
 
-														
 													</div>
 												</div>
 												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
-														<label for="passwordrepeat">Repetir Contraseña</label>
+														<label for="password">Repetir Contraseña</label>
 
-														<input type="password" className="form-control" id="passwordrepeat" name="passwordrepeat" placeholder="Repetir Contraseña" /* onChange={handleInputChange} */
+														<input type="password" className="form-control" id="passwordRepeat" name="passwordrepeat" placeholder="Repetir Contraseña" /* onChange={handleInputChange} */
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "repita su constraseña" },
-																		pattern: { value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g, message: 'Ingrese una contraseña válida' },
-																		validate: value => value === password.current || "Las contraseñas no coinciden"
-
+																		required: { value: true, message: "repita su pasword" }
 																	}
-
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
@@ -224,95 +192,87 @@ const GettingStarted = () => {
 													</div>
 												</div>
 											</div>
-
-
-											{/* <div className="row gutters">
+											<div className="row gutters">
 												<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<h6 className="mt-3 mb-2 text-primary">Direccion</h6>
-												</div> */}
-												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div>
+												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="Street">Calle</label>
 
-														 <input type="name" className="form-control" id="street" name="street" placeholder="Ingrese calle" 
+														<input type="name" className="form-control" id="street" name="street" placeholder="Ingrese calle" /* onChange={handleInputChange} */
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese datos de la calle donde reside" },
-																		pattern: { value: /[a-zA-Z0-9]/, message: 'Ingrese una dirección válida ej: santa calle, n° 666' }
+																		required: { value: true, message: "ingrese nombre de su calle" }
 																	}
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.street?.message}
-														</span> 
+														</span>
 
 													</div>
-												</div> */}
-												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div>
+												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="ciTy">Ciudad</label>
 
-														{/* <input type="name" className="form-control" id="city" name="city" placeholder="Ingrese Ciudad" 
+														<input type="name" className="form-control" id="city" name="city" placeholder="Ingrese Ciudad" /* onChange={handleInputChange}  */
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese su ciudad" },
-																		pattern: { value: /[a-zA-Z0-9]/, message: 'Ingrese una ciudad válida' }
+																		required: { value: true, message: "Ingrese su ciudad" }
 																	}
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.city?.message}
-														</span> 
+														</span>
 
 													</div>
-														</div> */}
-											{/* 	<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div>
+												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="sTate">Estado</label>
 
-														<input type="text" className="form-control" id="state" name="state" placeholder="Ingrese Estado" 
+														<input type="text" className="form-control" id="state" name="state" placeholder="Ingrese Estado" /* onChange={handleInputChange}  */
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese su Estado/Región" },
-																		pattern: { value: /[a-zA-Z0-9]/, message: 'Ingrese un Estado/Región válido' }
+																		required: { value: true, message: "Ingrese su Estado/Región" }
 																	}
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.state?.message}
-														</span> 
+														</span>
 
 													</div>
-												</div> */}
-												{/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												</div>
+												<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div className="form-group">
 														<label for="zIp">Codigo Postal</label>
 
-												 <input type="text" className="form-control" id="zip" name="zip" placeholder="Codigo Postal" 
+														<input type="text" className="form-control" id="zip" name="zip" placeholder="Codigo Postal" /* onChange={handleInputChange}  */
 															ref={
 																register(
 																	{
-																		required: { value: true, message: "Ingrese un codigo postal" },
-																		pattern: { value: /[0-9]+/, message: 'Ingrese un codigo postal válido' }
+																		required: { value: true, message: "Ingrese un codigo postal Valido" }
 																	}
 																)
 															} />
 														<span className="text-danger text-small d-block mb-2">
 															{errors?.zip?.message}
-														</span> 
+														</span>
 
 													</div>
 												</div>
-											</div> */}
-
-
+											</div>
 											<div className="row gutters" >
 												<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<div className="text-right">
-														
+														<button type="button" id="cancel" name="cancel?" className="btn btn-secondary mx-1">Cancelar</button>
 														<button type="sumbmit" id="submit" name="button" className="btn btn-primary mx-1">Enviar</button>
 													</div>
 												</div>

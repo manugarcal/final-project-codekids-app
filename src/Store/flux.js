@@ -25,6 +25,32 @@ const getState = ({ getStore, getActions, setStore }) => {
             });
         },
         
+        saveUser: (data) =>{
+            console.log("store", data)
+            /* let data = {
+                email: email,
+                username: username,
+                password: password,
+            } */
+            fetch("http://localhost:5000/api/register", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Success:", data);
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+
+        },
+
+
+        
     },
   };
 };

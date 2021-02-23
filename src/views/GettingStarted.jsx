@@ -1,4 +1,4 @@
-import { event } from "jquery";
+
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 
@@ -15,8 +15,8 @@ const GettingStarted = () => {
   } = useForm();
 
   const onSubmit = (data, e) => {
-    event.preventDefault();
-
+	console.log(data);
+    e.preventDefault();
     setInputData([...inputData, data]);
     e.target.reset();
   };
@@ -113,29 +113,30 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
+                        
+                        
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
-                            <label for="userName">Nombre de Usuario</label>
+                            <label for="eMail">Email</label>
                             <input
-                              type="text"
+                              type="email"
                               className="form-control"
-                              id="userName"
-                              name="username"
-                              placeholder="Ingrese Nombre de Usuraio"
-                              /* onChange={handleInputChange} */ ref={register({
+                              id="eMail"
+                              name="email"
+                              placeholder="Ingrese un e-mail valido" /* onChange={handleInputChange} */
+                              ref={register({
                                 required: {
                                   value: true,
-                                  message: "Ingrese un Nombre de usuario",
+                                  message: "Ingrese un e-mail válido",
                                 },
                                 pattern: {
-                                  value: /[a-zA-Z0-9]/,
-                                  message:
-                                    "Ingrese un Nombre de usuario válido",
+                                  value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                                  message: "El e-mail no es valido",
                                 },
                               })}
                             />
                             <span className="text-danger text-small d-block mb-2">
-                              {errors?.username?.message}
+                              {errors?.email?.message}
                             </span>
                           </div>
                         </div>
@@ -200,7 +201,7 @@ const GettingStarted = () => {
                           </div>
                         </div>
                       </div>
-					  
+                      
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">

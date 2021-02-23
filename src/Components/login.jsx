@@ -29,13 +29,13 @@ const Login = () => {
 
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <div className="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
-                                        <input name="email" ref={register({required: {value: true, message: 'Ingrese su email'}})} type="email" className="form-control" id="exampleInputEmail1"/>
+                                        <label htmlFor="email">Email</label>
+                                        <input placeholder="ingresa tu email" name="email" ref={register({required: {value: true, message: 'Ingrese su email'}})} type="email" className="form-control" id="exampleInputEmail1"/>
                                         <span className="text-danger text-small d-block mb-2">{errors?.email?.message}</span>
                                     </div>
                                     <div className="form-group mb-5">
-                                        <label for="exampleInputPassword1">Contraseña</label>
-                                        <input name="password" ref={register({required: {value: true, message: 'Ingrese una contraseña corecta'}})} type="password" className="form-control" id="exampleInputPassword1"/>
+                                        <label htmlFor="password">Contraseña</label>
+                                        <input placeholder="ingresa tu contraseña" name="password" ref={register({required: {value: true, message: 'Ingrese una contraseña corecta'}})} type="password" className="form-control" id="exampleInputPassword1"/>
                                         <span className="text-danger text-small d-block mb-2">{errors?.password?.message}</span>
                                     </div>
                                     <button type="submit" className="btn bg-success">Login</button>

@@ -412,4 +412,6 @@ color: white;
         margin-bottom: 1rem;
     }
 
-   
+.modal-header {
+    margin: auto;
+}

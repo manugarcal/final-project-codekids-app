@@ -1,9 +1,11 @@
 import CardPresetation from "../Components/CardPresetation";
 import MediaText from "../Components/MediaText";
+import NavbarIndex from "../Components/Navbar";
 
 const About = () => {
   return (
     <>
+    <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">

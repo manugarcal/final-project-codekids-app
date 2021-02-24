@@ -1,4 +1,5 @@
 import Cardcomponent from "../Components/Card"
+import Navbar2 from "../Components/Navbar-login";
 import "../style.css"
 
 
@@ -7,6 +8,7 @@ const Dashboard = () => {
     return (
 
         <>
+        <Navbar2 />
             <h1> Dashboard</h1>
             <div className="div-padre-dash container">
                 <div className="row">

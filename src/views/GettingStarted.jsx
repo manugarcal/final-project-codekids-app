@@ -1,32 +1,36 @@
 import React, { useState, useRef, useContext } from "react";
 import { useForm } from "react-hook-form";
-import {Context} from '../Store/appContext';
+import NavbarIndex from "../Components/Navbar";
+import { Context } from "../Store/appContext";
 
 const GettingStarted = () => {
+  const { store, actions } = useContext(Context);
   const [inputData, setInputData] = useState([]);
 
-  const {actions} = useContext(Context);
-  let nameRef = useRef(null)
-  let emailRef = useRef(null)
-  let passwordRef = useRef(null)
-  let imageRef = useRef(null)
- 
-
-  const {   register,   errors,    handleSubmit,    setError,    clearError,    watch,  } = useForm();
+  const {
+    register,
+    errors,
+    handleSubmit,
+    setError,
+    clearError,
+    watch,
+  } = useForm();
 
   const onSubmit = (data, e) => {
     console.log(data);
     e.preventDefault();
-	actions.saveUser(data) //se agregó esto // y luego lo de abajo ya no sirve
-    setInputData([...inputData, data]);  
+    setInputData([...inputData, data]);
     e.target.reset();
   };
 
   const password = useRef({});
   password.current = watch("password", "");
 
+
+
   return (
     <>
+	<NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -69,10 +73,11 @@ const GettingStarted = () => {
             <div className="row justify-content-center text-center">
               <div className="col-7 text-center mb-5">
                 <h2>Registrese mediante este formulario</h2>
-                <p>
+                <h5 className="text-muted">
                   rellene los campos necesarios para completar el registro, una
-                  vez que haya hecho esto dele click a enviar y listo!
-                </p>
+                  vez los datos esten correctos favor de hacer click al botón
+                  enviar y listo!
+                </h5>
               </div>
             </div>
 
@@ -89,17 +94,16 @@ const GettingStarted = () => {
                         </div>
 
                         {/* desde aquí están los inputs*/}
-                       {/*  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        {/*  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
-                            <label for="username">Nombre Completo</label>
+                            <label for="fullName">Nombre Completo</label>
                             <input
-							  	
                               type="text"
                               className="form-control"
-                              id="username"
-                              name="username"
+                              id="fullName"
+                              name="fullname"
                               placeholder="Ingrese Nombre Completo"
-                              ref={ register({
+                              ref={register({
                                 required: {
                                   value: true,
                                   message: "Ingrese su Nombre Completo",
@@ -111,11 +115,11 @@ const GettingStarted = () => {
                               })}
                             />
                             <span className="text-danger text-small d-block mb-2">
-                              {errors?.username?.message}
+                              {errors?.fullname?.message}
                             </span>
                           </div>
-                        </div>
- */}
+                        </div> */}
+
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="eMail">Email</label>
@@ -125,7 +129,7 @@ const GettingStarted = () => {
                               id="eMail"
                               name="username"
                               placeholder="Ingrese un e-mail valido" /* onChange={handleInputChange} */
-                              ref={ register({
+                              ref={register({
                                 required: {
                                   value: true,
                                   message: "Ingrese un e-mail válido",
@@ -134,13 +138,26 @@ const GettingStarted = () => {
                                   value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                                   message: "El e-mail no es valido",
                                 },
-                              }) }
+                              })}
                             />
                             <span className="text-danger text-small d-block mb-2">
-                              {errors?.username?.message}
+                              {errors?.email?.message}
                             </span>
                           </div>
                         </div>
+
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div className="form-group">
+                            <label htmlFor="file">Inserta una foto</label>
+                            <input
+                              type="file"
+                              name="file"
+                              id="file"
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="password">Contraseña</label>
@@ -150,7 +167,7 @@ const GettingStarted = () => {
                               id="password"
                               name="password"
                               placeholder="Ingrese Contraseña" /* onChange={handleInputChange} */
-                              ref={ register({
+                              ref={register({
                                 required: {
                                   value: true,
                                   message: "debe elegir una contraseña",
@@ -182,7 +199,7 @@ const GettingStarted = () => {
                               id="passwordrepeat"
                               name="passwordrepeat"
                               placeholder="Repetir Contraseña" /* onChange={handleInputChange} */
-                               ref= {register({
+                              ref={register({
                                 required: {
                                   value: true,
                                   message: "repita su constraseña",
@@ -194,23 +211,11 @@ const GettingStarted = () => {
                                 validate: (value) =>
                                   value === password.current ||
                                   "Las contraseñas no coinciden",
-                              }) } 
+                              })}
                             />
                             <span className="text-danger text-small d-block mb-2">
                               {errors?.passwordrepeat?.message}
                             </span>
-                          </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label htmlFor="file">Inserta una foto</label>
-                            <input
-                              type="file"
-                              name="file"
-                              id="file"
-                              className="form-control"
-							  ref={r=> (imageRef = r)}
-                            />
                           </div>
                         </div>
                       </div>
@@ -218,18 +223,11 @@ const GettingStarted = () => {
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
-                            <button
-							/* onClick={()=>{
-								actions.saveUser(nameRef.value, emailRef.value, passwordRef.value)	
-								nameRef.value = "";
-								emailRef.value = "";
-								passwordRef.value = "";						
-							}} */
+                            <button                              
                               type="sumbmit"
                               id="submit"
                               name="button"
                               className="btn btn-primary mx-1"
-
                             >
                               Enviar
                             </button>
@@ -240,6 +238,7 @@ const GettingStarted = () => {
                   </div>
                 </div>
               </form>
+              {/* fin del formulario */}
             </div>
           </div>
         </div>

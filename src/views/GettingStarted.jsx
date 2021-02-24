@@ -18,7 +18,7 @@ const GettingStarted = () => {
     console.log(data);
     e.preventDefault();
 	actions.saveUser(data) //se agregó esto // y luego lo de abajo ya no sirve
-   /*  setInputData([...inputData, data]); */ 
+    setInputData([...inputData, data]);  
     e.target.reset();
   };
 
@@ -89,7 +89,7 @@ const GettingStarted = () => {
                         </div>
 
                         {/* desde aquí están los inputs*/}
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                       {/*  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="username">Nombre Completo</label>
                             <input
@@ -115,7 +115,7 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
-
+ */}
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="eMail">Email</label>
@@ -123,7 +123,7 @@ const GettingStarted = () => {
                               type="email"
                               className="form-control"
                               id="eMail"
-                              name="email"
+                              name="username"
                               placeholder="Ingrese un e-mail valido" /* onChange={handleInputChange} */
                               ref={ register({
                                 required: {
@@ -137,7 +137,7 @@ const GettingStarted = () => {
                               }) }
                             />
                             <span className="text-danger text-small d-block mb-2">
-                              {errors?.email?.message}
+                              {errors?.username?.message}
                             </span>
                           </div>
                         </div>

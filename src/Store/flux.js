@@ -10,6 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       username: "",
       password: "",
       avatar: "",
+      email: ""
     },
     actions: {
       isLogged: () => {
@@ -24,25 +25,28 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      newsletterPost: (email) => {
-        let data = {
-          email: email,
-        };
+      handleSubmitNews: (e) => {
+        e.preventDefault();
+        const store = getStore();
+        const {email} = store;
+        const data = {
+            email: email
+        }
         fetch("http://localhost:5000/api/news", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        },
         })
-          .then((response) => response.json())
-          .then((data) => {
+        .then((response) => response.json())
+        .then((data) => {
             console.log("Success:", data);
-          })
-          .catch((error) => {
+        })
+        .catch((error) => {
             console.error("Error:", error);
-          });
-      },
+        });
+    },
       handleChange: (e) => {
         setStore({
           [e.target.name]: e.target.value,

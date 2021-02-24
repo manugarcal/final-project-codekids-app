@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { Context } from "../Store/appContext";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { store, actions } = useContext(Context);
+  const { register, errors, handleSubmit } = useForm();
   return (
     <footer className="site-footer">
       <div className="container">
@@ -14,15 +18,27 @@ const Footer = () => {
             </p>
 
             <h2 className="footer-heading mb-4">Boletin informativo</h2>
-            <form action="#" className="d-flex" className="subscribe">
+            <form
+              onSubmit={(e) => actions.handleSubmitNews(e)}
+              className="d-flex"
+              className="subscribe"
+            >
               <input
                 type="text"
                 className="form-control mr-3"
                 placeholder="Email"
+                name="email"
+                onChange={(e) => actions.handleChange(e)}
+                ref={register({
+                  required: {
+                    value: true,
+                    message: "Ingrese su email",
+                  },
+                })}
               />
               {/* <!-- Button trigger modal --> */}
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary btn-md mt-2"
                 data-toggle="modal"
                 data-target="#exampleModalCenter"
@@ -76,8 +92,11 @@ const Footer = () => {
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title text-danger " id="exampleModalLongTitle">
-              &#x1F973;Felicidades&#x1F973;
+              <h5
+                className="modal-title text-danger "
+                id="exampleModalLongTitle"
+              >
+                &#x1F973;Felicidades&#x1F973;
               </h5>
               <button
                 type="button"
@@ -88,7 +107,10 @@ const Footer = () => {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div className="modal-body text-center">Te enviaremos informacion sobre nuestros cursos, actualizaciones y muchas otras cosas para que sigas aprendiendo mucho más!</div>
+            <div className="modal-body text-center">
+              Te enviaremos informacion sobre nuestros cursos, actualizaciones y
+              muchas otras cosas para que sigas aprendiendo mucho más!
+            </div>
             <div className="modal-footer">
               <button
                 type="button"
@@ -97,7 +119,6 @@ const Footer = () => {
               >
                 Cerrar
               </button>
-              
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ const Footer = () => {
                     <h2 className="footer-heading mb-4">Boletin informativo</h2>
                     <form action="#" className="d-flex" className="subscribe">
                         <input type="text" className="form-control mr-3" placeholder="Email" />
-                        <input type="submit" value="Enviar" className="btn btn-primary" />
+                        <input type="submit" value="Enviar" className="btn btn-primary mt-3" />
                     </form>
                 </div>
                 <div className="col-lg-8 ml-auto">

@@ -9,8 +9,14 @@ const Dashboard = () => {
 
         <>
         <Navbar2 />
-            <h1> Dashboard</h1>
-            <div className="div-padre-dash container">
+        <div className="container-fluid"style={{
+            backgroundImage:"url(assets/space.jpg)",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: "100% 100%",
+            width:"100%",
+            height:"auto"
+            }}>
+            <div className="container">
                 <div className="row">
                     <div className="b1 col-md-4">
                         <h2>Usuario</h2>
@@ -66,7 +72,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-
+            </div>
 
         </>
 

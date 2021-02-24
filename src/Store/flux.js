@@ -9,12 +9,16 @@ const getState = ({ getStore, getActions, setStore }) => {
         errors: null,
         username: '',
         password: '',
-        avatar: ''
+        avatar: '',
+        email: ''
     },
     actions: 
     {
-        newsletterPost: (email) => {
-            let data = {
+        handleSubmitNews: (e) => {
+            e.preventDefault();
+            const store = getStore();
+            const {email} = store;
+            const data = {
                 email: email
             }
             fetch("http://localhost:5000/api/news", {

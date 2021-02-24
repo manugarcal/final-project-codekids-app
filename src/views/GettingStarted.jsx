@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import NavbarIndex from "../Components/Navbar";
 import { Context } from "../Store/appContext";
 
-const GettingStarted = () => {
+const GettingStarted = (props) => {
   const { store, actions } = useContext(Context);
   const [inputData, setInputData] = useState([]);
 
@@ -16,21 +16,19 @@ const GettingStarted = () => {
     watch,
   } = useForm();
 
-  const onSubmit = (data, e) => {
+  /* const onSubmit = (data, e) => {
     console.log(data);
     e.preventDefault();
     setInputData([...inputData, data]);
     e.target.reset();
-  };
+  }; */
 
   const password = useRef({});
   password.current = watch("password", "");
 
-
-
   return (
     <>
-	<NavbarIndex />
+      <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -53,6 +51,7 @@ const GettingStarted = () => {
                   <span className="text-cursive h5 text-red">Comenzemos</span>
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Registrarme
+
                   </h1>
                   <p>
                     <a href="/" className="text-white">
@@ -82,7 +81,30 @@ const GettingStarted = () => {
             </div>
 
             <div className="container">
-              <form className="row gutters" onSubmit={handleSubmit(onSubmit)}>
+              <form
+                className="row gutters"
+                onSubmit={(e) => actions.handleSubmitRegister(e, props.history)}
+              >
+                 {!!store.errors && (
+                              <div className="row">
+                                <div className="col-12">
+                                  <div
+                                    className="alert alert-danger alert-dismissible fade show"
+                                    role="alert"
+                                  >
+                                    <strong>Error: </strong>{store.errors.msg}
+                                    <button
+                                      type="button"
+                                      className="close"
+                                      data-dismiss="alert"
+                                      aria-label="Close"
+                                    >
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div className="card h-100">
                     <div className="card-body">
@@ -92,34 +114,6 @@ const GettingStarted = () => {
                             Detalles Personales
                           </h6>
                         </div>
-
-                        {/* desde aquí están los inputs*/}
-                        {/*  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="fullName">Nombre Completo</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="fullName"
-                              name="fullname"
-                              placeholder="Ingrese Nombre Completo"
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese su Nombre Completo",
-                                },
-                                pattern: {
-                                  value: /[a-zA-Z]+/,
-                                  message: "Ingrese un Nombre válido",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.fullname?.message}
-                            </span>
-                          </div>
-                        </div> */}
-
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="eMail">Email</label>
@@ -128,6 +122,7 @@ const GettingStarted = () => {
                               className="form-control"
                               id="eMail"
                               name="username"
+                              onChange={(e) => actions.handleChange(e)}
                               placeholder="Ingrese un e-mail valido" /* onChange={handleInputChange} */
                               ref={register({
                                 required: {
@@ -151,7 +146,8 @@ const GettingStarted = () => {
                             <label htmlFor="file">Inserta una foto</label>
                             <input
                               type="file"
-                              name="file"
+                              name="avatar"
+                              onChange={(e) => actions.handleChangeFile(e)}
                               id="file"
                               className="form-control"
                             />
@@ -166,7 +162,8 @@ const GettingStarted = () => {
                               className="form-control"
                               id="password"
                               name="password"
-                              placeholder="Ingrese Contraseña" /* onChange={handleInputChange} */
+                              onChange={(e) => actions.handleChange(e)}
+                              placeholder="Ingrese Contraseña"
                               ref={register({
                                 required: {
                                   value: true,
@@ -223,7 +220,7 @@ const GettingStarted = () => {
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
-                            <button                              
+                            <button
                               type="sumbmit"
                               id="submit"
                               name="button"

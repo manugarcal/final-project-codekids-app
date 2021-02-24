@@ -85,13 +85,13 @@ const NavbarIndex = (props) => {
 
                 <Nav>
                   <NavItem  >
-                    <NavLink className="icon-facebook text-teal d-flex float-right" href="#" ></NavLink>
+                    <NavLink className="icon-facebook text-teal d-flex float-right" href="https://web.facebook.com/Codekids-108202741318666" ></NavLink>
                   </NavItem>
                   <NavItem >
-                    <NavLink className="icon-twitter text-success d-flex float-right" href="#" ></NavLink>
+                    <NavLink className="icon-twitter text-success d-flex float-right" href="https://twitter.com/CodeKids4" ></NavLink>
                   </NavItem>
                   <NavItem >
-                    <NavLink className="icon-linkedin text-yellow d-flex float-right" href="#" ></NavLink>
+                    <NavLink className="icon-linkedin text-yellow d-flex float-right" href="https://www.linkedin.com/in/codekids-forkids-722598207/" ></NavLink>
                   </NavItem>
                   </Nav>
                 

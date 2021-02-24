@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useEffect } from "react";
 import CardsColor from "../Components/CardsColor";
 import MediaText from "../Components/MediaText";
 import NavbarIndex from "../Components/Navbar";
+import { Context } from "../Store/appContext";
 
-const Home = () => {
+const Home = (props) => {
+  const { store, actions } = useContext(Context);
+  
   useEffect(() => {
-    return () => {
-      <Home />;
-      console.log("recargado");
-    };
+    
+  
+
   }, []);
 
   return (

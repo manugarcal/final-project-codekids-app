@@ -1,10 +1,7 @@
 import Forum from "../Components/Forum"
-import NavbarIndex from "../Components/Navbar";
 
 const Foro = () => {
   return (
-    <>
-    <NavbarIndex />
     <div className="site-wrap" id="home-section">
       <div className="site-mobile-menu site-navbar-target">
         <div className="site-mobile-menu-header">
@@ -44,7 +41,6 @@ const Foro = () => {
         <Forum />
       </div>
     </div>
-    </>
   );
 };
 

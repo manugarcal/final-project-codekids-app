@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -11,12 +11,12 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
-} from 'reactstrap';
-import { Context } from '../Store/appContext';
+  NavbarText,
+} from "reactstrap";
+import { Context } from "../Store/appContext";
 
 const Navbar2 = (props) => {
-  const {store, actions} = useContext(Context);
+  const { store, actions } = useContext(Context);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,31 +34,41 @@ const Navbar2 = (props) => {
             </NavItem>
             <NavItem>
               <NavLink href="/Foro">Foro</NavLink>
-            </NavItem>           
+            </NavItem>
           </Nav>
           <NavbarText>
-          <UncontrolledDropdown >
+            <UncontrolledDropdown>
               <DropdownToggle nav caret>
-              {
-              !!store.currentUser && store.currentUser.user.username
-            }
+                {!!store.currentUser && store.currentUser.user.username}
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Dashboard
-                </DropdownItem>               
+                  <NavLink href="/Dashboard" className="text-black">
+                    Dashboard
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavLink href="/Leccion" className="text-black">
+                    Misiones
+                  </NavLink>
+                </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                <NavLink href="/" className="text-black" onClick={actions.logout}>Salir</NavLink>
+                  <NavLink
+                    href="/"
+                    className="text-black"
+                    onClick={actions.logout}
+                  >
+                    Salir
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            
           </NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};
 
 export default Navbar2;

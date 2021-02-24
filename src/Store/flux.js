@@ -10,7 +10,12 @@ const getState = ({ getStore, getActions, setStore }) => {
       username: "",
       password: "",
       avatar: "",
-      email: ""
+      email: "",
+      nombre_planeta: "",
+      instrucciones: "",
+      codigo: "",
+      soluciones: "",
+      
     },
     actions: {
       isLogged: () => {

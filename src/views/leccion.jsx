@@ -53,10 +53,12 @@ const Leccion = () => {
                     <div className="leccion-2 col-md-8">
                         <div className="row mx-0">
                             <div className="leccion-code col-md-12">
-                                <iframe height="265" style={{ width: "100%" }} scrolling="no" title="oNYZRRO" src="https://codepen.io/anpile/embed/oNYZRRO?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                {/* <iframe height="265" style={{ width: "100%" }} scrolling="no" title="oNYZRRO" src="https://codepen.io/anpile/embed/oNYZRRO?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                                     See the Pen <a href='https://codepen.io/anpile/pen/oNYZRRO'>oNYZRRO</a> by Andres Jesus Olivares Arredondo
                                     (<a href='https://codepen.io/anpile'>@anpile</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                </iframe>
+                                </iframe> */}
+                                {/* AQUI SOLICITAR AL BACK QUE DEVUELVA */}
+                               <img src="https://i.ibb.co/YjxMC8m/leccion01.jpg" alt="leccion01" border="0" style={{width:"100%"}}/>
                                     </div>
                                 </div>
                                 <div className="leccion-tips col-md-12 mt-2 ">
@@ -68,10 +70,19 @@ const Leccion = () => {
                                 <div className="col-md-12">
                                     <CollapseFaq
                                         title="Desbloquear solución"
-                                        text={[<iframe height="265" style={{ width: "100%" }} scrolling="no" title="Solucion meteor" src="https://codepen.io/anpile/embed/preview/qBqRbZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                        text= {
+                                            <>
+                                            <p className="text-center">Favor dar click en el siguiente enlace para revelar la solución</p>
+                                            <div className="row">
+                                            <button type="button" className="btn btn-success mx-auto"><a className="text-white" href="https://codepen.io/anpile/pen/qBqRbZP">Click</a></button>    
+                                            </div>
+                                            
+                                            </>
+                                        }
+                                        /* {[<iframe height="265" style={{ width: "100%" }} scrolling="no" title="Solucion meteor" src="https://codepen.io/anpile/embed/preview/qBqRbZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                                             See the Pen <a href='https://codepen.io/anpile/pen/qBqRbZP'>Solucion meteor</a> by Andres Jesus Olivares Arredondo
                                          (<a href='https://codepen.io/anpile'>@anpile</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                        </iframe>]}
+                                        </iframe>]} */
                                     >
                                     </CollapseFaq>
                                 </div>

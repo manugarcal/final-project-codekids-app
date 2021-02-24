@@ -1,11 +1,12 @@
-import ContactInfo from "../Components/ContactInfo";
-import NavbarIndex from "../Components/Navbar";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import ContactInfo from "../Components/ContactInfo"
 
 const Contact = () => {
 
   const [inputData, setInputData] = useState([]);
   
-  const { register, errors, handleSubmit, setError, clearError, watch} = useForm();
+  const { register, errors, handleSubmit, setError, clearError} = useForm();
 
   const onSubmit = (data, event) => {
 		event.preventDefault();		
@@ -16,11 +17,8 @@ const Contact = () => {
 		event.target.reset();
 	}
 
-
-
   return (
     <>
-    <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -35,11 +33,12 @@ const Contact = () => {
           <div
             className="site-section-cover overlay"
             data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('assets/kid03.jpg')` }} >
+            style={{ backgroundImage: `url('assets/kid03.jpg')` }}
+          >
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
-                  <span className="text-cursive h5 text-red">Contactanos</span>
+                  <span className="text-cursive h5 text-red">Cantactanos</span>
                   <h1 className="mb-3 font-weight-bold text-teal">Ponerse en contacto</h1>
                   <p>
                     <a href="/" className="text-white">
@@ -69,13 +68,8 @@ const Contact = () => {
                 <form action="#" method="post" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-group row">
                     <div className="col-md-6 mb-4 mb-lg-0">
-                    <label htmlFor="nombre">Nombre</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="ingresa tu nombre"
-                        name="nombre"
-                        id="nombre"
+                      
+                      <input type="text" className="form-control" placeholder="Nombre" name = "nombre" 
                       ref={
                         register(
                           {
@@ -91,13 +85,8 @@ const Contact = () => {
 
                     </div>
                     <div className="col-md-6">
-                    <label htmlFor="apellido">Apellido</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="ingresa tu apellido"
-                        name="apellido"
-                        id="apellido"
+                      
+                      <input type="text" className="form-control" placeholder="Apellido" name= "apellido"
                       
                       ref={
                         register(
@@ -118,13 +107,12 @@ const Contact = () => {
 
                   <div className="form-group row">
                     <div className="col-md-12">
-                    <label htmlFor="email">Email</label>
+                      
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="ingresa tu email"
+                        placeholder="Email"
                         name="email"
-                        id="email"
                         ref={
                           register(
                             {
@@ -142,14 +130,14 @@ const Contact = () => {
 
                   <div className="form-group row">
                     <div className="col-md-12">
-                    <label htmlFor="message">Mensaje</label>
-                      <textarea
-                        name="message"
-                        id="message"
+                     
+                      <textarea                       
+                        id=""
                         className="form-control"
                         placeholder="Escribe tu mensaje."
                         cols="30"
                         rows="10"
+                        name="mensaje"
                         ref={
                           register(
                             {

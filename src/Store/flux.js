@@ -23,7 +23,6 @@ const getState = ({ getStore, getActions, setStore }) => {
                 console.error("Error:", error);
             });
         },
-        
     },
   };
 };

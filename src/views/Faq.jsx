@@ -1,10 +1,12 @@
 import React from "react";
 import CollapseFaq from "../Components/CollapseFaq";
+import NavbarIndex from "../Components/Navbar";
 
 
 const Faq = () => {
   return (
     <>
+    <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">

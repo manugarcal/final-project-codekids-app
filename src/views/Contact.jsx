@@ -1,8 +1,10 @@
-import ContactInfo from "../Components/ContactInfo"
+import ContactInfo from "../Components/ContactInfo";
+import NavbarIndex from "../Components/Navbar";
 
 const Contact = () => {
   return (
     <>
+    <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -23,7 +25,9 @@ const Contact = () => {
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
                   <span className="text-cursive h5 text-red">Cantactanos</span>
-                  <h1 className="mb-3 font-weight-bold text-teal">Ponerse en contacto</h1>
+                  <h1 className="mb-3 font-weight-bold text-teal">
+                    Ponerse en contacto
+                  </h1>
                   <p>
                     <a href="/" className="text-white">
                       Inicio
@@ -42,7 +46,9 @@ const Contact = () => {
               <div className="col-7 text-center mb-5">
                 <h2>Pongase en contacto con nosotros usando este formulario</h2>
                 <p>
-                  Rellene los campos requeridos para ponerse en contacto con nostros y luego dele click en enviar, en poco tiempo nos pondremos en contacto con usted!
+                  Rellene los campos requeridos para ponerse en contacto con
+                  nostros y luego dele click en enviar, en poco tiempo nos
+                  pondremos en contacto con usted!
                 </p>
               </div>
             </div>
@@ -51,36 +57,46 @@ const Contact = () => {
                 <form action="#" method="post">
                   <div className="form-group row">
                     <div className="col-md-6 mb-4 mb-lg-0">
+                      <label htmlFor="nombre">Nombre</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Nombre"
+                        placeholder="ingresa tu nombre"
+                        name="nombre"
+                        id="nombre"
                       />
                     </div>
                     <div className="col-md-6">
+                      <label htmlFor="apellido">Apellido</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Apellido"
+                        placeholder="ingresa tu apellido"
+                        name="apellido"
+                        id="apellido"
                       />
                     </div>
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
+                      <label htmlFor="email">Email</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="ingresa tu email"
+                        name="email"
+                        id="email"
                       />
                     </div>
                   </div>
 
                   <div className="form-group row">
                     <div className="col-md-12">
+                      <label htmlFor="message">Mensaje</label>
                       <textarea
-                        name=""
-                        id=""
+                        name="message"
+                        id="message"
                         className="form-control"
                         placeholder="Escribe tu mensaje."
                         cols="30"

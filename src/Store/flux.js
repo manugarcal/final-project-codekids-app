@@ -3,7 +3,7 @@ import { data } from "jquery";
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-        baseURL: "http://localhost:5000",
+        baseURL: "http://localhost:5000", %esto lo puedes borrar%
         currentUser: null,
         isLogged: false,
         errors: null,

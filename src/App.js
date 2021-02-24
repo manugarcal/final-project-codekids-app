@@ -4,13 +4,13 @@ import {
   Switch,
   Route,
   Link,
-  BrowserRouter,
+  BrowserRouter
 } from "react-router-dom";
 import Contact from "./views/Contact";
-import injectContext from "./Store/appContext";
+import injectContext from './Store/appContext';
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
-import Dashboard from "./views/Dashboard";
+import Dashboard from "./views/Dashboard"
 import Leccion from "./views/leccion";
 import Footer from "./Components/Footer";
 import Login from "./Components/login";
@@ -19,11 +19,13 @@ import Faq from "./views/Faq";
 import Home from "./views/home";
 import NavbarIndex from "./Components/Navbar";
 import NotFound from "./Components/NotFound";
-import DashboardProfe from "./views/dashboardprofe";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>        
+
+      <NavbarIndex />
+        <Route exact path="/Dashboard" component={Dashboard} />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />
@@ -32,12 +34,8 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Faq" component={Faq} />
         <Route exact path="/Foro" component={Foro} />
-        <Route exact path="/Dashboard" component={Dashboard} />
-        <Route exact path="/dashboardprofe" component={DashboardProfe} />
-        <Route exact path="/leccion" component={Leccion} />
-
         <Route component={NotFound} />
-      </Switch>
+      </Switch>      
       <Footer />
     </BrowserRouter>
   );

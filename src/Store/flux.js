@@ -1,5 +1,4 @@
 import { data } from "jquery";
-
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -11,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         password: '',
         avatar: ''
     },
-    actions: 
+    actions:
     {
         newsletterPost: (email) => {
             let data = {
@@ -81,9 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 })
             }
         }
-        
     }
   };
 };
-
 export default getState;

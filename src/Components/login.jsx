@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { withRouter } from "react-router-dom";
 import { Context } from "../Store/appContext";
@@ -6,6 +6,12 @@ import NavbarIndex from "./Navbar";
 
 const Login = (props) => {
   const { store, actions } = useContext(Context);
+
+  useEffect(() => {
+    
+    if(store.isLogged) props.history.push('/Dashboard')
+  
+    }, []);
 
   const { register, errors, handleSubmit } = useForm();
 
@@ -40,7 +46,7 @@ const Login = (props) => {
 
                           <form
                             onSubmit={(e) =>
-                              actions.handleSubmit(e, props.history)
+                              actions.handleSubmitLogin(e, props.history)
                             }
                           >
                             {!!store.errors && (

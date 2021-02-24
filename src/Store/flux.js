@@ -1,4 +1,5 @@
 import { data } from "jquery";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -10,7 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         password: '',
         avatar: ''
     },
-    actions:
+    actions: 
     {
         newsletterPost: (email) => {
             let data = {
@@ -49,12 +50,10 @@ const getState = ({ getStore, getActions, setStore }) => {
                 "username": username,
                 "password": password
             }
-            getActions().login('/api/login', data)
-            if(currentUser != null){
-                history.push('/Dashboard')
-            }
+            getActions().login('/api/login', data, history)
+            
         },
-        login: async (url, data) => {
+        login: async (url, data, history) => {
             const store = getStore()
             const {baseURL} = store
             const resp = await fetch(baseURL+url, {
@@ -78,9 +77,12 @@ const getState = ({ getStore, getActions, setStore }) => {
                     username: '',
                     password: '',
                 })
+                history.push('/Dashboard')
             }
         }
+        
     }
   };
 };
+
 export default getState;

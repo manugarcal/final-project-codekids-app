@@ -1,26 +1,43 @@
-import Cardcomponent from "../Components/Card"
+import { useContext, useEffect, useState } from "react";
+import CardNoButton from "../Components/CardNoButton";
 import Navbar2 from "../Components/Navbar-login";
+import { Context } from "../Store/appContext";
 import "../style.css"
 
 
 
 const Dashboard = () => {
+    const [img, setImage] = useState(null)
+    const { store} = useContext(Context);
+    
+    useEffect( () =>{
+        if(store.currentUser !== null){
+
+            let img = store.currentUser["user"]["avatar"]
+            img = store.baseURL + '/api/user/' + img
+            setImage(img)
+        }
+    })
+
+
     return (
 
         <>
         <Navbar2 />
+       
             <h1> Dashboard</h1>
             <div className="div-padre-dash container">
                 <div className="row">
                     <div className="b1 col-md-4">
                         <h2>Usuario</h2>
-                        <Cardcomponent
-                            title="Nivel:"
-                            subtitle="Nombre:"
-                            textButton="Actualizar Datos"
-                            text=""
-                            
+                        <CardNoButton 
+                        image = {
+                             img !== '' ? (
+                                 img
+                             ): (null)
+                        }                        
                         />
+                        
                     </div>
 
                     <div className="b2 col-md-4  ">

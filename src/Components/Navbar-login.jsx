@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   Collapse,
   Navbar,
@@ -13,15 +13,18 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import { Context } from '../Store/appContext';
 
 const Navbar2 = (props) => {
+  const {store, actions} = useContext(Context);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" dark expand="md">
         <NavbarBrand href="/">CodeKids.</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -31,10 +34,14 @@ const Navbar2 = (props) => {
             </NavItem>
             <NavItem>
               <NavLink href="/Foro">Foro</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            </NavItem>           
+          </Nav>
+          <NavbarText>
+          <UncontrolledDropdown >
               <DropdownToggle nav caret>
-                Usuario
+              {
+              !!store.currentUser && store.currentUser.user.username
+            }
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
@@ -42,12 +49,12 @@ const Navbar2 = (props) => {
                 </DropdownItem>               
                 <DropdownItem divider />
                 <DropdownItem>
-                <NavLink href="/">Salir</NavLink>
+                <NavLink href="/" className="text-black" onClick={actions.logout}>Salir</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
+            
+          </NavbarText>
         </Collapse>
       </Navbar>
     </div>

@@ -19,19 +19,24 @@ import Faq from "./views/Faq";
 import Home from "./views/home";
 import NavbarIndex from "./Components/Navbar";
 import NotFound from "./Components/NotFound";
+import DashboardProfe from "./views/dashboardprofe";
+import Module from "./views/Module";
 
 function App() {
   return (
     <BrowserRouter>        
 
-      <NavbarIndex />
-        <Route exact path="/Dashboard" component={Dashboard} />
+      
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/About" component={About} />
         <Route exact path="/GettingStarted" component={GettingStarted} />
         <Route exact path="/Login" component={Login} />
+        <Route exact path="/Dashboard" component={Dashboard} />
+        <Route exact path="/Dashboardprofe" component={DashboardProfe} />
+        <Route exact path="/leccion" component={Leccion} />
+        <Route exact path="/module" component={Module} />
         <Route exact path="/Faq" component={Faq} />
         <Route exact path="/Foro" component={Foro} />
         <Route component={NotFound} />

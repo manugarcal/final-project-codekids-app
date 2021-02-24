@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import ContactInfo from "../Components/ContactInfo"
+import NavbarIndex from "../Components/Navbar";
 
 const Contact = () => {
 
@@ -19,6 +20,7 @@ const Contact = () => {
 
   return (
     <>
+    <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">

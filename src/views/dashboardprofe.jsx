@@ -1,4 +1,5 @@
 import Cardcomponent from "../Components/Card";
+import Navbar2 from "../Components/Navbar-login";
 import Table1 from "../Components/Table";
 import "../style.css"
 
@@ -6,6 +7,7 @@ import "../style.css"
 const DashboardProfe = () => {
     return (
    <>
+    <Navbar2 />
             <h1> Dashboard Profe</h1>
             <div className="container-fluid ">
                 <div className="row">

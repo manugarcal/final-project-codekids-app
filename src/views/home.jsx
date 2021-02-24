@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import CardsColor from "../Components/CardsColor";
 import MediaText from "../Components/MediaText";
-import NavbarIndex from "../Components/Navbar";
 
 const Home = () => {
   useEffect(() => {
@@ -14,7 +13,6 @@ const Home = () => {
 
   return (
     <>
-    <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">

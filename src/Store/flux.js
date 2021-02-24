@@ -1,10 +1,8 @@
-
-const url = "https://assets.breatheco.de/apis/fake/contact/"
+import { data } from "jquery";
 const getState = ({ getStore, getActions, setStore }) => {
-
   return {
     store: {
-        baseURL: "http://localhost:5000", %esto lo puedes borrar%
+        baseURL: "http://localhost:5000",
         currentUser: null,
         isLogged: false,
         errors: null,
@@ -12,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         password: '',
         avatar: ''
     },
-    actions: 
+    actions:
     {
         newsletterPost: (email) => {
             let data = {
@@ -80,18 +78,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                     username: '',
                     password: '',
                 })
-
-    return {
-        store: null, 
-
-        actions: {
-            
-
-
-
             }
+        }
     }
-}
-
-
+  };
+};
 export default getState;

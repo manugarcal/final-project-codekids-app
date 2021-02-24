@@ -14,7 +14,10 @@ const injectContext = PassedComponent => {
         })
     }));
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> 1c06a45db7fd39a6b2b23731695d6540d2109381
     return (
         <Context.Provider value={state}>
             <PassedComponent {...props}/>

@@ -42,7 +42,7 @@ const Navbar2 = (props) => {
                 </DropdownItem>               
                 <DropdownItem divider />
                 <DropdownItem>
-                  Salir
+                <NavLink href="/">Salir</NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

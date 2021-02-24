@@ -1,9 +1,8 @@
 import { data } from "jquery";
-
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-        baseURL: "http://localhost:5000", 
+        baseURL: "http://localhost:5000",
         currentUser: null,
         isLogged: false,
         errors: null,
@@ -11,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         password: '',
         avatar: ''
     },
-    actions: 
+    actions:
     {
         newsletterPost: (email) => {
             let data = {
@@ -81,9 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 })
             }
         }
-        
     }
   };
 };
-
 export default getState;

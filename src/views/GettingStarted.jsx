@@ -1,7 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { useForm } from "react-hook-form";
+import NavbarIndex from "../Components/Navbar";
+import { Context } from "../Store/appContext";
 
 const GettingStarted = () => {
+  const { store, actions } = useContext(Context);
   const [inputData, setInputData] = useState([]);
 
   const {
@@ -23,8 +26,11 @@ const GettingStarted = () => {
   const password = useRef({});
   password.current = watch("password", "");
 
+
+
   return (
     <>
+	<NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -67,10 +73,11 @@ const GettingStarted = () => {
             <div className="row justify-content-center text-center">
               <div className="col-7 text-center mb-5">
                 <h2>Registrese mediante este formulario</h2>
-                <p>
+                <h5 className="text-muted">
                   rellene los campos necesarios para completar el registro, una
-                  vez que haya hecho esto dele click a enviar y listo!
-                </p>
+                  vez los datos esten correctos favor de hacer click al botón
+                  enviar y listo!
+                </h5>
               </div>
             </div>
 
@@ -87,7 +94,7 @@ const GettingStarted = () => {
                         </div>
 
                         {/* desde aquí están los inputs*/}
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        {/*  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="fullName">Nombre Completo</label>
                             <input
@@ -111,7 +118,7 @@ const GettingStarted = () => {
                               {errors?.fullname?.message}
                             </span>
                           </div>
-                        </div>
+                        </div> */}
 
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
@@ -120,7 +127,7 @@ const GettingStarted = () => {
                               type="email"
                               className="form-control"
                               id="eMail"
-                              name="email"
+                              name="username"
                               placeholder="Ingrese un e-mail valido" /* onChange={handleInputChange} */
                               ref={register({
                                 required: {
@@ -138,6 +145,19 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
+
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div className="form-group">
+                            <label htmlFor="file">Inserta una foto</label>
+                            <input
+                              type="file"
+                              name="file"
+                              id="file"
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="password">Contraseña</label>
@@ -198,23 +218,12 @@ const GettingStarted = () => {
                             </span>
                           </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label htmlFor="file">Inserta una foto</label>
-                            <input
-                              type="file"
-                              name="file"
-                              id="file"
-                              className="form-control"
-                            />
-                          </div>
-                        </div>
                       </div>
 
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
-                            <button
+                            <button                              
                               type="sumbmit"
                               id="submit"
                               name="button"
@@ -229,6 +238,7 @@ const GettingStarted = () => {
                   </div>
                 </div>
               </form>
+              {/* fin del formulario */}
             </div>
           </div>
         </div>

@@ -1,24 +1,28 @@
 const NotFound = () => {
   return (
-    
-      <div className="ftco-blocks-cover-1">
-          <div
-            className="site-section-cover overlay"
-            data-stellar-background-ratio="0.5"
-            style={{ backgroundImage: `url('assets/spaceman01.png')` }}
-          >
-            <div className="container">
-              <div className="row align-items-center ">
-                <div className="col-md-5 mt-5 pt-5">
-                  <h1 className="font-weight-bold text-teal">
-                    404 Pagina no encontrada
-                  </h1>
-                </div>
-              </div>
-            </div>
+    <div className="site-section bg-dark">
+      <div className="container">
+      <div className="container error-container">
+        <div className="row  d-flex align-items-center justify-content-center">
+          <div className="col-md-12 text-center">
+            <h1 className="big-text">Oops!</h1>
+            <h2 className="small-text">404 - PAGINA NO ENCONTRADA</h2>
+          </div>
+          <div className="col-md-6  text-center">
+            <p className="text-light">
+			&#x1F921;...Algo malió sal...&#x1F921;
+            </p>
+            <a
+              href="/"
+              className="button button-dark-blue iq-mt-15 text-center"
+            >
+              IR AL INICIO
+            </a>
           </div>
         </div>
-   
+      </div>
+    </div>
+	</div>
   );
 };
 

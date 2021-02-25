@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import CardNoButton from "../Components/CardNoButton";
 import CollapseFaq from "../Components/CollapseFaq";
 import Navbar2 from "../Components/Navbar-login";
@@ -8,8 +8,9 @@ import "../style.css";
 
 const Dashboard = () => {
   const [img, setImage] = useState(null);
-  const { store } = useContext(Context);
+  const { store, actions } = useContext(Context);
   const [user, setUser] = useState(null);
+  
 
   useEffect(() => {
     if (store.currentUser !== null) {
@@ -19,8 +20,12 @@ const Dashboard = () => {
       let usuario = store.currentUser.user.username;
       setUser(usuario);
     }
-  });
-
+    actions.mision()
+    console.log(store.misiones)
+    actions.planets()
+    console.log(store.nombre_planeta)
+  },[]);
+  
   return (
     <>
       <Navbar2 />
@@ -93,20 +98,30 @@ const Dashboard = () => {
                 />
                 <CollapseFaq 
                 title="selecciona tu planeta" 
-                text = {
+                text = {!!store.nombre_planeta && store.nombre_planeta.map((planeta, index) =>{
+                  return (
                     <h4 className="text-center">
-                        <Link to="/Leccion">Glise</Link><br/>
-                        <Link>Clupert</Link><br/>
-                        <Link>Aldebaran</Link><br/>
-                        <Link>Omega</Link><br/>
-                        <Link>Hilius</Link><br/>
+                        <Link to="/Leccion">{planeta.nombre}</Link><br/>
                     </h4>
+
+                  )
+                })
                 }
                 />
                 <h2>Misión</h2>
                 <h5>Seleccione Misión</h5>
                 <img src="assets/level-map.png" className="img-fluid w-100" />
-                <CollapseFaq title="Selecciona una mision" />
+                <CollapseFaq title="Selecciona una mision"  text={!!store.miss && store.miss.map((mision, index) =>{
+                     return (
+                       <>
+                       <div className="col-12 d-flex justify-content-center">
+                       <Link key={index} to={"/leccion/" + mision.id}><button type="button" className="btn btn-primary btn-lg btn-block my-2" style={{width: "300px"}}>{mision.id}</button> </Link> 
+                       <br/>
+                       </div>
+                       </>
+                     )
+                   })} />
+                
               </div>
             </div>
           </div>

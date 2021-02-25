@@ -21,6 +21,7 @@ import NavbarIndex from "./Components/Navbar";
 import NotFound from "./Components/NotFound";
 import DashboardProfe from "./views/dashboardprofe";
 import Module from "./views/Module";
+import Leccion2 from "./views/leccion2";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Dashboard" component={Dashboard} />
         <Route exact path="/Dashboardprofe" component={DashboardProfe} />
-        <Route exact path="/leccion" component={Leccion} />
+        <Route exact path="/leccion/1" component={Leccion} />
+        <Route exact path="/leccion/2" component={Leccion2} />
         <Route exact path="/module" component={Module} />
         <Route exact path="/Faq" component={Faq} />
         <Route exact path="/Foro" component={Foro} />

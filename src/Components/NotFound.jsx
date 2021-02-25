@@ -1,6 +1,10 @@
+import NavbarIndex from "./Navbar";
+
+
 const NotFound = () => {
   return (
-    
+    <>
+      <NavbarIndex />
       <div className="ftco-blocks-cover-1">
           <div
             className="site-section-cover overlay"
@@ -18,7 +22,7 @@ const NotFound = () => {
             </div>
           </div>
         </div>
-   
+   </>
   );
 };
 

@@ -48,7 +48,7 @@ const Navbar2 = (props) => {
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <NavLink href="/Leccion" className="text-black">
+                  <NavLink href="/Leccion/1" className="text-black">
                     Misiones
                   </NavLink>
                 </DropdownItem>

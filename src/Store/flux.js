@@ -11,6 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       password: "",
       avatar: "",
       email: "",
+      allusers: [],
       nombre_planeta: [],
       misiones: {
         instrucciones: "",
@@ -174,8 +175,21 @@ const getState = ({ getStore, getActions, setStore }) => {
           isLogged: false,
         });
       },
+      getallUsers: () =>{
+        fetch("http://localhost:5000/api/users")
+          .then(resp => resp.json())
+          .then(data => {
+            setStore({
+              allusers: data
+            })
+          })
+          .catch(error => console.log(error));
+      
+      },    
     },
   };
 };
 
 export default getState;
+
+

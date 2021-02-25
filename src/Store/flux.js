@@ -11,13 +11,37 @@ const getState = ({ getStore, getActions, setStore }) => {
       password: "",
       avatar: "",
       email: "",
-      nombre_planeta: "",
-      instrucciones: "",
-      codigo: "",
-      soluciones: "",
+      nombre_planeta: [],
+      misiones: {
+        instrucciones: "",
+        codigo: "",
+        soluciones: ""
+      },
+      miss: []
+
       
     },
     actions: {
+      planets: () => {
+        fetch("http://localhost:5000/api/planetas")
+					.then(resp => resp.json())
+					.then(data => {
+            setStore({
+              nombre_planeta: data
+            })
+          })
+					.catch(error => console.log(error));
+      },
+      mision: () => {
+        fetch("http://localhost:5000/api/planeta/1/mision")
+					.then(resp => resp.json())
+					.then(data => {
+            setStore({
+              miss: data
+            })
+          })
+					.catch(error => console.log(error));
+      },
       isLogged: () => {
         if (sessionStorage.getItem("currentUser")) {
           let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));

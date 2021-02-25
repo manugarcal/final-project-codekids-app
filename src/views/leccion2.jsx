@@ -1,12 +1,13 @@
 import React from 'react';
 import '../style.css'
+
 import Navbar2 from '../Components/Navbar-login';
 import Cardcomponent from '../Components/Card';
 import CollapseFaq from '../Components/CollapseFaq';
 import { Link } from 'react-router-dom';
 
 
-const Leccion = () => {
+const Leccion2 = () => {
     return (
         <>
             <Navbar2 />
@@ -40,13 +41,7 @@ const Leccion = () => {
                             image="https://via.placeholder.com/400x200"
                             title="Leccion 1"
                             subtitle="comenzando el viaje"
-                            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta aperiam quo rem temporibus nobis facilis illum officia praesentium deserunt,
-                                    iure exercitationem rerum suscipit excepturi voluptate tempore numquam quam sunt, officiis placeat dolores, quis porro dicta labore reprehenderit?
-                                    Unde veritatis odit minima facere temporibus necessitatibus earum reiciendis numquam voluptatibus quis nesciunt,
-                                    voluptas inventore pariatur obcaecati architecto? Voluptates, eum facilis. Odio voluptatum esse quae natus, totam sed.
-                                    Voluptates id perferendis, dolorem sed minus reprehenderit officia nobis recusandae voluptatum quae! Dolorum ullam,
-                                    cumque animi aliquid ea obcaecati distinctio fugiat. Architecto sint culpa eum provident nesciunt corrupti deserunt praesentium,
-                                    molestias molestiae, explicabo velit ipsum."
+                            text="leccion 2 dios por favor ayuda"
                             textButton="Ingresar"
                         />
                     </div>
@@ -89,8 +84,8 @@ const Leccion = () => {
 
                             </div>
                             <div className="row mx-0">
-                                <button type="button" class="btn btn-success mx-auto my-3">{"<< Atras"}</button>
-                                <Link to="/leccion/2"><button type="button" class="btn btn-success mx-auto my-3">{"Siguente >>"}</button></Link>
+                                <Link to="/leccion/1"><button  type="button" class="btn btn-success mx-auto my-3">{"<< Atras"}</button></Link>
+                                <button type="button" class="btn btn-success mx-auto my-3">{"Siguente >>"}</button>
                                 
                             </div>
                         </div>
@@ -111,4 +106,4 @@ const Leccion = () => {
     );
 }
 
-export default Leccion;
+export default Leccion2;

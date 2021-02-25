@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import '../style.css'
-
 import Navbar2 from '../Components/Navbar-login';
 import Cardcomponent from '../Components/Card';
 import CollapseFaq from '../Components/CollapseFaq';
 import { Link } from 'react-router-dom';
+import { Context } from '../Store/appContext';
+import CardNoButton from '../Components/CardNoButton';
 
 
 const Leccion = () => {
+    const { store, actions } = useContext(Context);
+    useEffect(() => {
+        actions.mision()
+        console.log(store.misiones)
+        
+    }, [])
     return (
         <>
             <Navbar2 />
@@ -37,18 +44,12 @@ const Leccion = () => {
                 <div className="row">
                     <div className="col-md-4 leccion-instrucciones">
                         
-                        <Cardcomponent
+                        <CardNoButton
                             image="https://via.placeholder.com/400x200"
                             title="Leccion 1"
                             subtitle="comenzando el viaje"
-                            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta aperiam quo rem temporibus nobis facilis illum officia praesentium deserunt,
-                                    iure exercitationem rerum suscipit excepturi voluptate tempore numquam quam sunt, officiis placeat dolores, quis porro dicta labore reprehenderit?
-                                    Unde veritatis odit minima facere temporibus necessitatibus earum reiciendis numquam voluptatibus quis nesciunt,
-                                    voluptas inventore pariatur obcaecati architecto? Voluptates, eum facilis. Odio voluptatum esse quae natus, totam sed.
-                                    Voluptates id perferendis, dolorem sed minus reprehenderit officia nobis recusandae voluptatum quae! Dolorum ullam,
-                                    cumque animi aliquid ea obcaecati distinctio fugiat. Architecto sint culpa eum provident nesciunt corrupti deserunt praesentium,
-                                    molestias molestiae, explicabo velit ipsum."
-                            textButton="Ingresar"
+                            text={store.miss[0].instrucciones}
+                            
                         />
                     </div>
                     <div className="leccion-2 col-md-8">
@@ -59,7 +60,7 @@ const Leccion = () => {
                                     (<a href='https://codepen.io/anpile'>@anpile</a>) on <a href='https://codepen.io'>CodePen</a>.
                                 </iframe> */}
                                 {/* AQUI SOLICITAR AL BACK QUE DEVUELVA */}
-                               <img src="https://i.ibb.co/YjxMC8m/leccion01.jpg" alt="leccion01" border="0" style={{width:"100%"}}/>
+                               <img src={store.miss[0].codigo} alt="leccion01" border="0" style={{width:"100%"}}/>
                                     </div>
                                 </div>
                                 <div className="leccion-tips col-md-12 mt-2 ">
@@ -75,7 +76,7 @@ const Leccion = () => {
                                             <>
                                             <p className="text-center">Favor dar click en el siguiente enlace para revelar la solución</p>
                                             <div className="row">
-                                            <button type="button" className="btn btn-success mx-auto"><a className="text-white" href="https://codepen.io/anpile/pen/qBqRbZP">Click</a></button>    
+                                            <button type="button" className="btn btn-success mx-auto"><a className="text-white" href={store.miss[0].soluciones}>Click</a></button>    
                                             </div>
                                             
                                             </>

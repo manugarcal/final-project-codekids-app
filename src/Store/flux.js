@@ -11,6 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       password: "",
       avatar: "",
       email: "",
+      allusers: [],
       nombre_planeta: [],
       misiones: {
         instrucciones: "",
@@ -132,6 +133,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             username: "",
             password: "",
+            /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
@@ -173,8 +175,21 @@ const getState = ({ getStore, getActions, setStore }) => {
           isLogged: false,
         });
       },
+      getallUsers: () =>{
+        fetch("http://localhost:5000/api/users")
+          .then(resp => resp.json())
+          .then(data => {
+            setStore({
+              allusers: data
+            })
+          })
+          .catch(error => console.log(error));
+      
+      },    
     },
   };
 };
 
 export default getState;
+
+

@@ -132,6 +132,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             username: "",
             password: "",
+            /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../style.css'
-
 import Navbar2 from '../Components/Navbar-login';
 import Cardcomponent from '../Components/Card';
 import CollapseFaq from '../Components/CollapseFaq';

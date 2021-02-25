@@ -1,42 +1,40 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Table } from 'reactstrap';
+import { Context } from '../Store/appContext';
 
 const Table1 = (props) => {
+
+  const { store, actions } = useContext(Context);
+
+  useEffect(() => {
+    actions.getallUsers();
+    console.log(store.allusers)
+  }, [])
+
   return (
     <Table>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>E-mail</th>
-          <th>Nivel</th>
+          <th>id</th>
+          <th>Usuario</th>
+          <th>Tipo de Usuario</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>1</td>
-        </tr>
-        
-        
+        {
+          !!store.allusers && store.allusers.map((users, i) => {
+            return (
+              <tr>
+                <th scope="row">{users.id}</th>
+                <td>{users.username}</td>
+                <td>{users.type_user}</td>
+                
+              </tr>
+            )
+          })
+        }
+
+
       </tbody>
     </Table>
   );

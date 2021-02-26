@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, } from "react-router-dom";
+import { Link, withRouter, } from "react-router-dom";
 import CardNoButton from "../Components/CardNoButton";
 import CollapseFaq from "../Components/CollapseFaq";
 import Navbar2 from "../Components/Navbar-login";
 import { Context } from "../Store/appContext";
-import "../style.css";
+import "../style.css"
 
 const Dashboard = () => {
-  const [img, setImage] = useState(null);
   const { store, actions } = useContext(Context);
+  const [img, setImage] = useState(null);
   const [user, setUser] = useState(null);
   
 
@@ -20,9 +20,9 @@ const Dashboard = () => {
       let usuario = store.currentUser.user.username;
       setUser(usuario);
     }
+    actions.planets()
     actions.mision()
     console.log(store.misiones)
-    actions.planets()
     console.log(store.nombre_planeta)
   },[]);
   
@@ -44,7 +44,7 @@ const Dashboard = () => {
             <div className="b1 col-md-4">
               <h2>Usuario</h2>
               <CardNoButton
-                image={img !== "" ? img : null}
+                image={img  !== "" ? img : null}
                 title="Bienvenido"
                 subtitle="Nuevamente a una nueva aventura"
                 text={user}

@@ -155,4 +155,4 @@ const Login = (props) => {
   );
 };
 
-export default withRouter(Login);
+export default Login;

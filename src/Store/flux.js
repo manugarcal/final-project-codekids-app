@@ -11,6 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       password: "",
       avatar: "",
       email: "",
+      type_user: "",
       allusers: [],
       nombre_planeta: [],
       misiones: {
@@ -133,11 +134,18 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             username: "",
             password: "",
+            type_user:""
             /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          history.push("/Dashboard");
+          if(store.currentUser["user"]["type_user"] == 1){
+            
+            history.push("/Dashboard");
+          }else{
+            history.push("/Dashboardprofe");
+
+          }
         }
       },
       register: async (url, data, history) => {
@@ -164,7 +172,13 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          history.push("/Dashboard");
+          if(store.type == 1){
+            
+            history.push("/Dashboard");
+          }else{
+            history.push("/Dashboardprofe");
+
+          }
         }
       },
       logout: (e) => {

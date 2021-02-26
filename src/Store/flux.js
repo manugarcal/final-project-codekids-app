@@ -9,6 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       errors: null,
       username: "",
       password: "",
+      passwordrepeat: "",
       avatar: "",
       email: "",
       allusers: [],
@@ -100,7 +101,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       handleSubmitRegister: (e, history) => {
         e.preventDefault();
         const store = getStore();
-        const { username, password, avatar } = store;
+        const { username, password, passwordrepeat, avatar } = store;
         let formData = new FormData();
 
         formData.append("username", username);
@@ -108,7 +109,12 @@ const getState = ({ getStore, getActions, setStore }) => {
         if (avatar !== "") {
           formData.append("avatar", avatar);
         }
-        getActions().register("/api/register", formData, history);
+        if(password === passwordrepeat){
+          getActions().register("/api/register", formData, history);
+        } else {
+          alert("las contraseñas no coinciden");
+        }
+        
       },
       login: async (url, data, history) => {
         const store = getStore();

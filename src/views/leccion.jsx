@@ -18,13 +18,15 @@ const Leccion = () => {
     return (
         <>
             <Navbar2 />
-            <div className="container-fluid"style={{
+            <div className="container-fluid"
+            style={{
             backgroundImage:"url(assets/space.jpg)",
             backgroundRepeat: 'no-repeat',
             backgroundSize: "100% 100%",
             width:"100%",
             height:"auto"
             }}>
+                <div className="container">
                 <div className="row">
                     <div className="col-md-12 leccion media-playlist pr-5 align-middle">
                         <div className="row">
@@ -48,7 +50,7 @@ const Leccion = () => {
                             image="https://via.placeholder.com/400x200"
                             title="Leccion 1"
                             subtitle="comenzando el viaje"
-                            text={store.miss[0].instrucciones}
+                            text={store.miss[0]?.instrucciones}
                             
                         />
                     </div>
@@ -60,7 +62,7 @@ const Leccion = () => {
                                     (<a href='https://codepen.io/anpile'>@anpile</a>) on <a href='https://codepen.io'>CodePen</a>.
                                 </iframe> */}
                                 {/* AQUI SOLICITAR AL BACK QUE DEVUELVA */}
-                               <img src={store.miss[0].codigo} alt="leccion01" border="0" style={{width:"100%"}}/>
+                               <img src={store.miss[0]?.codigo} alt="leccion01" border="0" style={{width:"100%"}}/>
                                     </div>
                                 </div>
                                 <div className="leccion-tips col-md-12 mt-2 ">
@@ -76,7 +78,7 @@ const Leccion = () => {
                                             <>
                                             <p className="text-center">Favor dar click en el siguiente enlace para revelar la solución</p>
                                             <div className="row">
-                                            <button type="button" className="btn btn-success mx-auto"><a className="text-white" href={store.miss[0].soluciones}>Click</a></button>    
+                                            <button type="button" className="btn btn-success mx-auto"><a className="text-white" href={store.miss[0]?.soluciones}>Click</a></button>    
                                             </div>
                                             
                                             </>
@@ -97,6 +99,7 @@ const Leccion = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             {/* <div className="row mx-0">

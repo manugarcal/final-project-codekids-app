@@ -23,8 +23,17 @@ const GettingStarted = (props) => {
     e.target.reset();
   }; */
 
-  const password = useRef({});
+  /*  const password = useRef({});
   password.current = watch("password", "");
+ */
+  /* const password = useRef(null);
+  const passwordrepeat = useRef(null);
+
+  let  a = password.current.focus();
+  let  b = passwordrepeat.current.focus();
+  const comparar = (a, b) => {
+    return a, b
+  }; */
 
   return (
     <>
@@ -51,7 +60,6 @@ const GettingStarted = (props) => {
                   <span className="text-cursive h5 text-red">Comenzemos</span>
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Registrarme
-
                   </h1>
                   <p>
                     <a href="/" className="text-white">
@@ -83,28 +91,34 @@ const GettingStarted = (props) => {
             <div className="container">
               <form
                 className="row gutters"
-                onSubmit={(e) => actions.handleSubmitRegister(e, props.history)}
+                onSubmit={
+                  /* handleSubmit(onSubmit),  */ (e) =>
+                    actions.handleSubmitRegister(e, props.history)
+                }
               >
-                 {!!store.errors && (
-                              <div className="row">
-                                <div className="col-12">
-                                  <div
-                                    className="alert alert-danger alert-dismissible fade show"
-                                    role="alert"
-                                  >
-                                    <strong>Error: </strong>{store.errors.msg}
-                                    <button
-                                      type="button"
-                                      className="close"
-                                      data-dismiss="alert"
-                                      aria-label="Close"
-                                    >
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            )}
+                {!!store.errors && (
+                  <div className="row">
+                    <div className="col-12">
+                      <div
+                        className="alert alert-danger alert-dismissible fade show"
+                        role="alert"
+                      >
+                        <strong>Error: </strong>
+                        {store.errors.msg}
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="alert"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div className="card h-100">
                     <div className="card-body">
@@ -164,17 +178,6 @@ const GettingStarted = (props) => {
                               name="password"
                               onChange={(e) => actions.handleChange(e)}
                               placeholder="Ingrese Contraseña"
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "debe elegir una contraseña",
-                                },
-                                pattern: {
-                                  value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-                                  message:
-                                    "Ingrese una contraseña válida de entre 8 y 12 caracteres",
-                                },
-                              })}
                             />
                             <span className="text-danger text-small d-block mb-2">
                               {errors?.password?.message}
@@ -196,19 +199,7 @@ const GettingStarted = (props) => {
                               id="passwordrepeat"
                               name="passwordrepeat"
                               placeholder="Repetir Contraseña" /* onChange={handleInputChange} */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "repita su constraseña",
-                                },
-                                pattern: {
-                                  value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-                                  message: "Ingrese una contraseña válida",
-                                },
-                                validate: (value) =>
-                                  value === password.current ||
-                                  "Las contraseñas no coinciden",
-                              })}
+                              onChange={(e) => actions.handleChange(e)}
                             />
                             <span className="text-danger text-small d-block mb-2">
                               {errors?.passwordrepeat?.message}
@@ -221,6 +212,7 @@ const GettingStarted = (props) => {
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
                             <button
+                            
                               type="sumbmit"
                               id="submit"
                               name="button"

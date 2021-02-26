@@ -12,7 +12,7 @@ const Table1 = (props) => {
   }, [])
 
   return (
-    <Table>
+    <Table className="text-white">
       <thead>
         <tr>
           <th>id</th>

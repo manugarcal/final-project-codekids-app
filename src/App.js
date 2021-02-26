@@ -11,7 +11,6 @@ import injectContext from './Store/appContext';
 import About from "./views/About";
 import GettingStarted from "./views/GettingStarted";
 import Dashboard from "./views/Dashboard"
-import Leccion from "./views/leccion";
 import Footer from "./Components/Footer";
 import Login from "./Components/login";
 import Foro from "./views/Foro";
@@ -22,12 +21,12 @@ import NotFound from "./Components/NotFound";
 import DashboardProfe from "./views/dashboardprofe";
 import Module from "./views/Module";
 import Leccion2 from "./views/leccion2";
+import Leccion from "./views/leccion";
+import login from "./Components/login";
 
 function App() {
   return (
-    <BrowserRouter>        
-
-      
+    <BrowserRouter>     
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />

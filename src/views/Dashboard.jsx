@@ -101,7 +101,7 @@ const Dashboard = () => {
                 text = {!!store.nombre_planeta && store.nombre_planeta.map((planeta, index) =>{
                   return (
                     <h4 className="text-center">
-                        <Link to="/Leccion">{planeta.nombre}</Link><br/>
+                        <Link key={index} to="/Leccion/1">{planeta.nombre}</Link><br/>
                     </h4>
 
                   )

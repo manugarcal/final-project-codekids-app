@@ -172,7 +172,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          if(store.type == 1){
+          if(store.currentUser["user"]["type_user"] == 1){
             
             history.push("/Dashboard");
           }else{

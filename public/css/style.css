@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #343a40; }
+  background: #343a40 !important;}
   @media (min-width: 768px) {
     .site-footer {
       padding: 8em 0; } }

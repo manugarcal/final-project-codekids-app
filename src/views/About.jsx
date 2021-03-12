@@ -73,21 +73,21 @@ const About = () => {
                 name="Andres Olivares"
                 job="Full Stack Developer"
                 ceo="Fundador"
-                img="images/person_1.jpg"
+                img="assets/andres.jpg"
               />
 
               <CardPresetation
                 name="Manuel Garcia"
                 job="Full Stack Developer"
                 ceo="Fundador"
-                img="images/person_2.jpg"
+                img="assets/manuel.jpeg"
               />
 
               <CardPresetation
                 name="Alejandro Belmar"
                 job="Full Stack Developer"
                 ceo="Fundador"
-                img="images/person_3.jpg"
+                img="assets/jano.jpg"
               />
             </div>
           </div>

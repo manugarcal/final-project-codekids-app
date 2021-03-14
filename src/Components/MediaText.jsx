@@ -1,13 +1,5 @@
 import React from 'react';
 
-/* 
-
-
-
-
-
-*/
-
 const MediaText = ({title, subtitle, text, buttonText, img, url}) => {
     return (
         <>
@@ -15,7 +7,7 @@ const MediaText = ({title, subtitle, text, buttonText, img, url}) => {
           <div className="container">
             <div className="row">
               <div className="col-md-6 mb-5 mb-md-0">
-                <img src={img} alt="Image" className="img-fluid" />
+                <img src={img} alt="img" className="img-fluid" />
               </div>
               <div className="col-md-5 ml-auto pl-md-5">
                 <span className="text-cursive h5 text-red">

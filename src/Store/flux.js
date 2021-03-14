@@ -1,4 +1,3 @@
-import { data } from "jquery";
 
 const getState = ({ getStore, getActions, setStore }) => {
   return {
@@ -145,7 +144,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          if(store.currentUser["user"]["type_user"] == 1){
+          if(store.currentUser["user"]["type_user"] === 1){
             
             history.push("/Dashboard");
           }else{
@@ -178,7 +177,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          if(store.currentUser["user"]["type_user"] == 1){
+          if(store.currentUser["user"]["type_user"] === 1){
             
             history.push("/Dashboard");
           }else{
@@ -187,7 +186,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         }
       },
-      logout: (e) => {
+      logout: () => {
         sessionStorage.removeItem("currentUser");
         sessionStorage.removeItem("isLogged");
         setStore({

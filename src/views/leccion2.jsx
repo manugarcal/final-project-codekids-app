@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import "../style.css";
 import CardNoButton from "../Components/CardNoButton";
 import { Context } from "../Store/appContext";
+import CardAudio from "../Components/CardMultimedia";
+import Slider2 from "../Components/carousel2"
 
 const Leccion2 = () => {
 
@@ -13,7 +15,7 @@ const Leccion2 = () => {
 
     useEffect(() => {
       actions.mision();
-    }, []);
+    }, [actions]);
   
   return (
     <>
@@ -56,53 +58,17 @@ const Leccion2 = () => {
         </div>
         <div className="row">
           <div className="col-md-4 leccion-instrucciones">
-            <CardNoButton
-              image="https://i.ibb.co/f24KHnn/leccion2.jpg" 
+          <CardAudio
+              image="https://image.freepik.com/free-photo/hooded-computer-hacker-stealing-information-with-laptop_155003-1918.jpg"
               title="Leccion 2"
-              subtitle="comenzando el viaje"
-              text={
-                <>
-                  <div>
-                    <p>
-                      Capitán nuevamente nos solicitan desde el planeta Glise,
-                      esta vez han sufrido un ataque en sus instalaciones de
-                      defensa. Los enemigos han desactivado todas sus armas y
-                      están perdiendo la batalla.
-                    </p>
-                    <br></br>
-                    <p>
-                      El personal de defensa ha enviado un mensaje pero no lo
-                      puedo entender completamente necesito que limpie el código
-                      y quede completamente sin errores.{" "}
-                    </p>
-                    <br></br>
-                    <p>¿Cómo hacer esto?</p>
-                    <br></br>
-                    <p>
-                      debes borrar los errores de los mensajes para que pueda
-                      restablecer los campos de fuerza del planeta… RAPIDO!
-                    </p>
-                   
-                  </div>
-                </>
-              }
-              textButton="Ingresar"
+              subtitle="Apreta el boton Play para escuchar la misión y poder salvar al planeta Glise"
             />
+           
           </div>
           <div className="leccion-2 col-md-8">
             <div className="row mx-0">
-              <div className="leccion-code col-md-12">
-                {/* <iframe height="265" style={{ width: "100%" }} scrolling="no" title="oNYZRRO" src="https://codepen.io/anpile/embed/oNYZRRO?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                    See the Pen <a href='https://codepen.io/anpile/pen/oNYZRRO'>oNYZRRO</a> by Andres Jesus Olivares Arredondo
-                                    (<a href='https://codepen.io/anpile'>@anpile</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                </iframe> */}
-                {/* AQUI SOLICITAR AL BACK QUE DEVUELVA */}
-                <img
-                  src={store.miss[1]?.codigo}
-                  alt="leccion01"
-                  border="0"
-                  style={{ width: "100%" }}
-                />
+              <div className="leccion-code col-md-12">              
+              <Slider2 />
               </div>
             </div>
             <div className="leccion-tips col-md-12 mt-2 ">
@@ -126,6 +92,7 @@ const Leccion2 = () => {
                             >
                             <a
                               target="_blank"
+                              rel="noreferrer"
                               className="text-white"
                               href={store.miss[1]?.soluciones}
                             >
@@ -134,33 +101,24 @@ const Leccion2 = () => {
                           </button>
                         </div>
                       </>
-                    }
-                    /* {[<iframe height="265" style={{ width: "100%" }} scrolling="no" title="Solucion meteor" src="https://codepen.io/anpile/embed/preview/qBqRbZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                            See the Pen <a href='https://codepen.io/anpile/pen/qBqRbZP'>Solucion meteor</a> by Andres Jesus Olivares Arredondo
-                                         (<a href='https://codepen.io/anpile'>@anpile</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                        </iframe>]} */
+                    }                   
                   ></CollapseFaq>
                 </div>
               </div>
-              <div className="row mx-0">
+              <div className="row mx-0 d-flex justify-content-center">
                 <Link to="/leccion/1">
-                  <button type="button" class="btn btn-success mx-auto my-3">
+                  <button type="button" class="btn btn-success mx-5 my-3">
                     {"<< Atras"}
                   </button>
                 </Link>
-                <button type="button" class="btn btn-success mx-auto my-3">
+                <button type="button" class="btn btn-success mx-5 my-3">
                   {"Siguente >>"}
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* <div className="row mx-0">
-
-                        <div className="col-md-2 align-buttons">
-                        </div>
-                    </div> */}
+      </div>     
     </>
   );
 };

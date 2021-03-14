@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  CardTitle, CardSubtitle
 } from 'reactstrap';
 
 const CardNoButton = ({image ="https://via.placeholder.com/200x200", title="se espera titulo", subtitle="ingresar subtitulo", text= "ingresar texto", }) => {

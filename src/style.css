@@ -622,3 +622,10 @@ color: white;
     .m-b-sm {
         margin-bottom: 10px;
     }
+    @font-face{
+      font-family: dasher;
+      src:url(./DasherDeer-3zODG.otf)
+    }
+    .brand-name {
+      font-family: dasher;
+    }

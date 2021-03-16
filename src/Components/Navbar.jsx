@@ -25,8 +25,8 @@ const NavbarIndex = (props) => {
       <div className="container mb-3">
         <div className="d-flex align-items-center">
           <div className="site-logo mr-auto">
-            <a href="/">
-              <span style={{color: "red"}}>Code</span><span style={{color: "yellow"}}>Kids</span><spanKids className="text-primary">.</spanKids>
+            <a className="brand-name"href="/">
+              <span  style={{color: "red"}}>Code</span><span style={{color: "yellow"}}>Kids</span><spanKids className="text-primary">.</spanKids>
             </a>
           </div>
           <div className="site-quick-contact d-none d-lg-flex ml-auto ">

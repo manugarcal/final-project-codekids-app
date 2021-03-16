@@ -25,7 +25,7 @@ const Navbar2 = (props) => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/">CodeKids.</NavbarBrand>
+        <NavbarBrand href="/"><span style={{color: "red"}}>Code</span><span style={{color: "yellow"}}>Kids</span><span style={{color: "blue"}}>.</span></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

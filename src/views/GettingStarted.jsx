@@ -1,4 +1,5 @@
-import React, { useState, useRef, useContext } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import NavbarIndex from "../Components/Navbar";
 import { Context } from "../Store/appContext";
@@ -7,14 +8,7 @@ const GettingStarted = (props) => {
   const { store, actions } = useContext(Context);
   const [inputData, setInputData] = useState([]);
 
-  const {
-    register,
-    errors,
-    handleSubmit,
-    setError,
-    clearError,
-    watch,
-  } = useForm();
+  const { register, errors } = useForm();
 
   /* const onSubmit = (data, e) => {
     console.log(data);
@@ -117,7 +111,6 @@ const GettingStarted = (props) => {
                     </div>
                   </div>
                 )}
-                
 
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div className="card h-100">
@@ -212,7 +205,6 @@ const GettingStarted = (props) => {
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
                             <button
-                            
                               type="sumbmit"
                               id="submit"
                               name="button"

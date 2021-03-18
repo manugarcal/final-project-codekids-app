@@ -1,33 +1,30 @@
 import React, { useContext, useEffect } from "react";
 import Navbar2 from "../Components/Navbar-login";
-import Cardcomponent from "../Components/Card";
 import CollapseFaq from "../Components/CollapseFaq";
 import { Link } from "react-router-dom";
 import "../style.css";
-import CardNoButton from "../Components/CardNoButton";
 import { Context } from "../Store/appContext";
 import CardAudio from "../Components/CardMultimedia";
-import Slider2 from "../Components/carousel2"
+import Slider2 from "../Components/carousel2";
 
 const Leccion2 = () => {
+  const { store, actions } = useContext(Context);
 
-    const { store, actions } = useContext(Context);
+  useEffect(() => {
+    actions.mision();
+  }, [actions]);
 
-    useEffect(() => {
-      actions.mision();
-    }, [actions]);
-  
   return (
     <>
       <Navbar2 />
       <div
         className="container-fluid"
-        style={{ 
-            backgroundImage: "url(https://i.ibb.co/VvkVhD0/space.jpg", 
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% 100%",
-            width: "100%",
-            height: "auto",
+        style={{
+          backgroundImage: "url(https://i.ibb.co/VvkVhD0/space.jpg",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+          width: "100%",
+          height: "auto",
         }}
       >
         <div className="row">
@@ -58,17 +55,16 @@ const Leccion2 = () => {
         </div>
         <div className="row">
           <div className="col-md-4 leccion-instrucciones">
-          <CardAudio
+            <CardAudio
               image="https://image.freepik.com/free-photo/hooded-computer-hacker-stealing-information-with-laptop_155003-1918.jpg"
               title="Leccion 2"
               subtitle="Apreta el boton Play para escuchar la misión y poder salvar al planeta Glise"
             />
-           
           </div>
           <div className="leccion-2 col-md-8">
             <div className="row mx-0">
-              <div className="leccion-code col-md-12">              
-              <Slider2 />
+              <div className="leccion-code col-md-12">
+                <Slider2 />
               </div>
             </div>
             <div className="leccion-tips col-md-12 mt-2 ">
@@ -89,7 +85,7 @@ const Leccion2 = () => {
                           <button
                             type="button"
                             className="btn btn-success mx-auto"
-                            >
+                          >
                             <a
                               target="_blank"
                               rel="noreferrer"
@@ -101,7 +97,7 @@ const Leccion2 = () => {
                           </button>
                         </div>
                       </>
-                    }                   
+                    }
                   ></CollapseFaq>
                 </div>
               </div>
@@ -118,7 +114,7 @@ const Leccion2 = () => {
             </div>
           </div>
         </div>
-      </div>     
+      </div>
     </>
   );
 };

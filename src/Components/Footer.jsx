@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import { Context } from "../Store/appContext";
 
-const Footer = (props) => {
-  const { store, actions } = useContext(Context);
-  const { register, errors, handleSubmit } = useForm();
+const Footer = () => {
+  const { actions } = useContext(Context);
+  const { register } = useForm();
   return (
     <footer className="site-footer">
       <div className="container">
@@ -20,8 +19,7 @@ const Footer = (props) => {
             <h2 className="footer-heading mb-4">Boletin informativo</h2>
             <form
               onSubmit={(e) => actions.handleSubmitNews(e)}
-              className="d-flex"
-              className="subscribe"
+              className="d-flex subscribe"
             >
               <input
                 type="text"
@@ -59,7 +57,7 @@ const Footer = (props) => {
                     <a href="/About">Acerca de Nosotros</a>
                   </li>
                   <li>
-                    <a href="#">Foro</a>
+                    <a href="/foro">Foro</a>
                   </li>
                   <li>
                     <a href="/Faq">FAQ</a>

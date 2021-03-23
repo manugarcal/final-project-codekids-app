@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 import { Context } from "../Store/appContext";
 
-const Navbar2 = (props) => {
+const Navbar2 = () => {
   const { store, actions } = useContext(Context);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,15 @@ const Navbar2 = (props) => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand  href="/"><span className="brand-name" style={{color: "red"}}>Code</span><span className="brand-name" style={{color: "yellow"}}>Kids</span><span style={{color: "blue"}}>.</span></NavbarBrand>
+        <NavbarBrand href="/">
+          <span className="brand-name" style={{ color: "red" }}>
+            Code
+          </span>
+          <span className="brand-name" style={{ color: "yellow" }}>
+            Kids
+          </span>
+          <span style={{ color: "blue" }}>.</span>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

@@ -1,4 +1,3 @@
-import Cardcomponent from "../Components/Card";
 import Navbar2 from "../Components/Navbar-login";
 import Table1 from "../Components/Table";
 import "../style.css";
@@ -7,31 +6,34 @@ import { useContext, useEffect, useState } from "react";
 import { Context } from "../Store/appContext";
 
 const DashboardProfe = () => {
+  const { store, actions } = useContext(Context);
+  const [img, setImage] = useState(null);
+  const [user, setUser] = useState(null);
 
-    const { store, actions } = useContext(Context);
-    const [img, setImage] = useState(null);
-    const [user, setUser] = useState(null);
-    
-  
-    useEffect(() => {
-      if (store.currentUser !== null) {
-        let img = store.currentUser["user"]["avatar"];
-        img = store.baseURL + "/api/user/" + img;
-        setImage(img);
-        let usuario = store.currentUser.user.username;
-        setUser(usuario);
-      }
-      actions.planets()
-      actions.mision()
-      console.log(store.misiones)
-      console.log(store.nombre_planeta)
-    },[]);
-    
+  useEffect(() => {
+    if (store.currentUser !== null) {
+      let img = store.currentUser["user"]["avatar"];
+      img = store.baseURL + "/api/user/" + img;
+      setImage(img);
+      let usuario = store.currentUser.user.username;
+      setUser(usuario);
+    }
+    actions.planets();
+    actions.mision();
+    console.log(store.misiones);
+    console.log(store.nombre_planeta);
+  }, [
+    actions,
+    store.baseURL,
+    store.currentUser,
+    store.misiones,
+    store.nombre_planeta,
+  ]);
 
   return (
     <>
       <Navbar2 />
-      
+
       <div
         className="container-fluid "
         style={{

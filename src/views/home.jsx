@@ -1,22 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useEffect } from "react";
 import CardsColor from "../Components/CardsColor";
 import MediaText from "../Components/MediaText";
 import NavbarIndex from "../Components/Navbar";
-import { Context } from "../Store/appContext";
 
-const Home = (props) => {
-  const { store, actions } = useContext(Context);
-  
-  useEffect(() => {
-    
-  
-
-  }, []);
+const Home = () => {
+  useEffect(() => {}, []);
 
   return (
     <>
-    <NavbarIndex />
+      <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -34,32 +27,34 @@ const Home = (props) => {
             style={{ backgroundImage: `url('images/img_7.png')` }}
           >
             <div className="container">
-            <div className="row align-items-center ">
+              <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
                   <span className="text-cursive h5 text-red">
-                   <h3 className="text-cursive text-white">Bienvenidos a CodeKids</h3> 
+                    <h3 className="text-cursive text-white">
+                      Bienvenidos a CodeKids
+                    </h3>
                   </span>
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Diversion y aprendizaje para tus niños
                   </h1>
                   <p>Increible plataforma para tus hijos</p>
                   <p className="mt-5">
-                    <a href="/About" className="btn btn-primary py-4 btn-custom-1">
+                    <a
+                      href="/About"
+                      className="btn btn-primary py-4 btn-custom-1"
+                    >
                       Saber mas!
                     </a>
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-        
 
         <div className="site-section">
           <div className="container">
             <div className="row">
-
               <div className="col-lg-4">
                 <CardsColor
                   subtitle="Sobre Nosotros"
@@ -70,7 +65,7 @@ const Home = (props) => {
               </div>
 
               <div className="col-lg-4">
-              <CardsColor
+                <CardsColor
                   subtitle="FAQs"
                   text="Disponemos de una seccion de preguntas frecuentes para que puedas aclarar algunas dudas."
                   icon="far fa-question-circle"
@@ -79,7 +74,7 @@ const Home = (props) => {
               </div>
 
               <div className="col-lg-4">
-              <CardsColor
+                <CardsColor
                   subtitle="Forum"
                   text=" En esta seccion encontraras nuestra comunidad, Sacale el
                   mayor provecho planteando tus temas."
@@ -91,15 +86,15 @@ const Home = (props) => {
           </div>
         </div>
 
-        <MediaText 
-        title="Acerca de Nosotros"
-        subtitle="Diversion y aprendizaje para tus niños"
-        text="En CodeKids sabemos que la mejor forma de aprender es jugando,
+        <MediaText
+          title="Acerca de Nosotros"
+          subtitle="Diversion y aprendizaje para tus niños"
+          text="En CodeKids sabemos que la mejor forma de aprender es jugando,
         por lo que nuestra propuesta para potenciar el aprendizaje
         esta orientada a sacarle partido a esta premisa"
-        buttonText="Mas sobre Nosotros"
-        img="assets/spacekids.jpg"
-        url="/about"
+          buttonText="Mas sobre Nosotros"
+          img="assets/spacekids.jpg"
+          url="/about"
         />
 
         <div className="site-section bg-light">
@@ -122,7 +117,7 @@ const Home = (props) => {
                       <div className="vcard-wrap mr-5">
                         <img
                           src="assets/elon.jpg"
-                          alt="Image"
+                          alt=""
                           className="vcard img-fluid"
                         />
                       </div>
@@ -130,7 +125,9 @@ const Home = (props) => {
                         <h3>Elon Musk</h3>
                         <p className="position">Partner</p>
                         <p>
-                          Gracias a CodeKids. mi hijo X AE A-XII Musk pudo mejorar notablemente su desarrollo logico y esta pronto a que lo pueda enviar al espacio.
+                          Gracias a CodeKids. mi hijo X AE A-XII Musk pudo
+                          mejorar notablemente su desarrollo logico y esta
+                          pronto a que lo pueda enviar al espacio.
                         </p>
                       </div>
                     </div>
@@ -139,7 +136,7 @@ const Home = (props) => {
                       <div className="vcard-wrap mr-5">
                         <img
                           src="assets/bill.jpg"
-                          alt="Image"
+                          alt=""
                           className="vcard img-fluid"
                         />
                       </div>
@@ -147,7 +144,9 @@ const Home = (props) => {
                         <h3>Bill Gates</h3>
                         <p className="position">Partner</p>
                         <p>
-                          Considero que mi hijo a podido mejorar su desarrollo en cuanto a programación y prontamente estrenara su propio SO llamado Door XP
+                          Considero que mi hijo a podido mejorar su desarrollo
+                          en cuanto a programación y prontamente estrenara su
+                          propio SO llamado Door XP
                         </p>
                       </div>
                     </div>
@@ -156,7 +155,7 @@ const Home = (props) => {
                       <div className="vcard-wrap mr-5">
                         <img
                           src="assets/jeff.jpg"
-                          alt="Image"
+                          alt=""
                           className="vcard img-fluid"
                         />
                       </div>
@@ -164,7 +163,8 @@ const Home = (props) => {
                         <h3>Jeff Bezos</h3>
                         <p className="position">Partner</p>
                         <p>
-                          Me gusta mucho CodeKids. Asi que probablemente pronto lo compre y lo renombre AmazonKids.
+                          Me gusta mucho CodeKids. Asi que probablemente pronto
+                          lo compre y lo renombre AmazonKids.
                         </p>
                       </div>
                     </div>
@@ -195,7 +195,7 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
 
         <div className="site-section py-5 bg-warning">
           <div className="container">
@@ -206,7 +206,7 @@ const Home = (props) => {
                 </h2>
                 <a
                   href="/GettingStarted"
-                  className="btn btn-primary btn-custom-1  ml-auto"                  
+                  className="btn btn-primary btn-custom-1  ml-auto"
                 >
                   Comenzemos
                 </a>

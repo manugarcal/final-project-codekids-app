@@ -1,4 +1,3 @@
-
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -17,32 +16,30 @@ const getState = ({ getStore, getActions, setStore }) => {
       misiones: {
         instrucciones: "",
         codigo: "",
-        soluciones: ""
+        soluciones: "",
       },
-      miss: []
-
-      
+      miss: [],
     },
     actions: {
       planets: () => {
         fetch("http://localhost:5000/api/planetas")
-					.then(resp => resp.json())
-					.then(data => {
+          .then((resp) => resp.json())
+          .then((data) => {
             setStore({
-              nombre_planeta: data
-            })
+              nombre_planeta: data,
+            });
           })
-					.catch(error => console.log(error));
+          .catch((error) => console.log(error));
       },
       mision: () => {
         fetch("http://localhost:5000/api/planeta/1/mision")
-					.then(resp => resp.json())
-					.then(data => {
+          .then((resp) => resp.json())
+          .then((data) => {
             setStore({
-              miss: data
-            })
+              miss: data,
+            });
           })
-					.catch(error => console.log(error));
+          .catch((error) => console.log(error));
       },
       isLogged: () => {
         if (sessionStorage.getItem("currentUser")) {
@@ -59,25 +56,25 @@ const getState = ({ getStore, getActions, setStore }) => {
       handleSubmitNews: (e) => {
         e.preventDefault();
         const store = getStore();
-        const {email} = store;
+        const { email } = store;
         const data = {
-            email: email
-        }
+          email: email,
+        };
         fetch("http://localhost:5000/api/news", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        },
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
         })
-        .then((response) => response.json())
-        .then((data) => {
+          .then((response) => response.json())
+          .then((data) => {
             console.log("Success:", data);
-        })
-        .catch((error) => {
+          })
+          .catch((error) => {
             console.error("Error:", error);
-        });
-    },
+          });
+      },
       handleChange: (e) => {
         setStore({
           [e.target.name]: e.target.value,
@@ -109,12 +106,11 @@ const getState = ({ getStore, getActions, setStore }) => {
         if (avatar !== "") {
           formData.append("avatar", avatar);
         }
-        if(password === passwordrepeat){
+        if (password === passwordrepeat) {
           getActions().register("/api/register", formData, history);
         } else {
           alert("las contraseñas no coinciden");
         }
-        
       },
       login: async (url, data, history) => {
         const store = getStore();
@@ -139,17 +135,15 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             username: "",
             password: "",
-            type_user:""
+            type_user: "",
             /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          if(store.currentUser["user"]["type_user"] === 1){
-            
+          if (store.currentUser["user"]["type_user"] === 1) {
             history.push("/Dashboard");
-          }else{
+          } else {
             history.push("/Dashboardprofe");
-
           }
         }
       },
@@ -177,12 +171,10 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          if(store.currentUser["user"]["type_user"] === 1){
-            
+          if (store.currentUser["user"]["type_user"] === 1) {
             history.push("/Dashboard");
-          }else{
+          } else {
             history.push("/Dashboardprofe");
-
           }
         }
       },
@@ -194,21 +186,18 @@ const getState = ({ getStore, getActions, setStore }) => {
           isLogged: false,
         });
       },
-      getallUsers: () =>{
+      getallUsers: () => {
         fetch("http://localhost:5000/api/users")
-          .then(resp => resp.json())
-          .then(data => {
+          .then((resp) => resp.json())
+          .then((data) => {
             setStore({
-              allusers: data
-            })
+              allusers: data,
+            });
           })
-          .catch(error => console.log(error));
-      
-      },    
+          .catch((error) => console.log(error));
+      },
     },
   };
 };
 
 export default getState;
-
-

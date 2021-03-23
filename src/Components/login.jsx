@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { withRouter } from "react-router-dom";
 import { Context } from "../Store/appContext";
 import NavbarIndex from "./Navbar";
 
@@ -8,18 +7,11 @@ const Login = (props) => {
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
-    
-    if(store.isLogged) props.history.push('/Dashboard')
-  
-    }, []);
+    if (store.isLogged) props.history.push("/Dashboard");
+  }, [props.history, store.isLogged]);
 
-  const { register, errors, handleSubmit } = useForm();
+  const { register, errors } = useForm();
 
-  const onSubmit = (data, e) => {
-    console.log(data);
-    e.preventDefault();
-    e.target.reset();
-  };
   return (
     <>
       <NavbarIndex />
@@ -56,7 +48,8 @@ const Login = (props) => {
                                     className="alert alert-danger alert-dismissible fade show"
                                     role="alert"
                                   >
-                                    <strong>Error: </strong>{store.errors.msg}
+                                    <strong>Error: </strong>
+                                    {store.errors.msg}
                                     <button
                                       type="button"
                                       className="close"

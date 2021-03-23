@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, withRouter, } from "react-router-dom";
+import  {Link}  from "react-router-dom";
 import CardNoButton from "../Components/CardNoButton";
 import CollapseFaq from "../Components/CollapseFaq";
 import Navbar2 from "../Components/Navbar-login";
@@ -24,7 +24,7 @@ const Dashboard = () => {
     actions.mision()
     console.log(store.misiones)
     console.log(store.nombre_planeta)
-  },[]);
+  },[actions, store.baseURL, store.currentUser, store.misiones, store.nombre_planeta]);
   
   return (
     <>
@@ -62,24 +62,24 @@ const Dashboard = () => {
                   <div className="col-12 d-flex justify-content-around">
                     <img
                       src="assets/logros/1.png"
-                      className="img-fluid w-25 "
+                      className="img-fluid w-25 " alt=""
                     />
-                    <img src="assets/logros/2.png" className="img-fluid w-25" />
-                    <img src="assets/logros/3.png" className="img-fluid w-25" />
+                    <img src="assets/logros/2.png" className="img-fluid w-25" alt=""/>
+                    <img src="assets/logros/3.png" className="img-fluid w-25" alt=""/>
                   </div>
                 </div>
                 <div className="row d-flex justify-content-around">
                   <div className="col-12 d-flex justify-content-around">
-                    <img src="assets/logros/4.png" className="img-fluid w-25" />
-                    <img src="assets/logros/5.png" className="img-fluid w-25" />
-                    <img src="assets/logros/6.png" className="img-fluid w-25" />
+                    <img src="assets/logros/4.png" className="img-fluid w-25" alt="" />
+                    <img src="assets/logros/5.png" className="img-fluid w-25" alt=""/>
+                    <img src="assets/logros/6.png" className="img-fluid w-25" alt=""/>
                   </div>
                 </div>
                 <div className="row d-flex justify-content-around">
                   <div className="col-12 d-flex justify-content-around">
-                    <img src="assets/logros/7.png" className="img-fluid w-25" />
-                    <img src="assets/logros/8.png" className="img-fluid w-25" />
-                    <img src="assets/logros/9.png" className="img-fluid w-25" />
+                    <img src="assets/logros/7.png" className="img-fluid w-25" alt=""/>
+                    <img src="assets/logros/8.png" className="img-fluid w-25" alt=""/>
+                    <img src="assets/logros/9.png" className="img-fluid w-25" alt=""/>
                   </div>
                 </div>
               </div>
@@ -95,6 +95,7 @@ const Dashboard = () => {
                 <img
                   src="assets/space-map-01.png"
                   className="img-fluid w-100 mb-3"
+                  alt=""
                 />
                 <CollapseFaq 
                 title="selecciona tu planeta" 
@@ -110,7 +111,7 @@ const Dashboard = () => {
                 />
                 <h2>Misión</h2>
                 <h5>Seleccione Misión</h5>
-                <img src="assets/level-map.png" className="img-fluid w-100" />
+                <img src="assets/level-map.png" className="img-fluid w-100" alt=""/>
                 <CollapseFaq title="Selecciona una mision"  text={!!store.miss && store.miss.map((mision, index) =>{
                      return (
                        <>

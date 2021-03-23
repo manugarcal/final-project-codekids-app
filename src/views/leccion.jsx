@@ -97,7 +97,7 @@ const Leccion = () => {
                           </button>
                         </div>
                       </>
-                    }                  
+                    }
                   ></CollapseFaq>
                 </div>
               </div>

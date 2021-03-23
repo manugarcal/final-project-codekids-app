@@ -9,26 +9,6 @@ const GettingStarted = (props) => {
   const [inputData, setInputData] = useState([]);
 
   const { register, errors } = useForm();
-
-  /* const onSubmit = (data, e) => {
-    console.log(data);
-    e.preventDefault();
-    setInputData([...inputData, data]);
-    e.target.reset();
-  }; */
-
-  /*  const password = useRef({});
-  password.current = watch("password", "");
- */
-  /* const password = useRef(null);
-  const passwordrepeat = useRef(null);
-
-  let  a = password.current.focus();
-  let  b = passwordrepeat.current.focus();
-  const comparar = (a, b) => {
-    return a, b
-  }; */
-
   return (
     <>
       <NavbarIndex />

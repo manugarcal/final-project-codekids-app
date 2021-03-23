@@ -1,15 +1,14 @@
-import React, { useContext, useEffect } from 'react';
-import { Table } from 'reactstrap';
-import { Context } from '../Store/appContext';
+import React, { useContext, useEffect } from "react";
+import { Table } from "reactstrap";
+import { Context } from "../Store/appContext";
 
-const Table1 = (props) => {
-
+const Table1 = () => {
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
     actions.getallUsers();
-    console.log(store.allusers)
-  }, [])
+    console.log(store.allusers);
+  }, [actions, store.allusers]);
 
   return (
     <Table className="text-white">
@@ -21,23 +20,19 @@ const Table1 = (props) => {
         </tr>
       </thead>
       <tbody>
-        {
-          !!store.allusers && store.allusers.map((users, i) => {
+        {!!store.allusers &&
+          store.allusers.map((users, i) => {
             return (
-              <tr>
+              <tr key={i}>
                 <th scope="row">{users.id}</th>
                 <td>{users.username}</td>
                 <td>{users.type_user}</td>
-                
               </tr>
-            )
-          })
-        }
-
-
+            );
+          })}
       </tbody>
     </Table>
   );
-}
+};
 
 export default Table1;

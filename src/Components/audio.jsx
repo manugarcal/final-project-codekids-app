@@ -1,9 +1,9 @@
 const AudioControls = () => {
-    return (  
-        <audio controls>
-            <source/>
-        </audio>
-    );
-}
- 
+  return (
+    <audio controls>
+      <source />
+    </audio>
+  );
+};
+
 export default AudioControls;

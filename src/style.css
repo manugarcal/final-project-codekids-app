@@ -4,6 +4,8 @@
     height: 550px;
     width: 100%;
 } */
+
+
 .div-padre-dash{
     background-color:rgb(22, 195, 176);
 }
@@ -412,6 +414,10 @@ color: white;
         margin-bottom: 1rem;
     }
 
+.modal-header {
+    margin: auto;
+}
+
     /* Form CSS code */
     .white-bg {
         background-color: #ffffff;
@@ -420,7 +426,7 @@ color: white;
         border-top: 0;
         padding: 0 10px 20px 10px;
     }
-    
+
     .forum-post-container .media {
       margin: 10px 10px 10px 10px;
       padding: 20px 10px 20px 10px;
@@ -536,11 +542,11 @@ color: white;
         float: none !important;
       }
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     .ibox {
       clear: both;
       margin-bottom: 25px;
@@ -591,7 +597,7 @@ color: white;
       background: #ffffff;
       padding: 10px 15px;
     }
-    
+
     .message-input {
         height: 90px !important;
     }
@@ -616,6 +622,10 @@ color: white;
     .m-b-sm {
         margin-bottom: 10px;
     }
-    
-  
-
+    @font-face{
+      font-family: dasher;
+      src:url(./DasherDeer-3zODG.otf)
+    }
+    .brand-name {
+      font-family: dasher;
+    }

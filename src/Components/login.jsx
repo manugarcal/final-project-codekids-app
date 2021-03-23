@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Context } from "../Store/appContext";
 import NavbarIndex from "./Navbar";
@@ -6,13 +6,12 @@ import NavbarIndex from "./Navbar";
 const Login = (props) => {
   const { store, actions } = useContext(Context);
 
-  const { register, errors, handleSubmit } = useForm();
+  useEffect(() => {
+    if (store.isLogged) props.history.push("/Dashboard");
+  }, [props.history, store.isLogged]);
 
-  const onSubmit = (data, e) => {
-    console.log(data);
-    e.preventDefault();
-    e.target.reset();
-  };
+  const { register, errors } = useForm();
+
   return (
     <>
       <NavbarIndex />
@@ -39,17 +38,18 @@ const Login = (props) => {
 
                           <form
                             onSubmit={(e) =>
-                              actions.handleSubmit(e, props.history)
+                              actions.handleSubmitLogin(e, props.history)
                             }
                           >
                             {!!store.errors && (
                               <div className="row">
                                 <div className="col-12">
                                   <div
-                                    className="alert alert-warning alert-dismissible fade show"
+                                    className="alert alert-danger alert-dismissible fade show"
                                     role="alert"
                                   >
-                                    <strong>Error</strong>{store.errors.msg}
+                                    <strong>Error: </strong>
+                                    {store.errors.msg}
                                     <button
                                       type="button"
                                       className="close"
@@ -135,7 +135,7 @@ const Login = (props) => {
 
                 <p className="text-muted text-center mt-3 mb-0">
                   No tienes una cuenta?{" "}
-                  <a href="/GettingStarted" className="text-primary ml-1">
+                  <a href="/" className="text-primary ml-1">
                     registrate
                   </a>
                 </p>

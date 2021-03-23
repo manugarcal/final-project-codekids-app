@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import React, { useState } from "react";
+import { Collapse, Button, CardBody, Card } from "reactstrap";
 
-const CollapseFaq = ({title, text}) => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggle = () => setIsOpen(!isOpen);
-  
-    return (
-      <div>
-        <Button color="info" onClick={toggle} style={{ marginBottom: '1rem', width: "100%" }}>{title}</Button>
-        <Collapse isOpen={isOpen}>
-          <Card>
-            <CardBody>
-            {text}
-            </CardBody>
-          </Card>
-        </Collapse>
-      </div>
-    );
-  }
-  
-  export default CollapseFaq;
+const CollapseFaq = ({ title, text }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Button
+        color="info"
+        onClick={toggle}
+        style={{ marginBottom: "1rem", width: "100%" }}
+      >
+        {title}
+      </Button>
+      <Collapse isOpen={isOpen}>
+        <Card>
+          <CardBody>{text}</CardBody>
+        </Card>
+      </Collapse>
+    </div>
+  );
+};
+
+export default CollapseFaq;

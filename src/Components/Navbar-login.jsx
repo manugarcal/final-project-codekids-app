@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -11,18 +11,29 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
-} from 'reactstrap';
+  NavbarText,
+} from "reactstrap";
+import { Context } from "../Store/appContext";
 
-const Navbar2 = (props) => {
+const Navbar2 = () => {
+  const { store, actions } = useContext(Context);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">CodeKids.</NavbarBrand>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">
+          <span className="brand-name" style={{ color: "red" }}>
+            Code
+          </span>
+          <span className="brand-name" style={{ color: "yellow" }}>
+            Kids
+          </span>
+          <span style={{ color: "blue" }}>.</span>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -32,26 +43,40 @@ const Navbar2 = (props) => {
             <NavItem>
               <NavLink href="/Foro">Foro</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+          </Nav>
+          <NavbarText>
+            <UncontrolledDropdown>
               <DropdownToggle nav caret>
-                Usuario
+                {!!store.currentUser && store.currentUser.user.username}
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Dashboard
-                </DropdownItem>               
+                  <NavLink href="/Dashboard" className="text-black">
+                    Dashboard
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavLink href="/Leccion/1" className="text-black">
+                    Misiones
+                  </NavLink>
+                </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                <NavLink href="/">Salir</NavLink>
+                  <NavLink
+                    href="/"
+                    className="text-black"
+                    onClick={actions.logout}
+                  >
+                    Salir
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          </NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};
 
 export default Navbar2;

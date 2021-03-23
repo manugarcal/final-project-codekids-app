@@ -2,8 +2,10 @@
 .text-cursive {
   font-family: "Indie Flower", cursive !important; }
 
-html {
-  overflow-x: hidden; }
+/* html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+} */
 
 .font-size-10 {
   font-size: 10px; }
@@ -304,7 +306,7 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #343a40; }
+  background: #343a40 !important;}
   @media (min-width: 768px) {
     .site-footer {
       padding: 8em 0; } }

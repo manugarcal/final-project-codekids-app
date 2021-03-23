@@ -1,36 +1,17 @@
-import React, { useState, useRef, useContext } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import NavbarIndex from "../Components/Navbar";
 import { Context } from "../Store/appContext";
 
-const GettingStarted = () => {
+const GettingStarted = (props) => {
   const { store, actions } = useContext(Context);
   const [inputData, setInputData] = useState([]);
 
-  const {
-    register,
-    errors,
-    handleSubmit,
-    setError,
-    clearError,
-    watch,
-  } = useForm();
-
-  const onSubmit = (data, e) => {
-    console.log(data);
-    e.preventDefault();
-    setInputData([...inputData, data]);
-    e.target.reset();
-  };
-
-  const password = useRef({});
-  password.current = watch("password", "");
-
-
-
+  const { register, errors } = useForm();
   return (
     <>
-	<NavbarIndex />
+      <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -82,7 +63,35 @@ const GettingStarted = () => {
             </div>
 
             <div className="container">
-              <form className="row gutters" onSubmit={handleSubmit(onSubmit)}>
+              <form
+                className="row gutters"
+                onSubmit={
+                  /* handleSubmit(onSubmit),  */ (e) =>
+                    actions.handleSubmitRegister(e, props.history)
+                }
+              >
+                {!!store.errors && (
+                  <div className="row">
+                    <div className="col-12">
+                      <div
+                        className="alert alert-danger alert-dismissible fade show"
+                        role="alert"
+                      >
+                        <strong>Error: </strong>
+                        {store.errors.msg}
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="alert"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div className="card h-100">
                     <div className="card-body">
@@ -92,34 +101,6 @@ const GettingStarted = () => {
                             Detalles Personales
                           </h6>
                         </div>
-
-                        {/* desde aquí están los inputs*/}
-                        {/*  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                          <div className="form-group">
-                            <label for="fullName">Nombre Completo</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="fullName"
-                              name="fullname"
-                              placeholder="Ingrese Nombre Completo"
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "Ingrese su Nombre Completo",
-                                },
-                                pattern: {
-                                  value: /[a-zA-Z]+/,
-                                  message: "Ingrese un Nombre válido",
-                                },
-                              })}
-                            />
-                            <span className="text-danger text-small d-block mb-2">
-                              {errors?.fullname?.message}
-                            </span>
-                          </div>
-                        </div> */}
-
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                           <div className="form-group">
                             <label for="eMail">Email</label>
@@ -128,6 +109,7 @@ const GettingStarted = () => {
                               className="form-control"
                               id="eMail"
                               name="username"
+                              onChange={(e) => actions.handleChange(e)}
                               placeholder="Ingrese un e-mail valido" /* onChange={handleInputChange} */
                               ref={register({
                                 required: {
@@ -151,7 +133,8 @@ const GettingStarted = () => {
                             <label htmlFor="file">Inserta una foto</label>
                             <input
                               type="file"
-                              name="file"
+                              name="avatar"
+                              onChange={(e) => actions.handleChangeFile(e)}
                               id="file"
                               className="form-control"
                             />
@@ -166,18 +149,8 @@ const GettingStarted = () => {
                               className="form-control"
                               id="password"
                               name="password"
-                              placeholder="Ingrese Contraseña" /* onChange={handleInputChange} */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "debe elegir una contraseña",
-                                },
-                                pattern: {
-                                  value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-                                  message:
-                                    "Ingrese una contraseña válida de entre 8 y 12 caracteres",
-                                },
-                              })}
+                              onChange={(e) => actions.handleChange(e)}
+                              placeholder="Ingrese Contraseña"
                             />
                             <span className="text-danger text-small d-block mb-2">
                               {errors?.password?.message}
@@ -199,19 +172,7 @@ const GettingStarted = () => {
                               id="passwordrepeat"
                               name="passwordrepeat"
                               placeholder="Repetir Contraseña" /* onChange={handleInputChange} */
-                              ref={register({
-                                required: {
-                                  value: true,
-                                  message: "repita su constraseña",
-                                },
-                                pattern: {
-                                  value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-                                  message: "Ingrese una contraseña válida",
-                                },
-                                validate: (value) =>
-                                  value === password.current ||
-                                  "Las contraseñas no coinciden",
-                              })}
+                              onChange={(e) => actions.handleChange(e)}
                             />
                             <span className="text-danger text-small d-block mb-2">
                               {errors?.passwordrepeat?.message}
@@ -223,7 +184,7 @@ const GettingStarted = () => {
                       <div className="row gutters">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                           <div className="text-right">
-                            <button                              
+                            <button
                               type="sumbmit"
                               id="submit"
                               name="button"

@@ -5,7 +5,7 @@ import NavbarIndex from "../Components/Navbar";
 const About = () => {
   return (
     <>
-    <NavbarIndex />
+      <NavbarIndex />
       <div className="site-wrap" id="home-section">
         <div className="site-mobile-menu site-navbar-target">
           <div className="site-mobile-menu-header">
@@ -25,9 +25,6 @@ const About = () => {
             <div className="container">
               <div className="row align-items-center ">
                 <div className="col-md-5 mt-5 pt-5">
-                 {/*  <span className="text-cursive h5 text-red">
-                    Bienvenidos a nuestro sitio
-                  </span> */}
                   <h1 className="mb-3 font-weight-bold text-teal">
                     Quienes Somos
                   </h1>
@@ -53,7 +50,6 @@ const About = () => {
           buttonText="Sigue descubriendo aún más"
           img="assets/spaceman01.png"
           url="/about"
-          
         />
 
         <div className="site-section bg-teal">
@@ -73,21 +69,21 @@ const About = () => {
                 name="Andres Olivares"
                 job="Full Stack Developer"
                 ceo="Fundador"
-                img="images/person_1.jpg"
+                img="assets/andres.jpg"
               />
 
               <CardPresetation
                 name="Manuel Garcia"
                 job="Full Stack Developer"
                 ceo="Fundador"
-                img="images/person_2.jpg"
+                img="assets/manuel.jpeg"
               />
 
               <CardPresetation
                 name="Alejandro Belmar"
                 job="Full Stack Developer"
                 ceo="Fundador"
-                img="images/person_3.jpg"
+                img="assets/jano.jpg"
               />
             </div>
           </div>

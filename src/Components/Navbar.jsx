@@ -3,30 +3,25 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from "reactstrap";
 
-const NavbarIndex = (props) => {
+const NavbarIndex = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <header className="site-navbar site-navbar-target" role="banner">
-      
       <div className="container mb-3">
         <div className="d-flex align-items-center">
           <div className="site-logo mr-auto">
-            <a href="/">
-              CodeKids<span className="text-primary">.</span>
+            <a className="brand-name" href="/">
+              <span style={{ color: "red" }}>Code</span>
+              <span style={{ color: "yellow" }}>Kids</span>
+              <spanKids className="text-primary">.</spanKids>
             </a>
           </div>
           <div className="site-quick-contact d-none d-lg-flex ml-auto ">
@@ -48,6 +43,7 @@ const NavbarIndex = (props) => {
                   src="assets/spaceman01.png"
                   width="50px"
                   height="50px"
+                  alt=""
                 ></img>
               </span>
               <span>Registrarme</span>
@@ -84,17 +80,28 @@ const NavbarIndex = (props) => {
                 </Nav>
 
                 <Nav>
-                  <NavItem  >
-                    <NavLink className="icon-facebook text-teal d-flex float-right" href="#" ></NavLink>
+                  <NavItem>
+                    <NavLink
+                      className="icon-facebook text-teal d-flex float-right"
+                      href="https://web.facebook.com/Codekids-108202741318666"
+                      target="_blank"
+                    ></NavLink>
                   </NavItem>
-                  <NavItem >
-                    <NavLink className="icon-twitter text-success d-flex float-right" href="#" ></NavLink>
+                  <NavItem>
+                    <NavLink
+                      className="icon-twitter text-success d-flex float-right"
+                      href="https://twitter.com/CodeKids4"
+                      target="_blank"
+                    ></NavLink>
                   </NavItem>
-                  <NavItem >
-                    <NavLink className="icon-linkedin text-yellow d-flex float-right" href="#" ></NavLink>
+                  <NavItem>
+                    <NavLink
+                      className="icon-linkedin text-yellow d-flex float-right"
+                      href="https://www.linkedin.com/in/codekids-forkids-722598207/"
+                      target="_blank"
+                    ></NavLink>
                   </NavItem>
-                  </Nav>
-                
+                </Nav>
               </Collapse>
             </Navbar>
           </div>
@@ -105,4 +112,3 @@ const NavbarIndex = (props) => {
 };
 
 export default NavbarIndex;
-
